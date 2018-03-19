@@ -3,6 +3,9 @@
 * {
   box-sizing: border-box;
 }
+body {
+  background-color: #f7f7f6;
+}
 .container {
   width: 901px;
   margin: 0 auto;
@@ -65,7 +68,7 @@ p {
 }
 
 .row3 {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 button {
   display: block;
