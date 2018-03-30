@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'Roboto', sans-serif;
+  src: url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800|Roboto:300,900");
+}
+
+@font-face {
+  font-family: 'Open Sans', sans-serif;
+  src: url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800|Roboto:300,900");
+}
+
+body {
+  width: 1110px;
+  margin: 0 auto;
+}
+
+.header {
+  height: auto;
+  overflow: hidden;
+  margin-top: 38px;
+}
+
+.logo {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  color: #555252;
+  float: left;
+}
+
+.logo::first-letter {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  color: #1abc9c;
+}
+
+.nav-list {
+  float: right;
+}
+
+.nav-list nav a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  color: #0f0101;
+  margin-right: 30px;
+}
+
+.nav-list .active {
+  color: #1abc9c;
+}
+
+h2 {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 48px;
+  color: #515151;
+  margin-top: 110px;
+  text-align: center;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  top: 66px;
+  margin: 0 auto;
+  bottom: 0;
+  left: 145px;
+  height: 7px;
+  width: 164px;
+  background-color: #4ec6ab;
+}
+
+.item-block {
+  float: left;
+  margin-right: 20px;
+}
+
+.name-item,
+.price-item {
+  display: inline-block;
+}
+/*# sourceMappingURL=main.css.map */

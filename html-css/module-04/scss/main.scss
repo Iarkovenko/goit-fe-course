@@ -37,6 +37,7 @@ body {
 }
 
 h2 {
+  position: relative;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-size: 48px;
@@ -45,6 +46,12 @@ h2 {
   text-align: center;
   &::after {
     content: "";
+    position: absolute;
+    display: inline-block;
+    top: 66px;
+    margin: 0 auto;
+    bottom: 0;
+    left: 145px;
     height: 7px;
     width: 164px;
     background-color: $underline;
@@ -56,7 +63,5 @@ h2 {
 }
 .name-item,
 .price-item {
-    display: inline-block;
+  display: inline-block;
 }
-
-
