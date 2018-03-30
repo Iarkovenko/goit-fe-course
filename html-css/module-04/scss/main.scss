@@ -1,0 +1,62 @@
+@import "fonts";
+@import "vars";
+
+body {
+  width: 1110px;
+  margin: 0 auto;
+}
+.header {
+  height: auto;
+  overflow: hidden;
+  margin-top: 38px;
+}
+.logo {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  color: $logo;
+  float: left;
+  &::first-letter {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    color: $logo-first-letter;
+  }
+}
+.nav-list {
+  float: right;
+  nav a {
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    color: $nav-link;
+    margin-right: 30px;
+  }
+  .active {
+    color: $active-link;
+  }
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 48px;
+  color: $h2;
+  margin-top: 110px;
+  text-align: center;
+  &::after {
+    content: "";
+    height: 7px;
+    width: 164px;
+    background-color: $underline;
+  }
+}
+.item-block {
+  float: left;
+  margin-right: 20px;
+}
+.name-item,
+.price-item {
+    display: inline-block;
+}
+
+
