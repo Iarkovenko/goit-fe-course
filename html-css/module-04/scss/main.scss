@@ -9,6 +9,7 @@ body {
   height: auto;
   overflow: hidden;
   margin-top: 38px;
+  margin-bottom: 110px;
 }
 .logo {
   font-family: "Roboto", sans-serif;
@@ -25,11 +26,14 @@ body {
 .nav-list {
   float: right;
   nav a {
-    font-family: "Roboto", sans-serif;
-    font-weight: 800;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
     font-size: 14px;
     color: $nav-link;
-    margin-right: 30px;
+    margin-left: 25px;
+    &:hover {
+      color: $active-link;
+    }
   }
   .active {
     color: $active-link;
@@ -38,30 +42,134 @@ body {
 
 h2 {
   position: relative;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto black", sans-serif;
   font-weight: 900;
   font-size: 48px;
   color: $h2;
-  margin-top: 110px;
+  
   text-align: center;
   &::after {
     content: "";
     position: absolute;
-    display: inline-block;
-    top: 66px;
-    margin: 0 auto;
-    bottom: 0;
-    left: 145px;
+    top: 67px;
+    right: 460px;
     height: 7px;
-    width: 164px;
+    width: 210px;
     background-color: $underline;
   }
 }
+.product-list {
+  margin-top: 130px;
+  margin-bottom: 105px;
+  font-size: 18px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+   .item-block:nth-child(6) .name-item {
+    background-color: $name-item-active;
+  }
+  .item-block:nth-child(6) .price-item {
+    background-color: $price-item-active;
+  }
+}
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
 .item-block {
   float: left;
+  display: inline-block;
   margin-right: 20px;
+  margin-bottom: 30px;
+  max-width: 255px;
 }
-.name-item,
+.name-item {
+  padding: 14px;
+}
+
+.price-item {
+  text-align: center;
+  padding: 14px 0;
+}
+.img {
+  width: 255px;
+  height: 281px;
+  position: relative;
+}
+
+.img::before {
+  content: "";
+  position: absolute;
+  background-color: $bg-item;
+  width: 100%;
+  height: 281px;
+  z-index: -1;
+}
+
+.name-item {
+  display: inline-block;
+  float: left;
+  width: 200px;
+  background-color: $name-item;
+}
 .price-item {
   display: inline-block;
+  float: right;
+  width: 55px;
+  background: $price-item;
 }
+
+.news-list {
+  margin-top: 120px;
+}
+
+.news-block {
+  float: left;
+  display: inline-block;
+  margin-right: 30px;
+  margin-bottom: 81px;
+  max-width: 350px;
+  img {
+    margin-bottom: 14px;
+  }
+ &:last-child {
+   margin-right: 0;
+ }
+ h5 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: $logo;
+  position: relative;
+  margin-bottom: 49px;
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: $underline;
+    height: 3px;
+    width: 136px;
+    top: 56px;
+
+  }
+ }
+ p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: $logo;
+  margin-bottom: 19px;
+ }
+ .button {
+   display: inline-block;
+   background-color: $button;
+   outline: none;
+   border-radius: 3px;
+   padding: 19px 44px;
+   color: #fff;
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 300;
+   font-size: 16px;
+ }
+}
+
