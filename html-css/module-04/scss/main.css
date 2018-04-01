@@ -104,6 +104,10 @@ h2::after {
   max-width: 255px;
 }
 
+.item-block:hover .img::before {
+  background-color: #bad0f9;
+}
+
 .name-item {
   padding: 14px;
 }
@@ -163,7 +167,7 @@ h2::after {
 }
 
 .news-block h5 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-weight: 600;
   color: #555252;
@@ -181,7 +185,7 @@ h2::after {
 }
 
 .news-block p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: #555252;
@@ -195,7 +199,7 @@ h2::after {
   border-radius: 3px;
   padding: 19px 44px;
   color: #fff;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 16px;
 }

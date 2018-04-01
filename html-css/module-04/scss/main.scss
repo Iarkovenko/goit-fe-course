@@ -46,7 +46,6 @@ h2 {
   font-weight: 900;
   font-size: 48px;
   color: $h2;
-  
   text-align: center;
   &::after {
     content: "";
@@ -65,7 +64,7 @@ h2 {
   color: white;
   font-family: "Roboto", sans-serif;
   font-weight: 600;
-   .item-block:nth-child(6) .name-item {
+  .item-block:nth-child(6) .name-item {
     background-color: $name-item-active;
   }
   .item-block:nth-child(6) .price-item {
@@ -83,6 +82,9 @@ h2 {
   margin-right: 20px;
   margin-bottom: 30px;
   max-width: 255px;
+  &:hover .img::before {
+    background-color: darken($bg-item,10%);
+  }
 }
 .name-item {
   padding: 14px;
@@ -133,43 +135,41 @@ h2 {
   img {
     margin-bottom: 14px;
   }
- &:last-child {
-   margin-right: 0;
- }
- h5 {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  color: $logo;
-  position: relative;
-  margin-bottom: 49px;
-  &::before {
-    position: absolute;
-    content: "";
-    background-color: $underline;
-    height: 3px;
-    width: 136px;
-    top: 56px;
-
+  &:last-child {
+    margin-right: 0;
   }
- }
- p {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  color: $logo;
-  margin-bottom: 19px;
- }
- .button {
-   display: inline-block;
-   background-color: $button;
-   outline: none;
-   border-radius: 3px;
-   padding: 19px 44px;
-   color: #fff;
-   font-family: 'Open Sans', sans-serif;
-   font-weight: 300;
-   font-size: 16px;
- }
+  h5 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: $logo;
+    position: relative;
+    margin-bottom: 49px;
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: $underline;
+      height: 3px;
+      width: 136px;
+      top: 56px;
+    }
+  }
+  p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: $logo;
+    margin-bottom: 19px;
+  }
+  .button {
+    display: inline-block;
+    background-color: $button;
+    outline: none;
+    border-radius: 3px;
+    padding: 19px 44px;
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+  }
 }
-
