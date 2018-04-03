@@ -1,57 +1,69 @@
-@import 'reset';
-@import 'vars';
-@import 'fonts';
-@import 'templates';
+@import "reset";
+@import "vars";
+@import "fonts";
+@import "templates";
 body {
-    margin: 0 auto;
-  }
+  margin: 0 auto;
+}
 header {
-    height: auto;
-    overflow: hidden;
-    margin-top: 38px;
-    @extend %margin-center;
-    .logo {
-        font-family: "Roboto Light", sans-serif;
-        font-size: 30px;
-        color: $logo;
-        float: left;
-        &::first-letter {
-          font-family: "Roboto Black", sans-serif;
-          color: $logo-first-letter;
-        }
-      }
-      nav {
-        float: right;
-         a {
-          font-family: "Open Sans Bold", sans-serif;
-          font-size: 14px;
-          color: $nav-link;
-          margin-left: 25px;
-          &:hover {
-            color: $active-link;
-          }
-        }
-        .active {
-          color: $active-link;
-        }
-      }
+  height: auto;
+  overflow: hidden;
+  margin-top: 38px;
+  @extend %margin-center;
+  .logo {
+    font-family: "Roboto Light", sans-serif;
+    font-size: 30px;
+    color: $logo;
+    float: left;
+    &::first-letter {
+      font-family: "Roboto Black", sans-serif;
+      color: $logo-first-letter;
+    }
   }
-   
-  section {
-      min-height: 599px;
-      margin-top: 34px;
-      margin-bottom: 101px;
+  nav {
+    float: right;
+    a {
+      font-family: "Open Sans Bold", sans-serif;
+      font-size: 14px;
+      color: $nav-link;
+      margin-left: 25px;
+      &:hover {
+        color: $active-link;
+      }
+    }
+    .active {
+      color: $active-link;
+    }
+  }
 }
 
-  .item-block {
-    @extend %item-block;
+.main-section {
+  min-height: 599px;
+  margin-top: 34px;
+  margin-bottom: 101px;
+}
+h2 {
+  @extend %h2;
+}
+.item-section {
+  @extend %margin-center;
+  margin-top: 120px;
+}
+.item-block {
+  @extend %item-block;
 }
 .img {
-    @extend %img;
+  @extend %img;
 }
 .name-item {
-    @extend %name-item;
+  @extend %name-item;
 }
 .price-item {
-    @extend %price-item;
+  @extend %price-item;
+}
+footer {
+  @extend %footer;
+  & span {
+    color: $footer-span;
+  }
 }
