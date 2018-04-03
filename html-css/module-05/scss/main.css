@@ -1,0 +1,170 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("../fonts/OpenSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Open Sans Regular";
+  src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto Black";
+  src: url("../fonts/Roboto-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Roboto Light";
+  src: url("../fonts/Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+
+header {
+  width: 1110px;
+  margin: 0 auto;
+}
+
+.item-block {
+  display: inline-block;
+  max-width: 255px;
+  height: 321px;
+}
+
+.img {
+  width: 255px;
+  height: 281px;
+  position: relative;
+}
+
+.name-item {
+  float: left;
+  display: inline-block;
+  padding: 14px;
+  width: 200px;
+  background-color: #323232;
+  font-family: "Roboto Black", sans-serif;
+  color: #fff;
+}
+
+.price-item {
+  float: right;
+  display: inline-block;
+  width: 55px;
+  padding: 14px;
+  background: #8c8c8c;
+  font-family: "Roboto Black", sans-serif;
+  color: #fff;
+}
+
+body {
+  margin: 0 auto;
+}
+
+header {
+  height: auto;
+  overflow: hidden;
+  margin-top: 38px;
+}
+
+header .logo {
+  font-family: "Roboto Light", sans-serif;
+  font-size: 30px;
+  color: #555252;
+  float: left;
+}
+
+header .logo::first-letter {
+  font-family: "Roboto Black", sans-serif;
+  color: #1abc9c;
+}
+
+header nav {
+  float: right;
+}
+
+header nav a {
+  font-family: "Open Sans Bold", sans-serif;
+  font-size: 14px;
+  color: #0f0101;
+  margin-left: 25px;
+}
+
+header nav a:hover {
+  color: #1abc9c;
+}
+
+header nav .active {
+  color: #1abc9c;
+}
+
+section {
+  min-height: 599px;
+  margin-top: 34px;
+  margin-bottom: 101px;
+}
+/*# sourceMappingURL=main.css.map */
