@@ -41,6 +41,55 @@ header {
   min-height: 599px;
   margin-top: 34px;
   margin-bottom: 101px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+   &::before {
+     content: '';
+     position: absolute;
+     z-index: -1;
+     background-color: #000000;
+     opacity: 0.52;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+   }
+  .main-block {
+    display: inline-block;
+    margin-top: 218px;
+    position: relative;
+    & * {
+      text-align: left;
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      width: 105px;
+      height: 105px;
+      background-color: $button-left-right;
+      top: 15px;
+      right: -180px;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 105px;
+      height: 105px;
+      background-color: $button-left-right;
+      top: 15px;
+      left: -180px;
+      opacity: 0.52;
+    }
+  }
+  h1 {
+    @extend %h1;
+    margin-bottom: 18px;
+  }
+  .tips {
+    @extend %tips;
+  }
 }
 h2 {
   @extend %h2;

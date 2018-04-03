@@ -91,6 +91,18 @@ h2, header, .item-section {
   margin: 0 auto;
 }
 
+.main-section h1 {
+  font-family: 'Roboto Black', sans-serif;
+  font-size: 60px;
+  color: #fff;
+}
+
+.main-section .tips {
+  font-family: 'Roboto Light', sans-serif;
+  font-size: 24px;
+  color: #fff;
+}
+
 h2 {
   position: relative;
   font-family: "Roboto Black";
@@ -201,6 +213,56 @@ header nav .active {
   min-height: 599px;
   margin-top: 34px;
   margin-bottom: 101px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.main-section::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  background-color: #000000;
+  opacity: 0.52;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.main-section .main-block {
+  display: inline-block;
+  margin-top: 218px;
+  position: relative;
+}
+
+.main-section .main-block * {
+  text-align: left;
+}
+
+.main-section .main-block::after {
+  position: absolute;
+  content: '';
+  width: 105px;
+  height: 105px;
+  background-color: #1abc9c;
+  top: 15px;
+  right: -180px;
+}
+
+.main-section .main-block::before {
+  position: absolute;
+  content: '';
+  width: 105px;
+  height: 105px;
+  background-color: #1abc9c;
+  top: 15px;
+  left: -180px;
+  opacity: 0.52;
+}
+
+.main-section h1 {
+  margin-bottom: 18px;
 }
 
 .item-section {
