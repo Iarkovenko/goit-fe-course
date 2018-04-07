@@ -3,22 +3,22 @@
   margin: 0 auto;
 }
 %h1 {
-  font-family: 'Roboto Black', sans-serif;
+  font-family: "Roboto Black", sans-serif;
   font-size: 60px;
   color: #fff;
 }
 %tips {
-  font-family: 'Roboto Light', sans-serif;
+  font-family: "Roboto Light", sans-serif;
   font-size: 24px;
   color: #fff;
 }
 %h2 {
   @extend %margin-center;
-  position: relative;
   font-family: "Roboto Black";
   font-size: 48px;
   color: $h2;
   text-align: center;
+  position: relative;
   &::after {
     content: "";
     position: absolute;
@@ -32,20 +32,27 @@
 %item-block {
   display: inline-block;
   max-width: 255px;
-  height: 321px;
   margin-right: 26px;
   &:last-child {
     margin-right: 0;
   }
+  &:hover .name-item {
+    background-color: $name-item-active;
+  }
+  &:hover .price-item {
+    background-color: $price-item-active;
+  }
 }
 %img {
-  width: 255px;
-  height: 281px;
-  position: relative;
-}
-%name-item {
   float: left;
   display: inline-block;
+  width: 100%;
+  height: 281px;
+  object-fit: cover;
+}
+%name-item {
+  display: inline-block;
+  float: left;
   padding: 14px;
   width: 200px;
   background-color: $name-item;
@@ -53,8 +60,8 @@
   color: #fff;
 }
 %price-item {
-  float: right;
   display: inline-block;
+  float: right;
   width: 55px;
   padding: 14px;
   background: $price-item;
@@ -67,6 +74,6 @@
   text-align: center;
   color: $footer-text;
   padding: 35px;
-  font-family: 'Open Sans Regular', sans-serif;
+  font-family: "Open Sans Regular", sans-serif;
   font-size: 16px;
 }
