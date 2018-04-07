@@ -296,79 +296,118 @@ body .item-block .item-option-block {
   position: relative;
 }
 
-body .item-block .item-option-block .item-option-hover {
+body .item-block .item-option-block ::before {
   display: none;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  opacity: 0.5;
+  z-index: -1;
 }
 
-body .item-block:hover .item-option-hover {
-  display: inline-block;
-  text-align: center;
+body .item-block .item-option-block .item-option-hover {
   position: absolute;
+  display: none;
   width: 235px;
   height: 261px;
-  background-color: black;
+  z-index: 1;
+  left: 10px;
   top: 10px;
   bottom: 10px;
-  left: 10px;
   right: 10px;
-  padding-top: 79px;
-  z-index: 1;
+  color: #fff;
+  text-align: center;
+}
+
+body .item-block .item-option-block .item-option-hover * {
+  margin-top: 50%;
+  transform: translateY(-100%);
+}
+
+body .item-block .item-option-block .item-option-hover .like {
+  display: inline-block;
+  line-height: 1.65;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #fff;
+  margin-right: 5px;
   font-size: 30px;
   font-family: "Pe icon 7 stroke";
-  color: #fff;
 }
 
-body .item-block:hover .item-option-hover .like {
+body .item-block .item-option-block .item-option-hover .like:hover {
+  border-color: #1abc9c;
+  background-color: #1abc9c;
+}
+
+body .item-block .item-option-block .item-option-hover .random {
   display: inline-block;
+  line-height: 1.65;
   width: 50px;
   height: 50px;
   border: 1px solid #fff;
   margin-right: 5px;
+  font-size: 30px;
+  font-family: "Pe icon 7 stroke";
 }
 
-body .item-block:hover .item-option-hover .like:hover {
-  border: none;
+body .item-block .item-option-block .item-option-hover .random:hover {
+  border-color: #1abc9c;
   background-color: #1abc9c;
 }
 
-body .item-block:hover .item-option-hover .random {
+body .item-block .item-option-block .item-option-hover .time {
   display: inline-block;
-  width: 50px;
-  height: 50px;
-  border: 1px solid #fff;
-  margin-right: 5px;
-}
-
-body .item-block:hover .item-option-hover .random:hover {
-  border: none;
-  background-color: #1abc9c;
-}
-
-body .item-block:hover .item-option-hover .time {
-  display: inline-block;
+  line-height: 1.65;
   width: 50px;
   height: 50px;
   border: 1px solid #fff;
   margin-right: 0px;
+  font-size: 30px;
+  font-family: "Pe icon 7 stroke";
 }
 
-body .item-block:hover .item-option-hover .time:hover {
-  border: none;
+body .item-block .item-option-block .item-option-hover .time:hover {
+  border-color: #1abc9c;
   background-color: #1abc9c;
 }
 
-body .item-block:hover .item-option-hover .add-to-cart {
+body .item-block .item-option-block .item-option-hover .add-to-cart {
   display: inline-block;
   text-align: center;
-  width: 178px;
+  width: 168px;
   height: 50px;
   margin-top: 7px;
   border: 1px solid #fff;
+  font-size: 30px;
+  font-family: "Pe icon 7 stroke";
+  line-height: 1.65;
 }
 
-body .item-block:hover .item-option-hover .add-to-cart span {
-  font-size: 14px;
+body .item-block .item-option-block .item-option-hover .add-to-cart span {
   color: #fff;
+  font-family: "Open Sans Regular", sans-serif;
+  font-size: 14px;
+  vertical-align: super;
+}
+
+body .item-block .item-option-block .item-option-hover .add-to-cart:hover {
+  border-color: #1abc9c;
+  background-color: #1abc9c;
+}
+
+body .item-block .item-option-block:hover ::before {
+  display: block;
+}
+
+body .item-block .item-option-block:hover .item-option-hover {
+  display: inline-block;
 }
 
 footer span {
