@@ -312,12 +312,13 @@ body .item-block:hover .item-option-hover {
   left: 10px;
   right: 10px;
   padding-top: 79px;
-  opacity: 0.55;
   z-index: 1;
+  font-size: 30px;
+  font-family: "Pe icon 7 stroke";
+  color: #fff;
 }
 
 body .item-block:hover .item-option-hover .like {
-  position: static;
   display: inline-block;
   width: 50px;
   height: 50px;
@@ -358,13 +359,16 @@ body .item-block:hover .item-option-hover .time:hover {
 
 body .item-block:hover .item-option-hover .add-to-cart {
   display: inline-block;
-  content: "ADD TO CART";
-  color: #fff;
   text-align: center;
-  width: 168px;
+  width: 178px;
   height: 50px;
   margin-top: 7px;
   border: 1px solid #fff;
+}
+
+body .item-block:hover .item-option-hover .add-to-cart span {
+  font-size: 14px;
+  color: #fff;
 }
 
 footer span {
