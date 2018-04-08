@@ -130,25 +130,25 @@ body h2::after {
   background-color: #4ec6ab;
 }
 
-body .item-block {
+body .item-section .item-block {
   display: inline-block;
   max-width: 255px;
   margin-right: 26px;
 }
 
-body .item-block:last-child {
+body .item-section .item-block:last-child {
   margin-right: 0;
 }
 
-body .item-block:hover .name-item {
+body .item-section .item-block:hover .name-item {
   background-color: #1abc9c;
 }
 
-body .item-block:hover .price-item {
+body .item-section .item-block:hover .price-item {
   background-color: #7fd9c7;
 }
 
-body .item-block .item-option-block .img {
+body .item-section .item-block .img {
   float: left;
   display: inline-block;
   width: 100%;
@@ -156,7 +156,7 @@ body .item-block .item-option-block .img {
   object-fit: cover;
 }
 
-body .name-item {
+body .item-section .item-block .name-item {
   display: inline-block;
   float: left;
   padding: 14px;
@@ -166,7 +166,7 @@ body .name-item {
   color: #fff;
 }
 
-body .price-item {
+body .item-section .item-block .price-item {
   display: inline-block;
   float: right;
   width: 55px;
@@ -176,7 +176,7 @@ body .price-item {
   color: #fff;
 }
 
-footer {
+body footer {
   margin-top: 100px;
   background-color: #323232;
   text-align: center;
@@ -292,45 +292,47 @@ body .item-section {
   margin-top: 120px;
 }
 
-body .item-block .item-option-block {
+body .item-section .item-block {
   position: relative;
 }
 
-body .item-block .item-option-block ::before {
+body .item-section .item-block::before {
   display: none;
   position: absolute;
   content: "";
   background-color: black;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  width: 235px;
+  height: 261px;
   opacity: 0.5;
-  z-index: -1;
 }
 
-body .item-block .item-option-block .item-option-hover {
+body .item-section .item-block:hover::before {
+  display: block;
+}
+
+body .item-section .item-block .item-option-hover {
   position: absolute;
   display: none;
   width: 235px;
   height: 261px;
-  left: 10px;
-  top: 10px;
-  bottom: 10px;
-  right: 10px;
-  color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
   text-align: center;
-  z-index: 1;
+  color: #fff;
 }
 
-body .item-block .item-option-block .item-option-hover * {
-  margin-top: 50%;
-  transform: translateY(-100%);
+body .item-section .item-block:hover .item-option-hover {
+  display: inline-block;
 }
 
-body .item-block .item-option-block .item-option-hover .like,
-body .item-block .item-option-block .item-option-hover .random,
-body .item-block .item-option-block .item-option-hover .time {
+body .item-section .item-block .like,
+body .item-section .item-block .random,
+body .item-section .item-block .time {
   display: inline-block;
   line-height: 1.65;
   width: 50px;
@@ -341,18 +343,19 @@ body .item-block .item-option-block .item-option-hover .time {
   font-family: "Pe icon 7 stroke";
 }
 
-body .item-block .item-option-block .item-option-hover .like:hover,
-body .item-block .item-option-block .item-option-hover .random:hover,
-body .item-block .item-option-block .item-option-hover .time:hover {
+body .item-section .item-block .like:hover,
+body .item-section .item-block .random:hover,
+body .item-section .item-block .time:hover {
   border-color: #1abc9c;
   background-color: #1abc9c;
 }
 
-body .item-block .item-option-block .item-option-hover .time {
+body .item-section .item-block .time {
   margin-right: 0px;
+  margin-top: 0px;
 }
 
-body .item-block .item-option-block .item-option-hover .add-to-cart {
+body .item-section .item-block .add-to-cart {
   display: inline-block;
   text-align: center;
   width: 168px;
@@ -364,27 +367,19 @@ body .item-block .item-option-block .item-option-hover .add-to-cart {
   line-height: 1.65;
 }
 
-body .item-block .item-option-block .item-option-hover .add-to-cart span {
+body .item-section .item-block .add-to-cart span {
   color: #fff;
   font-family: "Open Sans Regular", sans-serif;
   font-size: 14px;
   vertical-align: super;
 }
 
-body .item-block .item-option-block .item-option-hover .add-to-cart:hover {
+body .item-section .item-block .add-to-cart:hover {
   border-color: #1abc9c;
   background-color: #1abc9c;
 }
 
-body .item-block:hover ::before {
-  display: block;
-}
-
-body .item-block:hover .item-option-hover {
-  display: inline-block;
-}
-
-footer span {
+body footer span {
   color: #46bfa9;
 }
 /*# sourceMappingURL=main.css.map */
