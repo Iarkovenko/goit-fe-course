@@ -108,7 +108,7 @@ body {
 
     .item-option-block {
       position: relative;
-      &::before {
+      ::before {
         display: none;
         position: absolute;
         content: "";
@@ -118,6 +118,7 @@ body {
         left: 0px;
         right: 0px;
         opacity: 0.5;
+        z-index: -1;
       }
       .img {
         @extend %img;
@@ -135,6 +136,7 @@ body {
         right: 10px;
         color: #fff;
         text-align: center;
+        z-index: 1;
         & * {
           margin-top: 50%;
           transform: translateY(-100%);          
@@ -149,7 +151,7 @@ body {
           height: 50px;
           border: 1px solid #fff;
           margin-right: 5px;
-          font-size: 60px;
+          font-size: 30px;
           font-family: "Pe icon 7 stroke";
           &:hover {
             border-color: $active-focus;

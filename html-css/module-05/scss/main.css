@@ -156,7 +156,7 @@ body .item-block .item-option-block .img {
   object-fit: cover;
 }
 
-body .item-block .name-item {
+body .name-item {
   display: inline-block;
   float: left;
   padding: 14px;
@@ -166,7 +166,7 @@ body .item-block .name-item {
   color: #fff;
 }
 
-body .item-block .price-item {
+body .price-item {
   display: inline-block;
   float: right;
   width: 55px;
@@ -300,8 +300,6 @@ body .item-block .item-option-block ::before {
   display: none;
   position: absolute;
   content: "";
-  width: 100%;
-  height: 100%;
   background-color: black;
   top: 0px;
   bottom: 0px;
@@ -316,13 +314,13 @@ body .item-block .item-option-block .item-option-hover {
   display: none;
   width: 235px;
   height: 261px;
-  z-index: 1;
   left: 10px;
   top: 10px;
   bottom: 10px;
   right: 10px;
   color: #fff;
   text-align: center;
+  z-index: 1;
 }
 
 body .item-block .item-option-block .item-option-hover * {
@@ -330,52 +328,28 @@ body .item-block .item-option-block .item-option-hover * {
   transform: translateY(-100%);
 }
 
-body .item-block .item-option-block .item-option-hover .like {
-  display: inline-block;
-  line-height: 1.65;
-  width: 50px;
-  height: 50px;
-  border: 1px solid #fff;
-  margin-right: 5px;
-  font-size: 30px;
-  font-family: "Pe icon 7 stroke";
-}
-
-body .item-block .item-option-block .item-option-hover .like:hover {
-  border-color: #1abc9c;
-  background-color: #1abc9c;
-}
-
-body .item-block .item-option-block .item-option-hover .random {
-  display: inline-block;
-  line-height: 1.65;
-  width: 50px;
-  height: 50px;
-  border: 1px solid #fff;
-  margin-right: 5px;
-  font-size: 30px;
-  font-family: "Pe icon 7 stroke";
-}
-
-body .item-block .item-option-block .item-option-hover .random:hover {
-  border-color: #1abc9c;
-  background-color: #1abc9c;
-}
-
+body .item-block .item-option-block .item-option-hover .like,
+body .item-block .item-option-block .item-option-hover .random,
 body .item-block .item-option-block .item-option-hover .time {
   display: inline-block;
   line-height: 1.65;
   width: 50px;
   height: 50px;
   border: 1px solid #fff;
-  margin-right: 0px;
+  margin-right: 5px;
   font-size: 30px;
   font-family: "Pe icon 7 stroke";
 }
 
+body .item-block .item-option-block .item-option-hover .like:hover,
+body .item-block .item-option-block .item-option-hover .random:hover,
 body .item-block .item-option-block .item-option-hover .time:hover {
   border-color: #1abc9c;
   background-color: #1abc9c;
+}
+
+body .item-block .item-option-block .item-option-hover .time {
+  margin-right: 0px;
 }
 
 body .item-block .item-option-block .item-option-hover .add-to-cart {
@@ -402,11 +376,11 @@ body .item-block .item-option-block .item-option-hover .add-to-cart:hover {
   background-color: #1abc9c;
 }
 
-body .item-block .item-option-block:hover ::before {
+body .item-block:hover ::before {
   display: block;
 }
 
-body .item-block .item-option-block:hover .item-option-hover {
+body .item-block:hover .item-option-hover {
   display: inline-block;
 }
 
