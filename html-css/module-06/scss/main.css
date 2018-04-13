@@ -71,6 +71,10 @@ button {
   width: 1200px;
 }
 
+.flex {
+  display: flex;
+}
+
 @font-face {
   font-family: "Roboto-Regular";
   src: url("../fonts/Roboto-Regular.ttf");
@@ -102,7 +106,7 @@ button {
 }
 
 .main-header {
-  margin-bottom: 128px;
+  padding-top: 28px;
 }
 
 .main-header .logo {
@@ -125,14 +129,8 @@ button {
   margin-right: 57px;
 }
 
-.main-header .main-nav:last-child {
+.main-header .main-nav a:last-child {
   margin-right: 0;
-}
-
-.whatwetodo h3, .meet-our-team mt85 h3 {
-  font-family: "KaushanScript-Regular", sans-serif;
-  font-size: 24px;
-  color: #333333;
 }
 
 .whatwetodo h2, .meet-our-team h2 {
@@ -142,6 +140,12 @@ button {
   text-transform: uppercase;
 }
 
+.whatwetodo h3, .meet-our-team h3 {
+  font-family: "KaushanScript-Regular", sans-serif;
+  font-size: 24px;
+  color: #333333;
+}
+
 .whatwetodo .our-services .item-services .about-services h4, .meet-our-team .our-team .card-member h4 {
   font-family: "Montserrat-Regular", sans-serif;
   font-size: 14px;
@@ -149,23 +153,32 @@ button {
   color: #333333;
 }
 
-.whatwetodo .our-services .item-services .about-services p, .meet-our-team p {
+.whatwetodo .our-services .item-services .about-services p, .meet-our-team > p {
   font-family: "Roboto-Regular", sans-serif;
   font-size: 15px;
   color: #999999;
 }
 
-/* HEADER START*/
-.main-header {
-  display: flex;
+.footer .btn-footer {
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 14px;
+  width: 150px;
+  height: 40px;
+  background-color: #95e1d3;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
 }
 
+/* HEADER START*/
 .main-header .main-nav {
   margin-left: auto;
+  align-self: flex-end;
 }
 
 .main-header .main-nav a {
   position: relative;
+  transition: color 0.2s linear;
 }
 
 .main-header .main-nav a:first-child::before {
@@ -181,25 +194,16 @@ button {
   color: #f38181;
 }
 
-.main-header .main-nav a:hover::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 3px;
-  background-color: #f38181;
-  top: 23px;
-}
-
 /* HEADER END*/
 /* AMAZING SERVICES START*/
 .whatwetodo {
+  padding-top: 128px;
   text-align: center;
 }
 
 .whatwetodo h2 {
   position: relative;
   margin-top: 23px;
-  margin-bottom: 110px;
 }
 
 .whatwetodo h2::before {
@@ -213,10 +217,9 @@ button {
 }
 
 .whatwetodo .our-services {
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-bottom: 96px;
+  padding: 112px 0 96px;
 }
 
 .whatwetodo .our-services .item-services {
@@ -228,6 +231,10 @@ button {
 
 .whatwetodo .our-services .item-services:nth-last-child(-n + 3) {
   padding-bottom: 0;
+}
+
+.whatwetodo .our-services .item-services:nth-last-child(3n + 1) {
+  padding-right: 0;
 }
 
 .whatwetodo .our-services .item-services img {
@@ -246,12 +253,12 @@ button {
 /*OUR TEAM START*/
 .meet-our-team {
   text-align: center;
+  padding-bottom: 94px;
 }
 
 .meet-our-team h2 {
   position: relative;
   margin-top: 23px;
-  margin-bottom: 96px;
 }
 
 .meet-our-team h2::before {
@@ -264,19 +271,19 @@ button {
   right: 560px;
 }
 
-.meet-our-team p {
+.meet-our-team > p {
   width: 954px;
-  margin: 0 auto 96px;
+  margin: 0 auto;
+  padding-top: 92px;
 }
 
 .meet-our-team .our-team {
-  display: flex;
   justify-content: space-between;
+  padding-top: 96px;
 }
 
 .meet-our-team .our-team .card-member {
   flex-basis: 380px;
-  display: flex;
   flex-direction: column;
 }
 
@@ -309,4 +316,42 @@ button {
 }
 
 /*OUR TEAM END*/
+/*FOOTER START*/
+.footer {
+  border-top-color: #e7e7e7;
+}
+
+.footer .made-by {
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 14px;
+  color: #333333;
+}
+
+.footer .made-by span {
+  color: #f38181;
+}
+
+.footer input {
+  margin-left: auto;
+  border: 1px solid #e7e7e7;
+  width: 229px;
+  padding-left: 12px;
+}
+
+.footer input::placeholder {
+  font-family: "Roboto-LightItalic", sans-serif;
+  font-size: 14px;
+  color: #cccccc;
+}
+
+.footer input:focus {
+  border: 1px solid #95e1d3;
+}
+
+/*FOOTER END*/
+.box {
+  width: 380px;
+  height: 470px;
+  background: linear-gradient(to top, #fce38a, #f38181);
+}
 /*# sourceMappingURL=main.css.map */

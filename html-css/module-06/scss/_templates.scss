@@ -1,5 +1,5 @@
 %main-header {
-  margin-bottom: 128px;
+  padding-top: 28px;
 }
 
 %logo {
@@ -17,24 +17,25 @@
   a {
     color: $main-header-color;
     margin-right: 57px;
+    &:last-child {
+      margin-right: 0;
+    }
   }
-  &:last-child {
-    margin-right: 0;
-  }
+  
 }
-
-%h3 {
-  font-family: "KaushanScript-Regular", sans-serif;
-  font-size: 24px;
-  color: $h-color;
-}
-
 %h2 {
   font-family: "Montserrat-Bold", sans-serif;
   font-size: 30px;
   color: $h-color;
   text-transform: uppercase;
 }
+%h3 {
+  font-family: "KaushanScript-Regular", sans-serif;
+  font-size: 24px;
+  color: $h-color;
+}
+
+
 
 %h4 {
   font-family: "Montserrat-Regular", sans-serif;
@@ -49,3 +50,13 @@
   color: $figcaption;
 }
 
+%btn-footer {
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 14px;
+  width: 150px;
+  height: 40px;
+  background-color: $btn-footer;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+}

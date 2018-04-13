@@ -18,6 +18,7 @@ header {
       color: $logo-first-letter;
     }
   }
+
   nav {
     float: right;
     a {
@@ -33,6 +34,7 @@ header {
       color: $active-link;
     }
   }
+  
 }
 
 .main-section {
@@ -161,10 +163,12 @@ header {
         background-color: $active-focus;
       }
     }
+
     .time {
       margin-right: 0px;
       margin-top: 0px;
     }
+
     .add-to-cart {
       display: inline-block;
       text-align: center;
@@ -186,9 +190,11 @@ header {
         background-color: $active-focus;
       }      
     }
+
     .name-item {
       @extend %name-item;
     }
+
     .price-item {
       @extend %price-item;
     }

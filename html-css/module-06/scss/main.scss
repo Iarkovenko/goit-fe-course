@@ -7,15 +7,16 @@
 /* HEADER START*/
 .main-header {
   @extend %main-header;
-  display: flex;
   .logo {
     @extend %logo;
   }
   .main-nav {
     @extend %main-nav;
     margin-left: auto;
+    align-self: flex-end;
     a {
       position: relative;
+      transition: color 0.2s linear;
       &:first-child::before {
         position: absolute;
         content: "";
@@ -27,14 +28,6 @@
       &:hover {
         color: $active-header-link;
       }
-      &:hover::before {
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 3px;
-        background-color: $underline;
-        top: 23px;
-      }
     }
   }
 }
@@ -42,15 +35,12 @@
 
 /* AMAZING SERVICES START*/
 .whatwetodo {
+  padding-top: 128px;
   text-align: center;
-  h3 {
-    @extend %h3;
-  }
   h2 {
     @extend %h2;
     position: relative;
     margin-top: 23px;
-    margin-bottom: 110px;
     &::before {
       position: absolute;
       content: "";
@@ -61,16 +51,21 @@
       right: 560px;
     }
   }
+  h3 {
+    @extend %h3;
+  }
   .our-services {
-    display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-bottom: 96px;
+    padding: 112px 0 96px;
     .item-services {
       flex-basis: 370px;
       padding: 0 20px 50px 0;
       &:nth-last-child(-n + 3) {
         padding-bottom: 0;
+      }
+      &:nth-last-child(3n + 1) {
+        padding-right: 0;
       }
       display: flex;
       text-align: left;
@@ -95,7 +90,7 @@
 /*OUR TEAM START*/
 .meet-our-team {
   text-align: center;
-  mt85
+  padding-bottom: 94px;
   h3 {
     @extend %h3;
   }
@@ -103,7 +98,6 @@
     @extend %h2;
     position: relative;
     margin-top: 23px;
-    margin-bottom: 96px;
     &::before {
       position: absolute;
       content: "";
@@ -114,17 +108,17 @@
       right: 560px;
     }
   }
-  p {
+  > p {
     @extend %p-style;
     width: 954px;
-    margin: 0 auto 96px;
+    margin: 0 auto;
+    padding-top: 92px;
   }
   .our-team {
-    display: flex;
     justify-content: space-between;
+    padding-top: 96px;
     .card-member {
       flex-basis: 380px;
-      display: flex;
       flex-direction: column;
       .phototeam {
         width: 100%;
@@ -138,7 +132,6 @@
           background-color: $img-before;
           width: 400px;
           height: 400px;
-
         }
       }
       h4 {
@@ -146,13 +139,51 @@
         margin-bottom: 15px;
         width: 100%;
       }
-      .speciality-direction {        
+      .speciality-direction {
         font-family: "Roboto-LightItalic", sans-serif;
         font-size: 15px;
-        color: $figcaption;        
+        color: $figcaption;
         width: 100%;
       }
     }
   }
 }
 /*OUR TEAM END*/
+
+/*FOOTER START*/
+.footer {
+  border-top-color: $border-foot;
+  .made-by {
+    font-family: "Montserrat-Regular", sans-serif;
+    font-size: 14px;
+    color: $footer;
+    span {
+      color: $author;
+    }
+  }
+  input {
+    margin-left: auto;
+    border: 1px solid $border-foot;
+    width: 229px;
+    padding-left: 12px;
+    &::placeholder {
+      font-family: "Roboto-LightItalic", sans-serif;
+      font-size: 14px;
+      color: #cccccc;
+    }
+    &:focus {
+      border: 1px solid #95e1d3;
+    }
+  }
+  .btn-footer {
+    @extend %btn-footer;
+  }
+}
+
+/*FOOTER END*/
+
+.box {
+  width: 380px;
+  height: 470px;
+  background: linear-gradient(to top, #fce38a, #f38181 );
+}

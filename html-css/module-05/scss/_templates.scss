@@ -2,16 +2,19 @@
   width: 1110px;
   margin: 0 auto;
 }
+
 %h1 {
   font-family: "Roboto Black", sans-serif;
   font-size: 60px;
   color: #fff;
 }
+
 %tips {
   font-family: "Roboto Light", sans-serif;
   font-size: 24px;
   color: #fff;
 }
+
 %h2 {
   @extend %margin-center;
   font-family: "Roboto Black";
@@ -43,6 +46,7 @@
     background-color: $price-item-active;
   }
 }
+
 %img {
   float: left;
   display: inline-block;
@@ -50,6 +54,7 @@
   height: 281px;
   object-fit: cover;
 }
+
 %name-item {
   display: inline-block;
   float: left;
@@ -59,6 +64,7 @@
   font-family: "Roboto Black", sans-serif;
   color: #fff;
 }
+
 %price-item {
   display: inline-block;
   float: right;
@@ -68,6 +74,7 @@
   font-family: "Roboto Black", sans-serif;
   color: #fff;
 }
+
 %footer {
   background-color: $footer;
   text-align: center;
