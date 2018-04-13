@@ -24,14 +24,28 @@
 }
 
 %h3 {
-    font-family: "KaushanScript-Regular", sans-serif;
-    font-size: 24px;
-    color: $h-color;
+  font-family: "KaushanScript-Regular", sans-serif;
+  font-size: 24px;
+  color: $h-color;
 }
 
 %h2 {
-    font-family: "Montserrat-Bold", sans-serif;
-    font-size: 30px;
-    color: $h-color;
-    text-transform: uppercase;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 30px;
+  color: $h-color;
+  text-transform: uppercase;
 }
+
+%h4 {
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: $h-color;
+}
+
+%p-style {
+  font-family: "Roboto-Regular", sans-serif;
+  font-size: 15px;
+  color: $figcaption;
+}
+

@@ -3,199 +3,201 @@
 @import "vars";
 @import "templates";
 
-body {
-  margin: 0 auto;
-
-  header {
-    height: auto;
-    overflow: hidden;
-    margin-top: 38px;
-    @extend %margin-center;
-    .logo {
-      font-family: "Roboto Light", sans-serif;
-      font-size: 30px;
-      color: $logo;
-      float: left;
-      &::first-letter {
-        font-family: "Roboto Black", sans-serif;
-        color: $logo-first-letter;
-      }
+header {
+  height: auto;
+  overflow: hidden;
+  padding: 38px 0 35px;
+  @extend %margin-center;
+  .logo {
+    font-family: "Roboto Light", sans-serif;
+    font-size: 30px;
+    color: $logo;
+    float: left;
+    &::first-letter {
+      font-family: "Roboto Black", sans-serif;
+      color: $logo-first-letter;
     }
-    nav {
-      float: right;
-      a {
-        font-family: "Open Sans Bold", sans-serif;
-        font-size: 14px;
-        color: $nav-link;
-        margin-left: 25px;
-        &:hover {
-          color: $active-link;
-        }
-      }
-      .active {
+  }
+  nav {
+    float: right;
+    a {
+      font-family: "Open Sans Bold", sans-serif;
+      font-size: 14px;
+      color: $nav-link;
+      margin-left: 25px;
+      &:hover {
         color: $active-link;
       }
     }
+    .active {
+      color: $active-link;
+    }
   }
+}
 
-  .main-section {
-    min-height: 599px;
-    margin-top: 34px;
-    margin-bottom: 101px;
-    text-align: center;
+.main-section {
+  min-height: 599px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background-color: #000000;
+    opacity: 0.52;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .main-block {
+    display: inline-block;
+    margin-top: 218px;
     position: relative;
-    z-index: 1;
-    &::before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      background-color: #000000;
-      opacity: 0.52;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+    & * {
+      text-align: left;
     }
-    .main-block {
+    .right-button {
       display: inline-block;
-      margin-top: 218px;
-      position: relative;
-      & * {
-        text-align: left;
-      }
-      .right-button {
-        display: inline-block;
-        font-family: "Pe icon 7 stroke", sans-serif;
-        color: #fff;
-        text-align: center;
-        font-size: 100px;
-        position: absolute;
-        width: 105px;
-        height: 105px;
-        background: url("../img/right-btn.png"), $button-left-right;
-        top: 15px;
-        right: -180px;
-      }
+      font-family: "Pe icon 7 stroke", sans-serif;
+      color: #fff;
+      text-align: center;
+      font-size: 100px;
+      position: absolute;
+      width: 105px;
+      height: 105px;
+      background: url("../img/right-btn.png"), $button-left-right;
+      top: 15px;
+      right: -180px;
+      cursor: pointer;
+    }
 
-      .left-button {
-        display: inline-block;
-        font-family: "Pe icon 7 stroke", sans-serif;
-        position: absolute;
-        width: 105px;
-        height: 105px;
-        background: url("../img/left-btn.png"), $button-left-right;
-        top: 15px;
-        left: -180px;
-        opacity: 0.52;
-      }
-    }
-    h1 {
-      @extend %h1;
-      margin-bottom: 18px;
-    }
-    .tips {
-      @extend %tips;
+    .left-button {
+      display: inline-block;
+      font-family: "Pe icon 7 stroke", sans-serif;
+      position: absolute;
+      width: 105px;
+      height: 105px;
+      background: url("../img/left-btn.png"), $button-left-right;
+      top: 15px;
+      left: -180px;
+      opacity: 0.52;
+      cursor: pointer;
     }
   }
+  h1 {
+    @extend %h1;
+    margin-bottom: 18px;
+  }
+  .tips {
+    @extend %tips;
+  }
+}
+
+.item-section {
+  text-align: center;
+  padding: 120px 0 100px;
+  background-color: $bg-new-coll;
   h2 {
     @extend %h2;
+    margin-bottom: 121px;
   }
-  .item-section {
-    @extend %margin-center;
-    margin-top: 120px;
-    .item-block {
-      @extend %item-block;
-      position: relative;
-      .img {
-        @extend %img;
-      }
-      &::before {
-        display: none;
-        position: absolute;
-        content: "";
-        background-color: rgb(0, 0, 0);
-        top: 10px;
-        bottom: 10px;
-        left: 10px;
-        right: 10px;
-        width: 235px;
-        height: 261px;
-        opacity: 0.5;
-      }
+  .item-block {
+    @extend %item-block;
+    position: relative;
+    &:last-child {
+      padding-right: 0;
+    }
+    .img {
+      @extend %img;
+    }
+    &::before {
+      display: none;
+      position: absolute;
+      content: "";
+      background-color: rgb(0, 0, 0);
+      top: 10px;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+      width: 235px;
+      height: 261px;
+      opacity: 0.5;
+    }
 
-      &:hover::before {
-        display: block;
-      }
+    &:hover::before {
+      display: block;
+    }
 
-      .item-option-hover {
-        position: absolute;
-        display: none;
-        width: 235px;
-        height: 261px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -30%);
-        text-align: center;
+    .item-option-hover {
+      position: absolute;
+      display: none;
+      width: 235px;
+      height: 261px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -30%);
+      text-align: center;
+      color: #fff;
+    }
+    &:hover .item-option-hover {
+      display: inline-block;
+    }
+
+    .like,
+    .random,
+    .time {
+      display: inline-block;
+      line-height: 1.65;
+      width: 50px;
+      height: 50px;
+      border: 1px solid #fff;
+      margin-right: 5px;
+      font-size: 30px;
+      font-family: "Pe icon 7 stroke";
+      &:hover {
+        border-color: $active-focus;
+        background-color: $active-focus;
+      }
+    }
+    .time {
+      margin-right: 0px;
+      margin-top: 0px;
+    }
+    .add-to-cart {
+      display: inline-block;
+      text-align: center;
+      width: 168px;
+      height: 50px;
+      margin-top: 7px;
+      border: 1px solid #fff;
+      font-size: 30px;
+      font-family: "Pe icon 7 stroke";
+      line-height: 1.65;
+      span {
         color: #fff;
+        font-family: "Open Sans Regular", sans-serif;
+        font-size: 14px;
+        vertical-align: super;
       }
-      &:hover .item-option-hover {
-        display: inline-block;
-      }
-
-      .like,
-      .random,
-      .time {
-        display: inline-block;
-        line-height: 1.65;
-        width: 50px;
-        height: 50px;
-        border: 1px solid #fff;
-        margin-right: 5px;
-        font-size: 30px;
-        font-family: "Pe icon 7 stroke";
-        &:hover {
-          border-color: $active-focus;
-          background-color: $active-focus;
-        }
-      }
-      .time {
-        margin-right: 0px;
-        margin-top: 0px;
-      }
-      .add-to-cart {
-        display: inline-block;
-        text-align: center;
-        width: 168px;
-        height: 50px;
-        margin-top: 7px;
-        border: 1px solid #fff;
-        font-size: 30px;
-        font-family: "Pe icon 7 stroke";
-        line-height: 1.65;
-        span {
-          color: #fff;
-          font-family: "Open Sans Regular", sans-serif;
-          font-size: 14px;
-          vertical-align: super;
-        }
-        &:hover {
-          border-color: $active-focus;
-          background-color: $active-focus;
-        }
-      }
-      .name-item {
-        @extend %name-item;
-      }
-      .price-item {
-        @extend %price-item;
-      }
+      &:hover {
+        border-color: $active-focus;
+        background-color: $active-focus;
+      }      
+    }
+    .name-item {
+      @extend %name-item;
+    }
+    .price-item {
+      @extend %price-item;
     }
   }
+}
 
-  footer {
-    @extend %footer;
-    & span {
-      color: $footer-span;
-    }
+footer {
+  @extend %footer;
+  & span {
+    color: $footer-span;
   }
 }

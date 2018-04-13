@@ -129,23 +129,39 @@ button {
   margin-right: 0;
 }
 
-.whatwetodo h3 {
+.whatwetodo h3, .meet-our-team mt85 h3 {
   font-family: "KaushanScript-Regular", sans-serif;
   font-size: 24px;
   color: #333333;
 }
 
-.whatwetodo h2 {
+.whatwetodo h2, .meet-our-team h2 {
   font-family: "Montserrat-Bold", sans-serif;
   font-size: 30px;
   color: #333333;
   text-transform: uppercase;
 }
 
+.whatwetodo .our-services .item-services .about-services h4, .meet-our-team .our-team .card-member h4 {
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.whatwetodo .our-services .item-services .about-services p, .meet-our-team p {
+  font-family: "Roboto-Regular", sans-serif;
+  font-size: 15px;
+  color: #999999;
+}
+
 /* HEADER START*/
 .main-header {
   display: flex;
-  justify-content: space-between;
+}
+
+.main-header .main-nav {
+  margin-left: auto;
 }
 
 .main-header .main-nav a {
@@ -198,7 +214,99 @@ button {
 
 .whatwetodo .our-services {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 96px;
+}
+
+.whatwetodo .our-services .item-services {
+  flex-basis: 370px;
+  padding: 0 20px 50px 0;
+  display: flex;
+  text-align: left;
+}
+
+.whatwetodo .our-services .item-services:nth-last-child(-n + 3) {
+  padding-bottom: 0;
+}
+
+.whatwetodo .our-services .item-services img {
+  align-self: flex-start;
+}
+
+.whatwetodo .our-services .item-services .about-services {
+  padding-left: 28px;
+}
+
+.whatwetodo .our-services .item-services .about-services h4 {
+  margin-bottom: 20px;
 }
 
 /* AMAZING SERVICES END*/
+/*OUR TEAM START*/
+.meet-our-team {
+  text-align: center;
+}
+
+.meet-our-team h2 {
+  position: relative;
+  margin-top: 23px;
+  margin-bottom: 96px;
+}
+
+.meet-our-team h2::before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: #f38181;
+  top: 65px;
+  right: 560px;
+}
+
+.meet-our-team p {
+  width: 954px;
+  margin: 0 auto 96px;
+}
+
+.meet-our-team .our-team {
+  display: flex;
+  justify-content: space-between;
+}
+
+.meet-our-team .our-team .card-member {
+  flex-basis: 380px;
+  display: flex;
+  flex-direction: column;
+}
+
+.meet-our-team .our-team .card-member .phototeam {
+  width: 100%;
+  height: 470px;
+  object-fit: cover;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.meet-our-team .our-team .card-member .phototeam::before {
+  position: absolute;
+  content: "";
+  background-color: #95e1d3;
+  width: 400px;
+  height: 400px;
+}
+
+.meet-our-team .our-team .card-member h4 {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.meet-our-team .our-team .card-member .speciality-direction {
+  font-family: "Roboto-LightItalic", sans-serif;
+  font-size: 15px;
+  color: #999999;
+  width: 100%;
+}
+
+/*OUR TEAM END*/
 /*# sourceMappingURL=main.css.map */

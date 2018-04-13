@@ -8,12 +8,12 @@
 .main-header {
   @extend %main-header;
   display: flex;
-  justify-content: space-between;
   .logo {
     @extend %logo;
   }
   .main-nav {
     @extend %main-nav;
+    margin-left: auto;
     a {
       position: relative;
       &:first-child::before {
@@ -63,6 +63,96 @@
   }
   .our-services {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 96px;
+    .item-services {
+      flex-basis: 370px;
+      padding: 0 20px 50px 0;
+      &:nth-last-child(-n + 3) {
+        padding-bottom: 0;
+      }
+      display: flex;
+      text-align: left;
+      img {
+        align-self: flex-start;
+      }
+      .about-services {
+        padding-left: 28px;
+        h4 {
+          @extend %h4;
+          margin-bottom: 20px;
+        }
+        p {
+          @extend %p-style;
+        }
+      }
+    }
   }
 }
 /* AMAZING SERVICES END*/
+
+/*OUR TEAM START*/
+.meet-our-team {
+  text-align: center;
+  mt85
+  h3 {
+    @extend %h3;
+  }
+  h2 {
+    @extend %h2;
+    position: relative;
+    margin-top: 23px;
+    margin-bottom: 96px;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 60px;
+      height: 3px;
+      background-color: $underline;
+      top: 65px;
+      right: 560px;
+    }
+  }
+  p {
+    @extend %p-style;
+    width: 954px;
+    margin: 0 auto 96px;
+  }
+  .our-team {
+    display: flex;
+    justify-content: space-between;
+    .card-member {
+      flex-basis: 380px;
+      display: flex;
+      flex-direction: column;
+      .phototeam {
+        width: 100%;
+        height: 470px;
+        object-fit: cover;
+        margin-bottom: 30px;
+        position: relative;
+        &::before {
+          position: absolute;
+          content: "";
+          background-color: $img-before;
+          width: 400px;
+          height: 400px;
+
+        }
+      }
+      h4 {
+        @extend %h4;
+        margin-bottom: 15px;
+        width: 100%;
+      }
+      .speciality-direction {        
+        font-family: "Roboto-LightItalic", sans-serif;
+        font-size: 15px;
+        color: $figcaption;        
+        width: 100%;
+      }
+    }
+  }
+}
+/*OUR TEAM END*/

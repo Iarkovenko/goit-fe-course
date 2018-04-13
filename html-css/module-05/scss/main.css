@@ -95,24 +95,24 @@ button {
   src: url("../fonts/Pe-icon-7-stroke.ttf") format("truetype");
 }
 
-body h2, body header, body .item-section {
+.item-section h2, header {
   width: 1110px;
   margin: 0 auto;
 }
 
-body .main-section h1 {
+.main-section h1 {
   font-family: "Roboto Black", sans-serif;
   font-size: 60px;
   color: #fff;
 }
 
-body .main-section .tips {
+.main-section .tips {
   font-family: "Roboto Light", sans-serif;
   font-size: 24px;
   color: #fff;
 }
 
-body h2 {
+.item-section h2 {
   font-family: "Roboto Black";
   font-size: 48px;
   color: #515151;
@@ -120,7 +120,7 @@ body h2 {
   position: relative;
 }
 
-body h2::after {
+.item-section h2::after {
   content: "";
   position: absolute;
   top: 67px;
@@ -130,25 +130,25 @@ body h2::after {
   background-color: #4ec6ab;
 }
 
-body .item-section .item-block {
+.item-section .item-block {
   display: inline-block;
   max-width: 255px;
-  margin-right: 26px;
+  margin-right: 30px;
 }
 
-body .item-section .item-block:last-child {
+.item-section .item-block:last-child {
   margin-right: 0;
 }
 
-body .item-section .item-block:hover .name-item {
+.item-section .item-block:hover .name-item {
   background-color: #1abc9c;
 }
 
-body .item-section .item-block:hover .price-item {
+.item-section .item-block:hover .price-item {
   background-color: #7fd9c7;
 }
 
-body .item-section .item-block .img {
+.item-section .item-block .img {
   float: left;
   display: inline-block;
   width: 100%;
@@ -156,7 +156,7 @@ body .item-section .item-block .img {
   object-fit: cover;
 }
 
-body .item-section .item-block .name-item {
+.item-section .item-block .name-item {
   display: inline-block;
   float: left;
   padding: 14px;
@@ -166,7 +166,7 @@ body .item-section .item-block .name-item {
   color: #fff;
 }
 
-body .item-section .item-block .price-item {
+.item-section .item-block .price-item {
   display: inline-block;
   float: right;
   width: 55px;
@@ -176,8 +176,7 @@ body .item-section .item-block .price-item {
   color: #fff;
 }
 
-body footer {
-  margin-top: 100px;
+footer {
   background-color: #323232;
   text-align: center;
   color: #fefefe;
@@ -186,57 +185,51 @@ body footer {
   font-size: 16px;
 }
 
-body {
-  margin: 0 auto;
-}
-
-body header {
+header {
   height: auto;
   overflow: hidden;
-  margin-top: 38px;
+  padding: 38px 0 35px;
 }
 
-body header .logo {
+header .logo {
   font-family: "Roboto Light", sans-serif;
   font-size: 30px;
   color: #555252;
   float: left;
 }
 
-body header .logo::first-letter {
+header .logo::first-letter {
   font-family: "Roboto Black", sans-serif;
   color: #1abc9c;
 }
 
-body header nav {
+header nav {
   float: right;
 }
 
-body header nav a {
+header nav a {
   font-family: "Open Sans Bold", sans-serif;
   font-size: 14px;
   color: #0f0101;
   margin-left: 25px;
 }
 
-body header nav a:hover {
+header nav a:hover {
   color: #1abc9c;
 }
 
-body header nav .active {
+header nav .active {
   color: #1abc9c;
 }
 
-body .main-section {
+.main-section {
   min-height: 599px;
-  margin-top: 34px;
-  margin-bottom: 101px;
   text-align: center;
   position: relative;
   z-index: 1;
 }
 
-body .main-section::before {
+.main-section::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -248,17 +241,17 @@ body .main-section::before {
   left: 0;
 }
 
-body .main-section .main-block {
+.main-section .main-block {
   display: inline-block;
   margin-top: 218px;
   position: relative;
 }
 
-body .main-section .main-block * {
+.main-section .main-block * {
   text-align: left;
 }
 
-body .main-section .main-block .right-button {
+.main-section .main-block .right-button {
   display: inline-block;
   font-family: "Pe icon 7 stroke", sans-serif;
   color: #fff;
@@ -270,9 +263,10 @@ body .main-section .main-block .right-button {
   background: url("../img/right-btn.png"), #1abc9c;
   top: 15px;
   right: -180px;
+  cursor: pointer;
 }
 
-body .main-section .main-block .left-button {
+.main-section .main-block .left-button {
   display: inline-block;
   font-family: "Pe icon 7 stroke", sans-serif;
   position: absolute;
@@ -282,21 +276,32 @@ body .main-section .main-block .left-button {
   top: 15px;
   left: -180px;
   opacity: 0.52;
+  cursor: pointer;
 }
 
-body .main-section h1 {
+.main-section h1 {
   margin-bottom: 18px;
 }
 
-body .item-section {
-  margin-top: 120px;
+.item-section {
+  text-align: center;
+  padding: 120px 0 100px;
+  background-color: #e9f0fd;
 }
 
-body .item-section .item-block {
+.item-section h2 {
+  margin-bottom: 121px;
+}
+
+.item-section .item-block {
   position: relative;
 }
 
-body .item-section .item-block::before {
+.item-section .item-block:last-child {
+  padding-right: 0;
+}
+
+.item-section .item-block::before {
   display: none;
   position: absolute;
   content: "";
@@ -310,11 +315,11 @@ body .item-section .item-block::before {
   opacity: 0.5;
 }
 
-body .item-section .item-block:hover::before {
+.item-section .item-block:hover::before {
   display: block;
 }
 
-body .item-section .item-block .item-option-hover {
+.item-section .item-block .item-option-hover {
   position: absolute;
   display: none;
   width: 235px;
@@ -326,13 +331,13 @@ body .item-section .item-block .item-option-hover {
   color: #fff;
 }
 
-body .item-section .item-block:hover .item-option-hover {
+.item-section .item-block:hover .item-option-hover {
   display: inline-block;
 }
 
-body .item-section .item-block .like,
-body .item-section .item-block .random,
-body .item-section .item-block .time {
+.item-section .item-block .like,
+.item-section .item-block .random,
+.item-section .item-block .time {
   display: inline-block;
   line-height: 1.65;
   width: 50px;
@@ -343,19 +348,19 @@ body .item-section .item-block .time {
   font-family: "Pe icon 7 stroke";
 }
 
-body .item-section .item-block .like:hover,
-body .item-section .item-block .random:hover,
-body .item-section .item-block .time:hover {
+.item-section .item-block .like:hover,
+.item-section .item-block .random:hover,
+.item-section .item-block .time:hover {
   border-color: #1abc9c;
   background-color: #1abc9c;
 }
 
-body .item-section .item-block .time {
+.item-section .item-block .time {
   margin-right: 0px;
   margin-top: 0px;
 }
 
-body .item-section .item-block .add-to-cart {
+.item-section .item-block .add-to-cart {
   display: inline-block;
   text-align: center;
   width: 168px;
@@ -367,19 +372,19 @@ body .item-section .item-block .add-to-cart {
   line-height: 1.65;
 }
 
-body .item-section .item-block .add-to-cart span {
+.item-section .item-block .add-to-cart span {
   color: #fff;
   font-family: "Open Sans Regular", sans-serif;
   font-size: 14px;
   vertical-align: super;
 }
 
-body .item-section .item-block .add-to-cart:hover {
+.item-section .item-block .add-to-cart:hover {
   border-color: #1abc9c;
   background-color: #1abc9c;
 }
 
-body footer span {
+footer span {
   color: #46bfa9;
 }
 /*# sourceMappingURL=main.css.map */

@@ -32,7 +32,7 @@
 %item-block {
   display: inline-block;
   max-width: 255px;
-  margin-right: 26px;
+  margin-right: 30px;
   &:last-child {
     margin-right: 0;
   }
@@ -69,7 +69,6 @@
   color: #fff;
 }
 %footer {
-  margin-top: 100px;
   background-color: $footer;
   text-align: center;
   color: $footer-text;
