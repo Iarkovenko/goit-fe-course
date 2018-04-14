@@ -304,7 +304,7 @@ button {
 }
 
 .meet-our-team .our-team .card-member .photo-block::before {
-  display: none;
+  visibility: hidden;
   position: absolute;
   content: "";
   background: linear-gradient(to top, #fce38a, #f38181);
@@ -313,6 +313,7 @@ button {
   opacity: 0.9;
   z-index: 1;
   transition: transform 0.2s linear;
+  transition: visibility 0.2s linear;
 }
 
 .meet-our-team .our-team .card-member .photo-block .phototeam {
@@ -324,10 +325,11 @@ button {
 }
 
 .meet-our-team .our-team .card-member .photo-block .social-links {
-  display: none;
+  visibility: hidden;
   position: absolute;
   z-index: 3;
   transform: translate(-10px, -10px);
+  transition: visibility 0.2s linear;
 }
 
 .meet-our-team .our-team .card-member .photo-block .social-links > a {
@@ -366,7 +368,7 @@ button {
 
 .meet-our-team .our-team .card-member:hover .photo-block::before {
   transform: translate(-10px, -10px);
-  display: block;
+  visibility: visible;
 }
 
 .meet-our-team .our-team .card-member:hover .phototeam {
@@ -374,7 +376,7 @@ button {
 }
 
 .meet-our-team .our-team .card-member:hover .social-links {
-  display: flex;
+  visibility: visible;
 }
 
 /*OUR TEAM END*/
