@@ -120,22 +120,67 @@
     .card-member {
       flex-basis: 380px;
       flex-direction: column;
-      .phototeam {
-        width: 100%;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        background-color: $img-before;
+        width: 380px;
         height: 470px;
-        object-fit: cover;
-        margin-bottom: 30px;
+        z-index: -1;
+      }
+
+      .photo-block {
         position: relative;
-        &::before {
-          position: absolute;
+        justify-content: center;
+        align-items: center;        
+        &::before { 
+          display: none;
+          position: absolute;           
           content: "";
-          background-color: $img-before;
-          width: 400px;
-          height: 400px;
+          background: linear-gradient(to top, #fce38a, #f38181);
+          width: 380px;
+          height: 470px;            
+          opacity: 0.9;
+          z-index: 1;
+          transition: transform 0.2s linear;
+        }
+        .phototeam {
+          width: 100%;
+          height: 470px;
+          object-fit: cover;
+          position: relative;
+          transition: transform 0.2s linear;
+        }
+        .social-links {
+          display: none;
+          position: absolute;
+          z-index: 3;
+          transform: translate(-10px, -10px);
+          > a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            width: 60px;
+            height: 60px;
+            background-color: #fce38a;
+            margin-right: 1px;
+            transition: background-color 0.2s linear;
+            &:last-child {
+              margin-right: 0;
+            }
+            &:hover {
+              background-color: $button;
+              opacity: 1;
+            }
+          }
         }
       }
+
       h4 {
         @extend %h4;
+        margin-top: 30px;
         margin-bottom: 15px;
         width: 100%;
       }
@@ -144,6 +189,17 @@
         font-size: 15px;
         color: $figcaption;
         width: 100%;
+      }
+      &:hover .photo-block::before {
+        transform: translate(-10px, -10px);
+        display: block;
+      }
+      &:hover .phototeam {
+        transform: translate(-10px, -10px);
+      }
+      
+      &:hover .social-links {
+        display: flex;
       }
     }
   }
@@ -157,33 +213,54 @@
     font-family: "Montserrat-Regular", sans-serif;
     font-size: 14px;
     color: $footer;
+    align-self: center;
     span {
       color: $author;
     }
   }
-  input {
+  > form {
+    display: flex;
     margin-left: auto;
-    border: 1px solid $border-foot;
-    width: 229px;
-    padding-left: 12px;
-    &::placeholder {
-      font-family: "Roboto-LightItalic", sans-serif;
-      font-size: 14px;
-      color: #cccccc;
+    input {
+      width: 229px;
+      border: 1px solid $border-foot;
+      padding-left: 12px;
+      &::placeholder {
+        font-family: "Roboto-LightItalic", sans-serif;
+        font-size: 14px;
+        color: #cccccc;
+      }
+      &:focus {
+        border: 1px solid #95e1d3;
+      }
     }
-    &:focus {
-      border: 1px solid #95e1d3;
+    .btn-footer {
+      @extend %btn-footer;
     }
-  }
-  .btn-footer {
-    @extend %btn-footer;
   }
 }
-
 /*FOOTER END*/
 
-.box {
-  width: 380px;
-  height: 470px;
-  background: linear-gradient(to top, #fce38a, #f38181 );
+/* 
+.social-links {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  > button {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    background-color: #fce38a;
+    margin-right: 1px;
+    transition: background-color 0.2s linear;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      background-color: $button;
+      opacity: 1;
+    }
+  }
 }
+*/

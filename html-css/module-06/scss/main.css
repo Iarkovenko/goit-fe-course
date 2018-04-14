@@ -159,7 +159,7 @@ button {
   color: #999999;
 }
 
-.footer .btn-footer {
+.footer > form .btn-footer {
   font-family: "Montserrat-Bold", sans-serif;
   font-size: 14px;
   width: 150px;
@@ -285,25 +285,74 @@ button {
 .meet-our-team .our-team .card-member {
   flex-basis: 380px;
   flex-direction: column;
-}
-
-.meet-our-team .our-team .card-member .phototeam {
-  width: 100%;
-  height: 470px;
-  object-fit: cover;
-  margin-bottom: 30px;
   position: relative;
 }
 
-.meet-our-team .our-team .card-member .phototeam::before {
+.meet-our-team .our-team .card-member::before {
   position: absolute;
   content: "";
   background-color: #95e1d3;
-  width: 400px;
-  height: 400px;
+  width: 380px;
+  height: 470px;
+  z-index: -1;
+}
+
+.meet-our-team .our-team .card-member .photo-block {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.meet-our-team .our-team .card-member .photo-block::before {
+  display: none;
+  position: absolute;
+  content: "";
+  background: linear-gradient(to top, #fce38a, #f38181);
+  width: 380px;
+  height: 470px;
+  opacity: 0.9;
+  z-index: 1;
+  transition: transform 0.2s linear;
+}
+
+.meet-our-team .our-team .card-member .photo-block .phototeam {
+  width: 100%;
+  height: 470px;
+  object-fit: cover;
+  position: relative;
+  transition: transform 0.2s linear;
+}
+
+.meet-our-team .our-team .card-member .photo-block .social-links {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  transform: translate(-10px, -10px);
+}
+
+.meet-our-team .our-team .card-member .photo-block .social-links > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  background-color: #fce38a;
+  margin-right: 1px;
+  transition: background-color 0.2s linear;
+}
+
+.meet-our-team .our-team .card-member .photo-block .social-links > a:last-child {
+  margin-right: 0;
+}
+
+.meet-our-team .our-team .card-member .photo-block .social-links > a:hover {
+  background-color: #95e1d3;
+  opacity: 1;
 }
 
 .meet-our-team .our-team .card-member h4 {
+  margin-top: 30px;
   margin-bottom: 15px;
   width: 100%;
 }
@@ -313,6 +362,19 @@ button {
   font-size: 15px;
   color: #999999;
   width: 100%;
+}
+
+.meet-our-team .our-team .card-member:hover .photo-block::before {
+  transform: translate(-10px, -10px);
+  display: block;
+}
+
+.meet-our-team .our-team .card-member:hover .phototeam {
+  transform: translate(-10px, -10px);
+}
+
+.meet-our-team .our-team .card-member:hover .social-links {
+  display: flex;
 }
 
 /*OUR TEAM END*/
@@ -325,33 +387,56 @@ button {
   font-family: "Montserrat-Regular", sans-serif;
   font-size: 14px;
   color: #333333;
+  align-self: center;
 }
 
 .footer .made-by span {
   color: #f38181;
 }
 
-.footer input {
+.footer > form {
+  display: flex;
   margin-left: auto;
-  border: 1px solid #e7e7e7;
+}
+
+.footer > form input {
   width: 229px;
+  border: 1px solid #e7e7e7;
   padding-left: 12px;
 }
 
-.footer input::placeholder {
+.footer > form input::placeholder {
   font-family: "Roboto-LightItalic", sans-serif;
   font-size: 14px;
   color: #cccccc;
 }
 
-.footer input:focus {
+.footer > form input:focus {
   border: 1px solid #95e1d3;
 }
 
 /*FOOTER END*/
-.box {
-  width: 380px;
-  height: 470px;
-  background: linear-gradient(to top, #fce38a, #f38181);
+/* 
+.social-links {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  > button {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    background-color: #fce38a;
+    margin-right: 1px;
+    transition: background-color 0.2s linear;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      background-color: $button;
+      opacity: 1;
+    }
+  }
 }
+*/
 /*# sourceMappingURL=main.css.map */
