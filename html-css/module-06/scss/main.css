@@ -312,8 +312,7 @@ button {
   height: 470px;
   opacity: 0.9;
   z-index: 1;
-  transition: transform 0.2s linear;
-  transition: visibility 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .meet-our-team .our-team .card-member .photo-block .phototeam {
@@ -328,8 +327,7 @@ button {
   visibility: hidden;
   position: absolute;
   z-index: 3;
-  transform: translate(-10px, -10px);
-  transition: visibility 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .meet-our-team .our-team .card-member .photo-block .social-links > a {
@@ -367,8 +365,8 @@ button {
 }
 
 .meet-our-team .our-team .card-member:hover .photo-block::before {
-  transform: translate(-10px, -10px);
   visibility: visible;
+  transform: translate(-10px, -10px);
 }
 
 .meet-our-team .our-team .card-member:hover .phototeam {
@@ -376,6 +374,7 @@ button {
 }
 
 .meet-our-team .our-team .card-member:hover .social-links {
+  transform: translate(-10px, -10px);
   visibility: visible;
 }
 
@@ -418,27 +417,4 @@ button {
 }
 
 /*FOOTER END*/
-/* 
-.social-links {
-  position: absolute;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  > button {
-    cursor: pointer;
-    width: 60px;
-    height: 60px;
-    background-color: #fce38a;
-    margin-right: 1px;
-    transition: background-color 0.2s linear;
-    &:last-child {
-      margin-right: 0;
-    }
-    &:hover {
-      background-color: $button;
-      opacity: 1;
-    }
-  }
-}
-*/
 /*# sourceMappingURL=main.css.map */
