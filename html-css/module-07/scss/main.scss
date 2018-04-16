@@ -1,0 +1,158 @@
+@import "reset";
+@import "base";
+@import "vars";
+@import "fonts";
+@import "templates";
+
+header {
+  @extend %flex;
+  padding-top: 44px;
+  padding-bottom: 126px;
+  .logo {
+    font-family: "WisdomScript-regular", sans-serif;
+    font-size: 26px;
+    color: $logo;
+  }
+  .nav-header {
+    margin-left: auto;
+    font-family: "RobotoSlab-regular", sans-serif;
+    text-transform: uppercase;
+    align-self: flex-end;
+
+    a {
+      color: $nav-links;
+      font-size: 14px;
+      margin-left: 41px;
+      &:first-child {
+        color: $nav-active-link;
+      }
+    }
+  }
+}
+
+.services {
+  @extend %flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 120px;
+  h2 {
+    @extend %h2;
+    margin-bottom: 20px;
+    color: $title;
+  }
+  h3 {
+    @extend %h3;
+    color: $sub-title;
+  }
+  .services-container {
+    @extend %flex;
+    justify-content: space-between;
+    width: 100%;
+    .services-block {
+      @extend %flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 274px;
+      .cicle {
+        @extend %flex;
+        border: 3px solid $cicle;
+        border-radius: 50%;
+        position: relative;
+        align-self: center;
+        height: 72px;
+        width: 72px;
+        margin-bottom: 29px;
+        justify-content: center;
+        align-items: center;
+        img {
+          position: absolute;
+        }
+      }
+      > h4 {
+        @extend %h4;
+        color: $service-name;
+      }
+      > p {
+        font-family: "RobotoSlab-regular", sans-serif;
+        font-size: 14px;
+        text-align: center;
+        color: $servise-describe;
+        padding-top: 19px;
+      }
+    }
+  }
+}
+
+.form-section {
+  background-color: $bgc-contact-us;
+  background-image: url("/img/map.png");
+  background-position: right 120px;
+  background-repeat: no-repeat;
+  padding-top: 109px;
+  padding-bottom: 115px;
+  height: 676px;
+  .contact-us {
+    text-align: center;
+    h2 {
+      @extend %h2;
+      color: #fff;
+      margin-bottom: 24px;
+    }
+    h3 {
+      @extend %h3;
+      color: $sub-title;
+      margin-bottom: 76px;
+    }
+    form {
+      .field-form {
+        @extend %flex;
+        justify-content: space-between;
+        padding-bottom: 30px;
+        .inputs {
+          @extend %flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 455px;
+          input {
+            padding-left: 20px;
+            width: 100%;
+            height: 50px;
+            &::placeholder {
+              text-transform: uppercase;
+              font-family: "RobotoSlab-regular", sans-serif;
+              font-size: 14px;
+              color: $placeholder;
+            }
+          }
+        }
+        .textarea {
+          width: 455px;
+          textarea {
+            padding-top: 18px;
+            padding-left: 20px;
+            width: 100%;
+            height: 210px;
+            resize: none;
+            &::placeholder {
+              text-transform: uppercase;
+              font-family: "RobotoSlab-regular", sans-serif;
+              font-size: 14px;
+              color: $placeholder;
+            }
+          }
+        }
+      }
+      button {
+        width: 240px;
+        height: 66px;
+        background-color: $btn-bgc;
+        color: #fff;
+        text-transform: uppercase;
+        font-family: "RobotoSlab-regular", sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        border-radius: 5px;
+      }
+    }
+  }
+}

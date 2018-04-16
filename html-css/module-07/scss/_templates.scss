@@ -1,0 +1,22 @@
+%flex {
+    display: flex;
+}
+
+%h2 {
+    font-family: "RobotoSlab-regular", sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    text-transform: uppercase;    
+}
+%h3 {
+    font-family: "DroidSerif-italic", sans-serif;
+    font-size: 16px;
+    margin-bottom: 80px;
+}
+
+%h4 {
+    font-family: "RobotoSlab-regular", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #000;
+}
