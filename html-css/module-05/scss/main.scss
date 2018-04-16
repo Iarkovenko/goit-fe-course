@@ -34,7 +34,6 @@ header {
       color: $active-link;
     }
   }
-  
 }
 
 .main-section {
@@ -61,31 +60,14 @@ header {
       text-align: left;
     }
     .right-button {
-      display: inline-block;
-      font-family: "Pe icon 7 stroke", sans-serif;
-      color: #fff;
-      text-align: center;
-      font-size: 100px;
-      position: absolute;
-      width: 105px;
-      height: 105px;
       background: url("../img/right-btn.png"), $button-left-right;
-      top: 15px;
       right: -180px;
-      cursor: pointer;
     }
 
     .left-button {
-      display: inline-block;
-      font-family: "Pe icon 7 stroke", sans-serif;
-      position: absolute;
-      width: 105px;
-      height: 105px;
       background: url("../img/left-btn.png"), $button-left-right;
-      top: 15px;
       left: -180px;
       opacity: 0.52;
-      cursor: pointer;
     }
   }
   h1 {
@@ -188,7 +170,7 @@ header {
       &:hover {
         border-color: $active-focus;
         background-color: $active-focus;
-      }      
+      }
     }
 
     .name-item {
