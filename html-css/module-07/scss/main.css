@@ -210,7 +210,7 @@ header .nav-header a:first-child {
 
 .form-section {
   background-color: #222222;
-  background-image: url("/img/map.png");
+  background-image: url("img/map.png");
   background-position: right 120px;
   background-repeat: no-repeat;
   padding-top: 109px;
