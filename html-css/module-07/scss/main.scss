@@ -155,6 +155,9 @@ header {
         font-weight: 700;
         font-size: 18px;
         border-radius: 5px;
+        &:focus {
+          outline: none;
+        }
       }
     }
   }
