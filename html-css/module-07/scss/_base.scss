@@ -1,4 +1,20 @@
 .main-wrapper {
-    margin: 0 auto;
-    width: 940px;
+  margin: 0 auto;
+  width: 940px;
+}
+
+input, textarea {
+  &:focus::placeholder {
+    opacity: 0;
+  }
+  &:required:valid {
+    outline: 2px solid $valid;
+  }
+  &:required:not(:focus):invalid {
+    outline: none;
+  }
+
+  &:required:focus:invalid {
+    outline: 2px solid $invalid;
+  }
 }

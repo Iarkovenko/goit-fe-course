@@ -71,6 +71,22 @@ button {
   width: 940px;
 }
 
+input:focus::placeholder, textarea:focus::placeholder {
+  opacity: 0;
+}
+
+input:required:valid, textarea:required:valid {
+  outline: 2px solid green;
+}
+
+input:required:not(:focus):invalid, textarea:required:not(:focus):invalid {
+  outline: none;
+}
+
+input:required:focus:invalid, textarea:required:focus:invalid {
+  outline: 2px solid red;
+}
+
 @font-face {
   font-family: "DroidSerif-italic";
   src: url("/fonts/droidserif-italic-webfont.woff2") format("woff2");
@@ -231,6 +247,7 @@ header .nav-header a:first-child {
   padding-left: 20px;
   width: 100%;
   height: 50px;
+  border-radius: 3px;
 }
 
 .form-section .contact-us form .field-form .inputs input::placeholder {
@@ -242,6 +259,7 @@ header .nav-header a:first-child {
 
 .form-section .contact-us form .field-form .textarea {
   width: 455px;
+  border-radius: 3px;
 }
 
 .form-section .contact-us form .field-form .textarea textarea {

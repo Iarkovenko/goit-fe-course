@@ -1,6 +1,6 @@
 @import "reset";
-@import "base";
 @import "vars";
+@import "base";
 @import "fonts";
 @import "templates";
 
@@ -117,16 +117,18 @@ header {
             padding-left: 20px;
             width: 100%;
             height: 50px;
+            border-radius: 3px;            
             &::placeholder {
               text-transform: uppercase;
               font-family: "RobotoSlab-regular", sans-serif;
               font-size: 14px;
               color: $placeholder;
-            }
-          }
+            }                   
+          } 
         }
         .textarea {
           width: 455px;
+          border-radius: 3px;
           textarea {
             padding-top: 18px;
             padding-left: 20px;
@@ -139,6 +141,7 @@ header {
               font-size: 14px;
               color: $placeholder;
             }
+            
           }
         }
       }
