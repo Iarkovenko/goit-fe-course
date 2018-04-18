@@ -89,17 +89,17 @@ input:required:focus:invalid, textarea:required:focus:invalid {
 
 @font-face {
   font-family: "DroidSerif-italic";
-  src: url("fonts/droidserif-italic-webfont.woff2") format("woff2");
+  src: url("../fonts/droidserif-italic-webfont.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "RobotoSlab-regular";
-  src: url("fonts/robotoslab-regular-webfont.woff2") format("woff2");
+  src: url("../fonts/robotoslab-regular-webfont.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "WisdomScript-regular";
-  src: url("fonts/wisdomscript-regular-webfont.woff2") format("woff2");
+  src: url("../fonts/wisdomscript-regular-webfont.woff2") format("woff2");
 }
 
 header, .services, .services .services-container, .services .services-container .services-block, .services .services-container .services-block .cicle, .form-section .contact-us form .field-form, .form-section .contact-us form .field-form .inputs {
@@ -210,7 +210,7 @@ header .nav-header a:first-child {
 
 .form-section {
   background-color: #222222;
-  background-image: url("img/map.png");
+  background-image: url("../img/map.png");
   background-position: right 120px;
   background-repeat: no-repeat;
   padding-top: 109px;
