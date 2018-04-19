@@ -66,6 +66,10 @@ button {
   border: none;
 }
 
+body {
+  max-width: 1400px;
+}
+
 .main-wrapper {
   margin: 0 auto;
   width: 940px;
@@ -102,7 +106,7 @@ input:required:focus:invalid, textarea:required:focus:invalid {
   src: url("../fonts/wisdomscript-regular-webfont.woff2") format("woff2");
 }
 
-header, .services, .services .services-container, .services .services-container .services-block, .services .services-container .services-block .cicle, .form-section .contact-us form .field-form, .form-section .contact-us form .field-form .inputs {
+header, header .nav-header, .services, .services .services-container, .services .services-container .services-block, .services .services-container .services-block .cicle, .form-section .contact-us form .field-form, .form-section .contact-us form .field-form .inputs {
   display: flex;
 }
 
@@ -138,16 +142,18 @@ header .logo {
 }
 
 header .nav-header {
-  margin-left: auto;
   font-family: "RobotoSlab-regular", sans-serif;
   text-transform: uppercase;
   align-self: flex-end;
+  margin-left: auto;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  flex-basis: 500px;
 }
 
 header .nav-header a {
   color: #222222;
   font-size: 14px;
-  margin-left: 41px;
 }
 
 header .nav-header a:first-child {
@@ -209,13 +215,14 @@ header .nav-header a:first-child {
 }
 
 .form-section {
-  background-color: #222222;
+  background: #222222;
   background-image: url("../img/map.png");
   background-position: right 120px;
   background-repeat: no-repeat;
   padding-top: 109px;
   padding-bottom: 115px;
   height: 676px;
+  width: 1400px;
 }
 
 .form-section .contact-us {
