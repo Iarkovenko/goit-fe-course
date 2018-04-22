@@ -112,25 +112,31 @@ a, button {
   bottom: 0;
 }
 
-.main-header .main-nav {
+.main-header .main-panel {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.main-header .main-panel .main-nav {
   z-index: 1;
   padding-top: 30px;
   font-family: "Montserrat-Bold", sans-serif;
   font-size: 14px;
 }
 
-.main-header .main-nav a {
+.main-header .main-panel .main-nav a {
   padding: 11px 18px;
   color: #ffffff;
   border: 2px solid transparent;
 }
 
-.main-header .main-nav a:hover {
+.main-header .main-panel .main-nav a:hover {
   border: 2px solid #ffffff;
   border-radius: 25px;
 }
 
-.main-header h2 {
+.main-header .main-panel .logo {
   z-index: 1;
   padding-top: 126px;
   font-family: "Montserrat-Bold", sans-serif;
@@ -185,21 +191,21 @@ a, button {
   width: 84.5%;
 }
 
-.partner .partner-block {
+.partner .partner-section-block .partner-block {
   padding-bottom: 21px;
   text-align: center;
 }
 
-.partner .partner-block .photo-block {
+.partner .partner-section-block .partner-block .photo-block {
   display: inline-block;
   position: relative;
 }
 
-.partner .partner-block .photo-block > img {
+.partner .partner-section-block .partner-block .photo-block > img {
   border-radius: 50%;
 }
 
-.partner .partner-block .photo-block .sprite-block {
+.partner .partner-section-block .partner-block .photo-block .sprite-block {
   display: flex;
   position: absolute;
   right: 0;
@@ -210,11 +216,11 @@ a, button {
   border: 4px solid #ffffff;
 }
 
-.partner .partner-block .photo-block .sprite-block img {
+.partner .partner-section-block .partner-block .photo-block .sprite-block img {
   margin: auto;
 }
 
-.partner .partner-block h3 {
+.partner .partner-section-block .partner-block h3 {
   font-family: "Montserrat-Bold", sans-serif;
   font-size: 14px;
   color: #333333;
@@ -222,7 +228,7 @@ a, button {
   margin-bottom: 11px;
 }
 
-.partner .partner-block p {
+.partner .partner-section-block .partner-block p {
   font-family: "Roboto-Light", sans-serif;
   font-size: 14px;
   color: #666666;
@@ -237,5 +243,58 @@ a, button {
   color: #ff4e50;
   border: 2px solid #ff4e50;
   border-radius: 25px;
+}
+
+@media (min-width: 768px) {
+  .main-header {
+    background: url("../img/h768.jpg") center no-repeat;
+    background-size: cover;
+    height: 700px;
+  }
+  .main-header .main-panel {
+    display: flex;
+    width: 87.9%;
+    flex-flow: row-reverse wrap;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 161px;
+    align-items: flex-start;
+  }
+  .main-header .main-panel .main-nav {
+    padding-top: 0;
+  }
+  .main-header .main-panel .logo {
+    margin-right: auto;
+    padding: 0;
+  }
+  .main-header h1 {
+    padding-top: 0;
+    padding-bottom: 42px;
+    font-size: 52px;
+    width: 69.27%;
+  }
+  .main-header p {
+    padding-bottom: 35px;
+  }
+  .partner {
+    margin: 0 auto;
+    padding-top: 70px;
+    width: 69.27%;
+  }
+  .partner h2 {
+    width: 52.73%;
+    padding-bottom: 31px;
+  }
+  .partner .partner-section-block {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  .partner .partner-section-block .partner-block {
+    width: 44.36%;
+  }
+  .partner a {
+    margin-top: 4px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

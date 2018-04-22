@@ -1,0 +1,52 @@
+@media (min-width: 768px) {
+  .main-header {
+    background: url("../img/h768.jpg") center no-repeat;
+    background-size: cover;
+    height: 700px;
+    .main-panel {
+      display: flex;
+      width: 87.9%;
+      flex-flow: row-reverse wrap;
+      justify-content: space-between;
+      padding-top: 30px;
+      padding-bottom: 161px;
+      align-items: flex-start;
+      .main-nav {
+        padding-top: 0;
+      }
+      .logo {
+        margin-right: auto;
+        padding: 0;
+      }
+    }
+    h1 {
+      padding-top: 0;
+      padding-bottom: 42px;
+      font-size: 52px;
+      width: 69.27%;
+    }
+    p {
+      padding-bottom: 35px;
+    }
+  }
+  .partner {
+    margin: 0 auto;
+    padding-top: 70px;
+    width: 69.27%;
+    h2 {
+      width: 52.73%;
+      padding-bottom: 31px;
+    }
+    .partner-section-block {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      .partner-block {
+        width: 44.36%;
+      }
+    }
+    a {
+      margin-top: 4px;
+    }
+  }
+}
