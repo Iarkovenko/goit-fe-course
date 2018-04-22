@@ -94,6 +94,7 @@ a, button {
   position: relative;
   display: flex;
   background: url("../img/h320.jpg") center no-repeat;
+  background-size: cover;
   height: 540px;
   flex-flow: column;
   align-items: center;
@@ -120,8 +121,8 @@ a, button {
 
 .main-header .main-nav a {
   padding: 11px 18px;
-  border: 2px transparent;
   color: #ffffff;
+  border: 2px solid transparent;
 }
 
 .main-header .main-nav a:hover {

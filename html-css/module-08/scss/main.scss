@@ -9,6 +9,7 @@
   position: relative;
   display: flex;
   background: url("../img/h320.jpg") center no-repeat;
+  background-size: cover;
   height: 540px;
   flex-flow: column;
   align-items: center;
@@ -30,8 +31,8 @@
     font-size: 14px;    
     a {
       padding: 11px 18px;
-      border: 2px transparent;
       color: #ffffff;
+      border: 2px solid transparent;
     }
     a:hover {
       border: 2px solid #ffffff;
