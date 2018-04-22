@@ -98,6 +98,8 @@
   }
 
   .partner-section-block {
+    display: flex;
+    flex-direction: column;
     .partner-block {
       padding-bottom: 21px;
       text-align: center;
