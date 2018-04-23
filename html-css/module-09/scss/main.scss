@@ -16,7 +16,7 @@
     position: absolute;
     content: "";
     background-color: $main-opa-bgc;
-    opacity: 0.3;
+    opacity: 0.25;
     top: 0;
     left: 0;
     right: 0;
@@ -53,6 +53,7 @@
     color: #ffffff;
     text-transform: uppercase;
     width: 91%;
+    max-width: 292px;
   }
   p {
     z-index: 1;
@@ -61,6 +62,7 @@
     font-size: 18px;
     color: #ffffff;
     width: 68.75%;
+    max-width: 220px;
   }
   .finder {
     z-index: 1;
@@ -87,6 +89,7 @@
     color: #333333;
     padding-bottom: 15px;
     width: 84.5%;
+    max-width: 271px;
   }
 
   .p-b-25 {
@@ -127,6 +130,7 @@
         font-size: 14px;
         color: #666666;
         width: 68.75%;
+        max-width: 220px;
         margin: auto;
       }
     }

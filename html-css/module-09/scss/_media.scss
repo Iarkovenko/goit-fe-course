@@ -22,10 +22,12 @@
       padding-bottom: 42px;
       font-size: 52px;
       width: 70%;
+      max-width: 505px;
     }
     p {
       padding-bottom: 35px;
       font-size: 24px;
+      max-width: 505px;
     }
 
     .finder {
@@ -39,6 +41,8 @@
     width: 66.66%;
     h2 {
       padding-bottom: 31px;
+      max-width: 450px;
+      width: 100%;
     }
     .partner-block {
       p {
@@ -55,6 +59,7 @@
 
 @media (min-width: 1200px) {
   .container {
+    width: 100%;
     max-width: 940px;
   }
   .main-header {
@@ -64,8 +69,11 @@
     h1 {
       width: 54%;
     }  
-  }
-  .partner {
-    width: 65.27%;
-  }
+    .partner-block {
+      p {
+        width: 100%;
+        max-width: 207px;
+      }
+    }
+  } 
 }

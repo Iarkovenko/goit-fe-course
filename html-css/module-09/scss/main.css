@@ -109,7 +109,7 @@ a, button {
   position: absolute;
   content: "";
   background-color: #1a1915;
-  opacity: 0.3;
+  opacity: 0.25;
   top: 0;
   left: 0;
   right: 0;
@@ -151,6 +151,7 @@ a, button {
   color: #ffffff;
   text-transform: uppercase;
   width: 91%;
+  max-width: 292px;
 }
 
 .main-header p {
@@ -160,6 +161,7 @@ a, button {
   font-size: 18px;
   color: #ffffff;
   width: 68.75%;
+  max-width: 220px;
 }
 
 .main-header .finder {
@@ -187,6 +189,7 @@ a, button {
   color: #333333;
   padding-bottom: 15px;
   width: 84.5%;
+  max-width: 271px;
 }
 
 .partner .p-b-25 {
@@ -235,6 +238,7 @@ a, button {
   font-size: 14px;
   color: #666666;
   width: 68.75%;
+  max-width: 220px;
   margin: auto;
 }
 
@@ -270,10 +274,12 @@ a, button {
     padding-bottom: 42px;
     font-size: 52px;
     width: 70%;
+    max-width: 505px;
   }
   .main-header p {
     padding-bottom: 35px;
     font-size: 24px;
+    max-width: 505px;
   }
   .main-header .finder {
     padding: 13px 21px;
@@ -285,6 +291,8 @@ a, button {
   }
   .partner h2 {
     padding-bottom: 31px;
+    max-width: 450px;
+    width: 100%;
   }
   .partner .partner-block p {
     max-width: 207px;
@@ -298,6 +306,7 @@ a, button {
 
 @media (min-width: 1200px) {
   .container {
+    width: 100%;
     max-width: 940px;
   }
   .main-header {
@@ -308,8 +317,9 @@ a, button {
   .main-header h1 {
     width: 54%;
   }
-  .partner {
-    width: 65.27%;
+  .main-header .partner-block p {
+    width: 100%;
+    max-width: 207px;
   }
 }
 /*# sourceMappingURL=main.css.map */
