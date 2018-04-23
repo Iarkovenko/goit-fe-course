@@ -297,13 +297,16 @@ a, button {
 }
 
 @media (min-width: 1200px) {
+  .container {
+    max-width: 940px;
+  }
   .main-header {
     background: url("../img/h1440.jpg") center no-repeat;
     height: 700px;
     background-size: cover;
   }
   .main-header h1 {
-    width: 44.5%;
+    width: 54%;
   }
   .partner {
     width: 65.27%;
