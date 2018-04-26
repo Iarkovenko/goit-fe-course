@@ -385,7 +385,7 @@ ol, ul {
 
 .header-section {
   min-height: 100vh;
-  background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%), url("../img/header.jpg");
+  background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%), url("../img/header-min.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
