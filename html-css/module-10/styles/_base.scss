@@ -1,15 +1,17 @@
-.img-responsive {
+img {
     display: block;
     max-width: 100%;
     height: auto;
 }
 
 .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .container {
-    max-width: 1201px;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
 }
