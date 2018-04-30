@@ -1,0 +1,51 @@
+.footer {
+  border-top: 1px solid map-get($color-footer, border-foot);
+  padding: 10px 0;
+}
+
+.footer-block__made-by {
+  @include font-mixin(
+    "Montserrat-Regular",
+    14px,
+    map-get($color-footer, footer)
+  );
+  -ms-flex-item-align: center;
+  align-self: center;
+  .made-by--author {
+    color: map-get($color-footer, author);
+  }
+}
+
+.footer-block__form-subscribe {
+  margin-left: auto;
+  }
+
+  .form-subscribe__input {
+    width: 229px;
+    border: 1px solid map-get($color-footer, border-foot);
+    padding-left: 12px;
+    &::-webkit-input-placeholder {
+        @include font-mixin('Roboto-LightItalic', 14px, map-get($color-footer, placeholder));
+          }
+    &:-ms-input-placeholder {
+        @include font-mixin('Roboto-LightItalic', 14px, map-get($color-footer, placeholder));
+          }
+    &::placeholder {
+        @include font-mixin('Roboto-LightItalic', 14px, map-get($color-footer, placeholder));
+          }
+    &:focus {
+      border: 1px solid map-get($color-footer, border-input);
+    }
+    &:valid {
+      border: 1px solid green;
+    }
+  }
+  .form-subscribe__btn {
+    @include font-mixin('Montserrat-Bold', 14px, map-get($color-footer, btn-text));  
+    border: none;    
+    width: 150px;
+    height: 40px;
+    background-color: map-get($color-footer, button);
+    text-transform: uppercase;
+    cursor: pointer;
+  }

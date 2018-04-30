@@ -1,0 +1,40 @@
+$color-header: (
+    gradient-bottom: rgba(252, 227, 138, 0.9),
+    gradient-top: rgba(243, 129, 129, 0.9),
+    header-color: #ffffff,
+    link-color: #ffffff,
+    logo-color: #ffffff,
+    active-link: #fce38a,
+    hover-link: #fce38a
+);
+
+$color-services: (
+    h-color: #333333,
+    underline: #f38181,
+    fill-icon: #95e1d3,
+    figcaption: #999999
+    );
+
+$color-team: (
+    h-color: #333333,
+    figcaption: #999999,
+    underline: #f38181,
+    img-before: #95e1d3,
+    gradient-bottom: rgba(252, 227, 138, 0.9),
+    gradient-top: rgba(243, 129, 129, 0.9),
+    block-link: #fce38a,
+    block-link-hover: rgba(243, 129, 129, 1),
+    fill-icon:rgba(243, 129, 129, 1),
+    fill-icon-hover: rgba(255, 255, 255, 1),
+);
+
+$color-footer: (
+    button: #95e1d3,
+    author: #f38181,
+    footer: #333333,
+    border-foot: #e7e7e7,
+    placeholder: #cccccc,
+    border-input: #95e1d3,
+    btn-text: white
+);
+

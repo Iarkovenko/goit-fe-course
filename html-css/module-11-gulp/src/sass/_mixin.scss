@@ -1,0 +1,9 @@
+@mixin font-mixin($font-family, $size, $color) {
+    font-family: $font-family;
+    font-size: $size;
+    color: $color;
+}
+@mixin full-width($max-width, $full-width: 100%) {
+    max-width: $max-width;
+    width: $full-width;
+}
