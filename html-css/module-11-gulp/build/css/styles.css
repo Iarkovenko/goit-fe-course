@@ -597,6 +597,7 @@ img {
 
 .item-services__about-services {
   padding-left: 28px;
+  width: 100%;
 }
 
 .about-services__title {
