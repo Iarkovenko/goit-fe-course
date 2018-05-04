@@ -47,7 +47,8 @@
   fill: map-get($color-services, fill-icon);
 }
 .item-services__about-services {
-  padding-left: 28px;}
+  padding-left: 28px;
+width: 100%;}
 .about-services__title {
   @include font-mixin('Montserrat-Regular', 14px, map-get($color-services, h-color));
   text-transform: uppercase;
