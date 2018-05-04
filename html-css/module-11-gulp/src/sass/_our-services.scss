@@ -52,8 +52,10 @@
   @include font-mixin('Montserrat-Regular', 14px, map-get($color-services, h-color));
   text-transform: uppercase;
   padding-bottom: 20px;
+  margin: 0;
 }
 .about-services__describe {
   @include full-width(380px);
   @include font-mixin('Roboto-Regular', 15px, map-get($color-services, figcaption));
+  margin: 0;
   }

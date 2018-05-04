@@ -12,6 +12,10 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   line-height: 1.15;
   /* 1 */
@@ -28,6 +32,7 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
 }
 
 /**
@@ -375,10 +380,6 @@ template {
   display: none;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 a,
 ul,
 li {
@@ -604,6 +605,7 @@ img {
   color: #333333;
   text-transform: uppercase;
   padding-bottom: 20px;
+  margin: 0;
 }
 
 .about-services__describe {
@@ -612,6 +614,7 @@ img {
   font-family: "Roboto-Regular";
   font-size: 15px;
   color: #999999;
+  margin: 0;
 }
 
 /* AMAZING SERVICES END*/
