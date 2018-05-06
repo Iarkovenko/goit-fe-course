@@ -1,0 +1,30 @@
+@include reset();
+
+.container {
+    @include container();
+}
+
+.row {
+    @include row-flex();
+}
+
+.item {
+    @include col();
+}
+
+
+@mixin font-mixin($f-family, $f-size, $color) {
+    font-family: $f-family;
+    font-size: $f-size;
+    color: $color;
+}
+
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.flex {
+    display: flex;
+}
