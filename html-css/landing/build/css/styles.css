@@ -108,6 +108,10 @@ img {
   height: auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   max-width: 1759px;
   margin: 0 auto;
@@ -127,12 +131,6 @@ img {
   word-wrap: break-word;
   margin-left: 0px;
   margin-right: 0px;
-}
-
-img {
-  display: block;
-  height: auto;
-  max-width: 100%;
 }
 
 .flex {
@@ -178,6 +176,8 @@ img {
   font-family: 'Ubuntu-mono_R';
   src: url("../fonts/ubuntumono-regular.woff2") format("woff2");
 }
+
+/* HEADER */
 
 .main-header {
   background-color: #2b2a2f;
@@ -254,7 +254,7 @@ img {
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: -1.8px;
-  width: 255px;
+  width: 280px;
   max-width: 100%;
 }
 
@@ -269,9 +269,8 @@ img {
   position: absolute;
   content: "";
   height: 3px;
-  width: 150px;
+  width: 180px;
   top: calc(100% + 19px);
-  left: 68px;
   background-color: #00bcd4;
 }
 
@@ -282,6 +281,8 @@ img {
   font-size: 30px;
   color: #ffffff;
   text-transform: uppercase;
+  letter-spacing: -1.5px;
+  line-height: 1.5;
 }
 
 .header-h1__full-stack {
@@ -309,12 +310,125 @@ img {
   color: #ffffff;
   line-height: 1.5;
   margin: 0 auto;
-  max-width: 225px;
+  max-width: 275px;
 }
 
 .main-info p:nth-child(5) .precent {
   font-size: 18px;
   color: #00bcd4;
+}
+
+/* SECTION COME FROM*/
+
+.come-from {
+  padding-top: 38px;
+  padding-bottom: 91px;
+}
+
+.come-from .row {
+  justify-content: center;
+}
+
+.header-block {
+  width: 220px;
+  text-align: center;
+}
+
+.header-block__h2 {
+  line-height: 1.2;
+  font-family: "Museo_900";
+  font-size: 25px;
+  color: #242427;
+  text-transform: uppercase;
+}
+
+.header-block__h2--underline {
+  color: #00bcd4;
+}
+
+.come-from-age {
+  padding-top: 40px;
+  padding-bottom: 60px;
+  width: 260px;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  line-height: 1.5;
+  font-family: "Museo_900";
+  font-size: 14px;
+  color: #242427;
+}
+
+.come-from-age::before {
+  position: absolute;
+  content: "";
+  width: 150px;
+  height: 2px;
+  background-color: #242427;
+  left: 20%;
+  top: 24px;
+}
+
+.come-from-age--blue {
+  font-family: "ProximaNova_ExB";
+  font-size: 14px;
+  color: #00bcd4;
+}
+
+.article {
+  max-width: 330px;
+  position: relative;
+}
+
+.article__title {
+  padding-left: 36px;
+  font-family: "Ubuntu-mono_B";
+  font-size: 18px;
+  color: #242427;
+}
+
+.article__info {
+  text-align: left;
+  padding: 35px 0;
+  line-height: 1.7;
+  font-family: "Open Sans";
+  font-size: 14px;
+  color: #000000;
+}
+
+.a-1 .article__title::before {
+  position: absolute;
+  content: url("../img/come-from/a-1.png");
+  top: -10px;
+  left: -4px;
+}
+
+.a-2 .article__title::before {
+  position: absolute;
+  content: url("../img/come-from/a-2.png");
+  top: -10px;
+  left: -4px;
+}
+
+.a-3 .article__title::before {
+  position: absolute;
+  content: url("../img/come-from/a-3.png");
+  top: -7px;
+  left: -4px;
+}
+
+.a-4 .article__title::before {
+  position: absolute;
+  content: url("../img/come-from/a-4.png");
+  top: -5px;
+  left: -4px;
+}
+
+.a-5 .article__title::before {
+  position: absolute;
+  content: url("../img/come-from/a-5.png");
+  top: -10px;
+  left: -4px;
 }
 
 @media screen and (min-width: 320px) {
