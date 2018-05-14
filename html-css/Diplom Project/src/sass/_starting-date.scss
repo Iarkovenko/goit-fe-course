@@ -1,0 +1,58 @@
+.starting-date {
+    padding-top: 100px;
+}
+.starting-box {
+  padding-top: 48px;
+  padding-bottom: 56px;
+  box-shadow: -8px 8px 21px 8px rgba(0, 0, 0, 0.11);
+  margin: auto;
+  text-align: center;
+}
+
+.date,
+.month,
+.duration,
+.count-month {
+  @include size(6);
+  @include font-mixin("Acrom-ex", 12.5px, #000000);
+}
+.date,
+.duration {
+  text-align: right;
+  span {
+    background-color: #000000;
+    color: #ffffff;
+  }
+}
+.month,
+.count-month {
+  padding-left: 10px;
+  text-align: left;
+}
+.date {
+    margin-bottom: 26px;
+}
+
+.duration {
+    margin-bottom: 48px;
+}
+
+.bonus-block {
+    margin: auto;
+    text-align: left;
+    @include font-mixin("Acrom-medium", 14.5px, $orange);
+    position: relative;
+    &::before {
+        position: absolute;
+        content: "";
+        width: 4px;
+        height: 33px;
+        border-radius: 3px;
+        top: 4px;
+        left: -20px;
+        background-color: #000;
+        transform: rotate(30deg);
+    }
+}
+
+  

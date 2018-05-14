@@ -1,0 +1,37 @@
+.6-steps {
+    padding-top: 90px;
+}
+.steps-info, .steps-img {
+    @include size(6);
+}
+.header-6-steps {
+    white-space: pre-line;
+    @include font-mixin("Acrom-ex", 37px, #000000);
+    &__subheader {
+        background-color: #000000;
+        color: #ffffff;
+    }
+}
+
+.list-steps {
+    counter-reset: step;
+    padding-top: 35px;
+    @include font-mixin("Acrom-regular", 17px, #000000);
+}
+.list-steps__item {    
+    padding-left: 73px;
+    margin-bottom: 24px;
+    position: relative;
+    &:nth-child(-n+9)::before {
+        content: "[ 00" counter(step) " ]";
+      }
+    &::before {
+        position: absolute;
+        @include font-mixin("Acrom-bold", 13px, #ffffff);
+        counter-increment: step;
+        content: counter(step);
+        background-color: $orange;
+        left: 9px;
+        padding: 0 2px;
+    }
+}

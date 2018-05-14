@@ -1,0 +1,49 @@
+.main-header {
+    padding-top: 32px;
+}
+.main-header .row {
+    justify-content: space-between;
+    
+}
+.logo-goit {
+    margin-right: 48px;
+}
+a {
+    @include font-mixin('Acrom-bold', 10.5px, #000000);
+}
+.email {
+    align-self: center;
+    margin-left: auto;
+    margin-right: 34px;
+    a {
+        position: relative;
+        &::before {
+            position: absolute;
+            content: url('../img/sprite/header/close-envelope.svg#Capa_1');
+            width: 15px;
+            height: 11px;
+            left: -18px;
+            top: 50%;
+            transform: translateY(-70%);
+        }
+    }
+}
+
+.call-tel__number {
+    width: 100%;
+    max-width: 110px;
+    flex-direction: column;
+    a {
+        position: relative;
+        &::before {
+            position: absolute;
+            content: url('../img/sprite/header/phone-receiver.svg#Capa_1');
+            width: 8px;
+            height: 11px;
+            left: -11px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }  
+    
+}

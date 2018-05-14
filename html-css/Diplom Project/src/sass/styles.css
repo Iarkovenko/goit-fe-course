@@ -1,0 +1,681 @@
+/*
+   Import partials below
+*/
+body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset, img, abbr {
+  border: 0;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ul li {
+  list-style: none;
+}
+
+caption, th {
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+legend {
+  color: #000;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 848px;
+  margin: 0 auto;
+  padding-left: 177px;
+  padding-right: 177px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.item {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.h3 {
+  font-family: "Acrom-ex";
+  font-size: 37px;
+  color: #000000;
+}
+
+@font-face {
+  font-family: 'Acrom-regular';
+  src: url("../fonts/acrom400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Acrom-medium';
+  src: url("../fonts/acrom600.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Acrom-bold';
+  src: url("../fonts/acrom800.woff2");
+}
+
+@font-face {
+  font-family: 'Acrom-ex';
+  src: url("../fonts/acrom900.woff2") format("woff2");
+}
+
+/* HEADER */
+.main-header {
+  padding-top: 32px;
+}
+
+.main-header .row {
+  justify-content: space-between;
+}
+
+.logo-goit {
+  margin-right: 48px;
+}
+
+a {
+  font-family: "Acrom-bold";
+  font-size: 10.5px;
+  color: #000000;
+}
+
+.email {
+  align-self: center;
+  margin-left: auto;
+  margin-right: 34px;
+}
+
+.email a {
+  position: relative;
+}
+
+.email a::before {
+  position: absolute;
+  content: url("../img/sprite/header/close-envelope.svg#Capa_1");
+  width: 15px;
+  height: 11px;
+  left: -18px;
+  top: 50%;
+  transform: translateY(-70%);
+}
+
+.call-tel__number {
+  width: 100%;
+  max-width: 110px;
+  flex-direction: column;
+}
+
+.call-tel__number a {
+  position: relative;
+}
+
+.call-tel__number a::before {
+  position: absolute;
+  content: url("../img/sprite/header/phone-receiver.svg#Capa_1");
+  width: 8px;
+  height: 11px;
+  left: -11px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* HEADER */
+/* COURSE BUSINESS ANALYST*/
+.business-analysis {
+  padding-top: 96px;
+  counter-reset: before;
+}
+
+.header-analyst-block {
+  justify-content: space-between;
+}
+
+.header-course {
+  white-space: pre-line;
+  margin-bottom: 63px;
+  font-family: "Acrom-ex";
+  font-size: 58px;
+  color: #000000;
+}
+
+.header-course__business-analyst {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.brief-course {
+  padding-bottom: 70px;
+}
+
+.complete {
+  margin-left: calc(8.33333% + 0px);
+  width: calc(41.66667% - 0px);
+  font-family: "Acrom-bold";
+  font-size: 21px;
+  color: #231f20;
+  padding-left: 34px;
+  padding-right: 10px;
+  padding-bottom: 30px;
+  position: relative;
+}
+
+.complete::before {
+  position: absolute;
+  content: "";
+  width: 56px;
+  height: 8px;
+  background-color: #0e0000;
+  left: -58px;
+}
+
+.student {
+  margin-left: calc(8.33333% + 0px);
+  width: calc(66.66667% - 0px);
+  font-family: "Acrom-regular";
+  font-size: 17px;
+  color: #231f20;
+  padding-left: 34px;
+}
+
+.info-course {
+  justify-content: space-between;
+  padding-bottom: 90px;
+}
+
+.info-img {
+  width: calc(50% - 0px);
+}
+
+.info {
+  width: calc(41.66667% - 0px);
+}
+
+.info__header {
+  padding-top: 30px;
+  line-height: 1.34;
+  letter-spacing: -0.5px;
+  white-space: pre-line;
+  position: relative;
+}
+
+.info__header::before {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: #000000;
+  top: 0;
+  left: 0;
+}
+
+.info__brief {
+  padding-top: 40px;
+  font-family: "Acrom-regular";
+  font-size: 17px;
+  color: #000000;
+}
+
+.after-course {
+  padding-bottom: 90px;
+}
+
+.arcticle-list {
+  padding-top: 4px;
+}
+
+.arcticle-list__block {
+  width: calc(33.33333% - 0px);
+  padding-left: 73px;
+  position: relative;
+  margin-top: 43px;
+  font-family: "Acrom-regular";
+  font-size: 17px;
+  color: #000000;
+}
+
+.arcticle-list__block::before {
+  position: absolute;
+  content: '';
+  width: 40px;
+  height: 8px;
+  background-color: #2e2020;
+  left: 15px;
+  top: 5px;
+}
+
+.requirements-course > h3 {
+  white-space: pre-line;
+}
+
+.requirements-block {
+  padding-top: 46px;
+  justify-content: space-between;
+}
+
+.req-img {
+  width: calc(41.66667% - 0px);
+}
+
+.req-info-block {
+  margin-left: calc(8.33333% + 0px);
+  width: calc(50% - 0px);
+}
+
+.req-list {
+  justify-content: space-between;
+}
+
+.req-list > .item {
+  width: calc(50% - 0px);
+  font-family: "Acrom-regular";
+  font-size: 17px;
+  color: #231f20;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.req-list > .item::before {
+  position: absolute;
+  counter-increment: before;
+  content: "[ 00" counter(before) " ]";
+  font-family: "Acrom-bold";
+  font-size: 13px;
+  color: #ffffff;
+  top: 5px;
+  left: -33px;
+  text-align: center;
+  height: 48px;
+  width: 16px;
+  writing-mode: vertical-rl;
+  transform: rotateZ(180deg);
+  background-color: #ef7330;
+}
+
+.req-list > .item:nth-child(even) {
+  max-width: 160px;
+}
+
+.req-list > .item:nth-child(odd) {
+  max-width: 180px;
+}
+
+.req-list > .item:nth-last-child(1), .req-list > .item:nth-last-child(2) {
+  margin-bottom: 0;
+}
+
+/* COURSE BUSINESS ANALYST*/
+/* PROGRAMM COURSE */
+.programm-course {
+  padding-top: 134px;
+}
+
+.header__programm-course {
+  line-height: 1.17;
+  background-color: #000000;
+  font-family: "Acrom-ex";
+  font-size: 58px;
+  color: #ffffff;
+}
+
+.programm-list {
+  padding-top: 63px;
+  counter-reset: order;
+}
+
+.item__title {
+  text-transform: uppercase;
+  display: inline;
+  font-family: "Acrom-ex";
+  font-size: 12.5px;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.item__sub-title {
+  white-space: pre-line;
+  text-transform: uppercase;
+  display: block;
+  letter-spacing: -0.7px;
+  padding-bottom: 22px;
+  font-family: "Acrom-ex";
+  font-size: 12.5px;
+  color: #000000;
+}
+
+.programm-list__item {
+  padding-left: 65px;
+  padding-right: 16px;
+  padding-bottom: 24px;
+  width: calc(33.33333% - 0px);
+  position: relative;
+  overflow: hidden;
+}
+
+.programm-list__item::before {
+  position: absolute;
+  counter-increment: order;
+  content: "" counter(order) ".";
+  line-height: 0.75;
+  font-family: "Acrom-ex";
+  font-size: 38px;
+  color: #000000;
+  top: 0;
+  left: -10px;
+}
+
+.programm-list__item:nth-child(-n+9)::before {
+  content: "0" counter(order) ".";
+}
+
+.unit-list {
+  font-family: "Acrom-regular";
+  font-size: 10.5px;
+  color: #3f4144;
+}
+
+.unit-list__item {
+  padding-left: 17px;
+  position: relative;
+  margin-bottom: 9px;
+}
+
+.unit-list__item::before {
+  position: absolute;
+  content: '';
+  width: 7px;
+  height: 7px;
+  background-color: #ef7330;
+  left: 0;
+  top: 3px;
+}
+
+.unit-list__item:last-child() {
+  margin-bottom: 0;
+}
+
+/* PROGRAMM COURSE */
+/*6 STEPS*/
+.6-steps {
+  padding-top: 90px;
+}
+
+.steps-info, .steps-img {
+  width: calc(50% - 0px);
+}
+
+.header-6-steps {
+  white-space: pre-line;
+  font-family: "Acrom-ex";
+  font-size: 37px;
+  color: #000000;
+}
+
+.header-6-steps__subheader {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.list-steps {
+  counter-reset: step;
+  padding-top: 35px;
+  font-family: "Acrom-regular";
+  font-size: 17px;
+  color: #000000;
+}
+
+.list-steps__item {
+  padding-left: 73px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.list-steps__item:nth-child(-n+9)::before {
+  content: "[ 00" counter(step) " ]";
+}
+
+.list-steps__item::before {
+  position: absolute;
+  font-family: "Acrom-bold";
+  font-size: 13px;
+  color: #ffffff;
+  counter-increment: step;
+  content: counter(step);
+  background-color: #ef7330;
+  left: 9px;
+  padding: 0 2px;
+}
+
+/*6 STEPS*/
+/*STARTING DATE*/
+.starting-date {
+  padding-top: 100px;
+}
+
+.starting-box {
+  padding-top: 48px;
+  padding-bottom: 56px;
+  box-shadow: -8px 8px 21px 8px rgba(0, 0, 0, 0.11);
+  margin: auto;
+  text-align: center;
+}
+
+.date,
+.month,
+.duration,
+.count-month {
+  width: calc(50% - 0px);
+  font-family: "Acrom-ex";
+  font-size: 12.5px;
+  color: #000000;
+}
+
+.date,
+.duration {
+  text-align: right;
+}
+
+.date span,
+.duration span {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.month,
+.count-month {
+  padding-left: 10px;
+  text-align: left;
+}
+
+.date {
+  margin-bottom: 26px;
+}
+
+.duration {
+  margin-bottom: 48px;
+}
+
+.bonus-block {
+  margin: auto;
+  text-align: left;
+  font-family: "Acrom-medium";
+  font-size: 14.5px;
+  color: #ef7330;
+  position: relative;
+}
+
+.bonus-block::before {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 33px;
+  border-radius: 3px;
+  top: 4px;
+  left: -20px;
+  background-color: #000;
+  transform: rotate(30deg);
+}
+
+/*STARTING DATE*/
+/*RPICE SECTION*/
+.price-section {
+  padding-top: 107px;
+  padding-bottom: 84px;
+}
+
+.price-section .container .row {
+  margin-bottom: 36px;
+  justify-content: space-between;
+}
+
+.name-what,
+.first-price,
+.second-price,
+.third-price {
+  width: calc(25% - 0px);
+  align-self: center;
+}
+
+.name-what {
+  font-family: "Acrom-bold";
+  font-size: 16.7px;
+  color: #2e2020;
+  text-align: right;
+}
+
+.price-section .row:nth-child(-n + 4) .first-price {
+  background-image: url("../img/v.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 22px;
+}
+
+.price-section .row:nth-child(n + 5) .first-price {
+  background-image: url("../img/x.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 23px;
+}
+
+.price-section .row:nth-child(-n + 7) .second-price {
+  background-image: url("../img/v.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 22px;
+}
+
+.price-section .row:nth-child(n + 8) .second-price {
+  background-image: url("../img/x.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 23px;
+}
+
+.price-section .row:nth-child(n + 1) .third-price {
+  background-image: url("../img/v.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 22px;
+}
+
+.first-price,
+.second-price,
+.third-price {
+  width: size(4);
+}
+
+.first-price-block {
+  margin-left: calc(25% + 0px);
+}
+
+.first-price-block,
+.second-price-block,
+.third-price-block {
+  text-align: center;
+  width: calc(25% - 0px);
+  font-family: "Acrom-bold";
+  font-size: 25px;
+  color: #ffffff;
+}
+
+.first-price-block span,
+.second-price-block span,
+.third-price-block span {
+  background-color: #3f4144;
+  padding: 6px 14px;
+}
+
+.choose-price {
+  width: calc(25% - 0px);
+  font-family: "Acrom-bold";
+  font-size: 10.5px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: #ef7330;
+  cursor: pointer;
+  border: none;
+  width: 200px;
+  height: 48px;
+  padding: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .choose-price {
+    font-size: 9px;
+    width: 150px;
+    height: 30px;
+  }
+}
+
+.choose-price:first-child {
+  margin-left: calc(25% + 0px);
+}
+
+/*RPICE SECTION*/
+/*# sourceMappingURL=styles.css.map */
