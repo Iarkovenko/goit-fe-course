@@ -18,4 +18,8 @@
     color: $color;
 }
 
-.h3 {@include font-mixin("Acrom-ex", 37px, #000000);}
+.h3 {@include font-mixin("Acrom-ex", 37px, #000000);
+@media screen and (min-width: 1024px) {
+    font-size: 30px;
+}
+}
