@@ -328,13 +328,10 @@ a {
   font-family: "Acrom-bold";
   font-size: 13px;
   color: #ffffff;
-  top: 5px;
-  left: -33px;
+  top: 17px;
+  left: -50px;
   text-align: center;
-  height: 48px;
-  width: 16px;
-  writing-mode: vertical-rl;
-  transform: rotateZ(180deg);
+  transform: rotateZ(-90deg);
   background-color: #ef7330;
 }
 

@@ -135,13 +135,10 @@
         counter-increment: before;
         content: "\005B  00"counter(before)" \005D";
         @include font-mixin("Acrom-bold", 13px, #ffffff);
-        top: 5px;
-        left: -33px;
+        top: 17px;
+        left: -50px;
         text-align: center;
-        height: 48px;
-        width: 16px;
-        writing-mode: vertical-rl;
-        transform: rotateZ(180deg);
+        transform: rotateZ(-90deg);
         background-color: $orange;      
     
     }
