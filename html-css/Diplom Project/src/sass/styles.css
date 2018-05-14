@@ -624,12 +624,6 @@ a {
   height: 22px;
 }
 
-.first-price,
-.second-price,
-.third-price {
-  width: size(4);
-}
-
 .first-price-block {
   margin-left: calc(25% + 0px);
 }
