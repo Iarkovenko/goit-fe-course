@@ -124,6 +124,7 @@ a {
   flex-wrap: wrap;
   margin-left: 0px;
   margin-right: 0px;
+  overflow: hidden;
 }
 
 .item {
@@ -318,6 +319,8 @@ a {
   color: #00bcd4;
 }
 
+/* HEADER */
+
 /* SECTION COME FROM*/
 
 .come-from {
@@ -430,6 +433,200 @@ a {
   top: -10px;
   left: -4px;
 }
+
+/* SECTION COME FROM*/
+
+/*FULL STACK CREATE*/
+
+.fullstack-create {
+  padding-top: 50px;
+  padding-bottom: 62px;
+  background-color: #f4f4f4;
+}
+
+.fullstack-header {
+  padding-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Museo_900";
+  font-size: 25px;
+  color: #242427;
+  position: relative;
+}
+
+.fullstack-header span {
+  color: #00bcd4;
+}
+
+.fullstack-header::before {
+  position: absolute;
+  content: "";
+  width: 150px;
+  height: 2px;
+  background-color: #242427;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.sub-title {
+  margin-top: 25px;
+  margin-bottom: 32px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Museo_900";
+  font-size: 14px;
+  color: #242427;
+}
+
+.sub-title span {
+  font-family: "ProximaNova_ExB";
+  color: #00bcd4;
+}
+
+.task-developer {
+  width: 100%;
+  padding: 8px 80px;
+  text-align: center;
+  border: 2px solid #00bcd4;
+  font-family: "OpenSans_ExB";
+  font-size: 14px;
+  color: #121212;
+}
+
+.task-developer span {
+  color: #00bcd4;
+}
+
+.fs-header {
+  margin-top: 55px;
+  font-family: "Ubuntu-mono_B";
+  font-size: 18px;
+  color: #242427;
+  width: calc(50% - 0px);
+  text-align: right;
+  position: relative;
+}
+
+.fs-header::before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 135px;
+  background-color: #242427;
+  bottom: 5px;
+  width: 100%;
+  left: 9px;
+  right: 0;
+  display: block;
+  margin-left: 100%;
+}
+
+.go-full-stack {
+  margin-top: 15px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.fs-info {
+  padding-bottom: 16px;
+  text-align: center;
+  margin-top: 30px;
+  font-family: "Museo_900";
+  font-size: 16px;
+  color: #242427;
+  position: relative;
+}
+
+.fs-info::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  margin: 0 auto;
+  width: 80px;
+  height: 2px;
+  background-color: #00bcd4;
+}
+
+.fs-info__sub-info {
+  font-family: "OpenSans_SmB";
+  font-size: 14px;
+  color: #242427;
+  text-align: center;
+  padding-top: 25px;
+  line-height: 1.75;
+  width: 79%;
+  margin: auto;
+}
+
+.fs-info__sub-info span {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.be-block {
+  padding-bottom: 65px;
+}
+
+.start-learning {
+  padding-top: 32px;
+  padding-bottom: 106px;
+  position: relative;
+}
+
+.start-learning::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  top: 0;
+  height: 3px;
+  background-color: #242427;
+}
+
+.kwnolege {
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.7;
+  letter-spacing: -2px;
+  font-family: "Ubuntu-mono_B";
+  font-size: 16px;
+  color: #242427;
+}
+
+.kwnolege span {
+  background-color: #00bcd4;
+  padding: 6px 4px;
+}
+
+.kwnolege-list {
+  margin-top: 25px;
+  text-align: center;
+  line-height: 1.9;
+  font-family: "Ubuntu-mono_B";
+  font-size: 16px;
+  color: #242427;
+}
+
+.click-start {
+  width: 100%;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: "Museo_900";
+  font-size: 14px;
+  color: #ffffff;
+  padding: 23px 36px;
+  border-radius: 5px;
+  border: none;
+  background: linear-gradient(to right, #ffc617 0%, #fb0740 100%);
+  box-shadow: 0px 12px 20px 0px rgba(28, 28, 30, 0.21);
+}
+
+/*FULL STACK CREATE*/
 
 @media screen and (min-width: 320px) {
   .container {

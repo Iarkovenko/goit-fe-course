@@ -6,6 +6,7 @@
 
 .row {
     @include row-flex();
+    overflow: hidden;
 }
 
 .item {

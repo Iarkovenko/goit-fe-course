@@ -1,0 +1,160 @@
+.fullstack-create {
+  padding-top: 50px;
+  padding-bottom: 62px;
+  background-color: $rosesmoke;
+}
+
+.fullstack-header {
+  padding-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  @include font-mixin("Museo_900", 25px, $header-color);
+  span {
+    color: $main-blue;
+  }
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 2px;
+    background-color: $header-color;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}
+
+.sub-title {
+  margin-top: 25px;
+  margin-bottom: 32px;
+  text-align: center;
+  text-transform: uppercase;
+  @include font-mixin("Museo_900", 14px, $header-color);
+  span {
+    font-family: "ProximaNova_ExB";
+    color: $main-blue;
+  }
+}
+
+.task-developer {
+  width: 100%;
+  padding: 8px 80px;
+  text-align: center;
+  border: 2px solid $main-blue;
+  @include font-mixin("OpenSans_ExB", 14px, $dark);
+  span {
+    color: $main-blue;
+  }
+}
+
+.fs-header {
+  margin-top: 55px;
+  @include font-mixin("Ubuntu-mono_B", 18px, $header-color);
+  @include size(1);
+  text-align: right;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 135px;
+    background-color: $header-color;
+    bottom: 5px;
+    width: 100%;
+    left: 9px;
+    right: 0;
+    display: block;
+    margin-left: 100%;
+  }
+}
+
+.go-full-stack {
+  margin-top: 15px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.fs-info {
+  padding-bottom: 16px;
+  text-align: center;
+  margin-top: 30px;
+  @include font-mixin("Museo_900", 16px, $header-color);
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+    height: 2px;
+    background-color: $main-blue;
+  }
+}
+
+.fs-info__sub-info {
+  @include font-mixin("OpenSans_SmB", 14px, $header-color);
+  text-align: center;
+  padding-top: 25px;
+  line-height: 1.75;
+  width: 79%;
+  margin: auto;
+  span {
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 12px;
+  }
+}
+
+.be-block {
+  padding-bottom: 65px;
+}
+
+.start-learning {
+  padding-top: 32px;
+  padding-bottom: 106px;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    top: 0;
+    height: 3px;
+    background-color: $header-color;
+  }
+}
+
+.kwnolege {
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.7;
+  letter-spacing: -2px;
+  @include font-mixin("Ubuntu-mono_B", 16px, $header-color);
+  span {
+    background-color: $main-blue;
+    padding: 6px 4px;
+  }
+}
+.kwnolege-list {
+    margin-top: 25px;
+    text-align: center;
+    line-height: 1.9;
+    @include font-mixin("Ubuntu-mono_B", 16px, $header-color);
+}
+
+.click-start {
+    width: 100%;
+    cursor: pointer;
+    margin-top: 20px;
+    @include font-mixin("Museo_900", 14px, #ffffff);
+    padding: 23px 36px;
+    border-radius: 5px;
+    border: none;
+    background: linear-gradient(to right,rgb(255,198,23) 0%, rgb(251,7,64) 100%);
+    box-shadow: 0px 12px 20px 0px rgba(28, 28, 30, 0.21);
+    
+}
