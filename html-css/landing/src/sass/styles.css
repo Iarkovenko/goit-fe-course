@@ -159,7 +159,15 @@ a {
 .main-header {
   background-color: #2b2a2f;
   padding-top: 31px;
-  padding-bottom: 68px;
+  padding-bottom: 70px;
+}
+
+@media (min-width: 768px) {
+  .main-header {
+    background-image: url("../img/header/bg-header.png");
+    background-repeat: no-repeat;
+    background-position: 120px 220px;
+  }
 }
 
 .top-panel {
@@ -173,7 +181,40 @@ a {
   background-repeat: no-repeat;
   object-fit: cover;
   width: 100px;
-  height: 29px;
+  height: 27px;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    background: url("../img/header/logo-768.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    width: 150px;
+    text-align: right;
+  }
+}
+
+.centr-it {
+  display: none;
+  text-transform: uppercase;
+  margin-left: 90px;
+  width: 120px;
+  font-family: "Museo_900";
+  font-size: 11px;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .centr-it {
+    display: inline-block;
+    text-align: left;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-info {
+    order: 3;
+  }
 }
 
 .contact-info__tel {
@@ -210,6 +251,7 @@ a {
   padding: 10px 12px;
   border: 1px solid #00bcd4;
   text-transform: uppercase;
+  align-self: center;
   font-family: "Museo_900";
   font-size: 14px;
   color: #ffffff;
@@ -219,8 +261,18 @@ a {
   color: #00bcd4;
 }
 
+@media (min-width: 768px) {
+  .info-start {
+    margin-top: 0;
+    font-size: 16px;
+    padding: 8px 12px;
+    align-self: center;
+  }
+}
+
 .main-info {
   text-align: center;
+  width: 100%;
 }
 
 .main-info p:nth-child(1) {
@@ -230,8 +282,12 @@ a {
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: -1.8px;
-  width: 280px;
-  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .main-info p:nth-child(1) {
+    letter-spacing: normal;
+  }
 }
 
 .main-info p:nth-child(2) {
@@ -244,13 +300,25 @@ a {
 .main-info p:nth-child(2)::before {
   position: absolute;
   content: "";
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   height: 3px;
   width: 180px;
   top: calc(100% + 19px);
   background-color: #00bcd4;
 }
 
+@media (min-width: 768px) {
+  .main-info p:nth-child(2)::before {
+    width: 574px;
+    height: 6px;
+  }
+}
+
 .header-h1 {
+  margin: 0 auto;
   padding-top: 40px;
   padding-bottom: 45px;
   font-family: "Museo_900";
@@ -259,10 +327,30 @@ a {
   text-transform: uppercase;
   letter-spacing: -1.5px;
   line-height: 1.5;
+  position: relative;
 }
 
 .header-h1__full-stack {
   color: #00bcd4;
+}
+
+@media (min-width: 768px) {
+  .header-h1 {
+    width: 55%;
+    letter-spacing: normal;
+  }
+  .header-h1::before {
+    position: absolute;
+    content: "";
+    width: 120px;
+    height: 1px;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: #00bcd4;
+    bottom: 20px;
+  }
 }
 
 .main-info p:nth-child(4) {
@@ -271,13 +359,20 @@ a {
   color: #ffffff;
   line-height: 1.5;
   margin: 0 auto;
-  max-width: 215px;
-  text-align: justify;
-  padding-bottom: 17px;
+  width: 215px;
+  padding-bottom: 10px;
 }
 
 .main-info p:nth-child(4) .junior-full-stack {
   font-family: "Museo_900", "ProximaNova_R";
+}
+
+@media (min-width: 768px) {
+  .main-info p:nth-child(4) {
+    padding-bottom: 0;
+    width: 522px;
+    font-size: 16px;
+  }
 }
 
 .main-info p:nth-child(5) {
@@ -286,12 +381,81 @@ a {
   color: #ffffff;
   line-height: 1.5;
   margin: 0 auto;
-  max-width: 275px;
+  width: 275px;
 }
 
 .main-info p:nth-child(5) .precent {
   font-size: 18px;
   color: #00bcd4;
+}
+
+@media (min-width: 768px) {
+  .main-info p:nth-child(5) .precent {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-info p:nth-child(5) {
+    width: 522px;
+    font-size: 18px;
+    letter-spacing: -0.4px;
+    padding-bottom: 110px;
+  }
+}
+
+.m768 {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .m768 {
+    display: flex;
+  }
+}
+
+.portfolio {
+  width: 510px;
+  display: flex;
+  flex-flow: row nowrap;
+  text-align: center;
+  justify-content: space-between;
+  font-family: "Museo_900";
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.portfolio .item {
+  text-align: left;
+}
+
+.portfolio .item:first-child {
+  text-transform: uppercase;
+  position: relative;
+}
+
+.portfolio .item:first-child::before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 100%;
+  right: 0;
+  background-color: #fff;
+}
+
+.portfolio .item:nth-child(n + 2) {
+  font-family: "Ubuntu-mono_R";
+  position: relative;
+  margin-left: 35px;
+}
+
+.portfolio .item:nth-child(n + 2)::before {
+  position: absolute;
+  content: "<_";
+  font-size: 25px;
+  color: #00bcd4;
+  left: -27px;
+  top: -9px;
 }
 
 /* HEADER */
@@ -303,6 +467,13 @@ a {
 
 .come-from .row {
   justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .come-from .row {
+    justify-content: space-between;
+    align-content: flex-end;
+  }
 }
 
 .header-block {
@@ -320,6 +491,15 @@ a {
 
 .header-block__h2--underline {
   color: #00bcd4;
+}
+
+@media (min-width: 768px) {
+  .header-block {
+    text-align: left;
+    order: 1;
+    font-size: 30px;
+    align-self: flex-start;
+  }
 }
 
 .come-from-age {
@@ -343,6 +523,12 @@ a {
   background-color: #242427;
   left: 20%;
   top: 24px;
+}
+
+@media (min-width: 768px) {
+  .come-from-age {
+    order: 3;
+  }
 }
 
 .come-from-age--blue {
@@ -379,11 +565,23 @@ a {
   left: -4px;
 }
 
+@media (min-width: 768px) {
+  .a-1 {
+    order: 2;
+  }
+}
+
 .a-2 .article__title::before {
   position: absolute;
   content: url("../img/come-from/a-2.png");
   top: -10px;
   left: -4px;
+}
+
+@media (min-width: 768px) {
+  .a-2 {
+    order: 3;
+  }
 }
 
 .a-3 .article__title::before {
@@ -393,6 +591,12 @@ a {
   left: -4px;
 }
 
+@media (min-width: 768px) {
+  .a-3 {
+    order: 4;
+  }
+}
+
 .a-4 .article__title::before {
   position: absolute;
   content: url("../img/come-from/a-4.png");
@@ -400,11 +604,23 @@ a {
   left: -4px;
 }
 
+@media (min-width: 768px) {
+  .a-4 {
+    order: 5;
+  }
+}
+
 .a-5 .article__title::before {
   position: absolute;
   content: url("../img/come-from/a-5.png");
   top: -10px;
   left: -4px;
+}
+
+@media (min-width: 768px) {
+  .a-5 {
+    order: 6;
+  }
 }
 
 /* SECTION COME FROM*/

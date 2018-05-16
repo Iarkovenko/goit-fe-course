@@ -4,6 +4,10 @@
 }
 .come-from .row {
   justify-content: center;
+  @media (min-width: 768px) {
+    justify-content: space-between;
+    align-content: flex-end;
+  }
 }
 .header-block {
   width: 220px;
@@ -15,6 +19,12 @@
     &--underline {
       color: $main-blue;
     }
+  }
+  @media (min-width: 768px) {
+    text-align: left;
+    order: 1;
+    font-size: 30px;
+    align-self: flex-start;
   }
 }
 
@@ -35,6 +45,9 @@
     background-color: $header-color;
     left: 20%;
     top: 24px;
+  }
+  @media (min-width: 768px) {
+    order: 3;
   }
 }
 
@@ -64,6 +77,9 @@
     top: -10px;
     left: -4px;
   }
+  @media (min-width: 768px) {
+    order: 2;
+  }
 }
 
 .a-2 {
@@ -72,6 +88,9 @@
     content: url("../img/come-from/a-2.png");
     top: -10px;
     left: -4px;
+  }
+  @media (min-width: 768px) {
+    order: 3;
   }
 }
 
@@ -82,6 +101,9 @@
     top: -7px;
     left: -4px;
   }
+  @media (min-width: 768px) {
+    order: 4;
+  }
 }
 
 .a-4 {
@@ -91,6 +113,9 @@
     top: -5px;
     left: -4px;
   }
+  @media (min-width: 768px) {
+    order: 5;
+  }
 }
 
 .a-5 {
@@ -99,5 +124,8 @@
     content: url("../img/come-from/a-5.png");
     top: -10px;
     left: -4px;
+  }
+  @media (min-width: 768px) {
+    order: 6;
   }
 }

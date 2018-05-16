@@ -1,111 +1,231 @@
 .main-header {
-    background-color: $dark-smoke;
-    padding-top: 31px;
-    padding-bottom: 68px;
-  }
-  .top-panel {
-    justify-content: space-between;
-    padding-bottom: 57px;
-  }
-  .logo {
-    background: url("../img/header/logo.png");
-    background-position: center;
+  background-color: $dark-smoke;
+  padding-top: 31px;
+  padding-bottom: 70px;
+  @media (min-width: 768px) {
+    background-image: url("../img/header/bg-header.png");
     background-repeat: no-repeat;
-    object-fit: cover;
-    width: 100px;
-    height: 29px;
+    background-position: 120px 220px;
   }
-  
-  .contact-info__tel {
-    @include font-mixin("Ubuntu-mono_B", 14px, $main-blue);
+}
+.top-panel {
+  justify-content: space-between;
+  padding-bottom: 57px;
+}
+.logo {
+  background: url("../img/header/logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  width: 100px;
+  height: 27px;
+  @media (min-width: 768px) {
+    background: url("../img/header/logo-768.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    width: 150px;
+    text-align: right;
+  }
+}
+.centr-it {
+  display: none;
+  text-transform: uppercase;
+  margin-left: 90px;
+  width: 120px;
+  @include font-mixin("Museo_900", 11px, #ffffff);
+  @media (min-width: 768px) {
+    display: inline-block;
+    text-align: left;
     
-    position: relative;
+  }
+}
+
+.contact-info {
+  @media (min-width: 768px) {
+    order: 3;
+  }
+}
+.contact-info__tel {
+  @include font-mixin("Ubuntu-mono_B", 14px, $main-blue);
+
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: $main-blue;
+    top: calc(100% + 4px);
+    width: 135px;
+    height: 1px;
+  }
+}
+
+.contact-info__age {
+  padding-top: 13px;
+  @include font-mixin("ProximaNova_R", 13px, $light-smoke2);
+  &--age-color {
+    @include font-mixin("ProximaNova_ExB", 13px, #ffffff);
+  }
+}
+
+.info-start {
+  margin: 27px auto 0;
+  padding: 10px 12px;
+  border: 1px solid $main-blue;
+  text-transform: uppercase;
+  align-self: center;
+  @include font-mixin("Museo_900", 14px, #ffffff);
+  &__date {
+    color: $main-blue;
+  }
+  @media (min-width: 768px) {
+    margin-top: 0;
+    font-size: 16px;
+    padding: 8px 12px;
+    align-self: center;
+  }
+}
+
+.main-info {
+  text-align: center;
+  width: 100%;
+}
+
+.main-info p:nth-child(1) {
+  margin: 0 auto;
+  @include font-mixin("Ubuntu-mono_B", 18px, #ffffff);
+  text-transform: uppercase;
+  letter-spacing: -1.8px;
+  @media (min-width: 768px) {
+    letter-spacing: normal;
+  }
+}
+
+.main-info p:nth-child(2) {
+  @include font-mixin("ProximaNova_R", 16px, $light-smoke);
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 3px;
+    width: 180px;
+    top: calc(100% + 19px);
+    background-color: $main-blue;
+    @media (min-width: 768px) {
+      width: 574px;
+      height: 6px;
+    }
+  }
+}
+.header-h1 {
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 45px;
+  @include font-mixin("Museo_900", 30px, #ffffff);
+  text-transform: uppercase;
+  letter-spacing: -1.5px;
+  line-height: 1.5;
+  position: relative;
+  &__full-stack {
+    color: $main-blue;
+  }
+  @media (min-width: 768px) {
+    width: 55%;
+    letter-spacing: normal;
     &::before {
       position: absolute;
       content: "";
-      background-color: $main-blue;
-      top: calc(100% + 4px);
-      width: 135px;
+      width: 120px;
       height: 1px;
-    }
-  }
-  
-  .contact-info__age {
-    padding-top: 13px;
-    @include font-mixin("ProximaNova_R", 13px, $light-smoke2);
-    &--age-color {
-      @include font-mixin("ProximaNova_ExB", 13px, #ffffff);
-    }
-  }
-  
-  .info-start {
-    margin: 27px auto 0;
-    padding: 10px 12px;
-    border: 1px solid $main-blue;
-    text-transform: uppercase;
-    @include font-mixin("Museo_900", 14px, #ffffff);
-    &__date {
-      color: $main-blue;
-    }
-  }
-  
-  .main-info {
-    text-align: center;
-  }
-  
-  .main-info p:nth-child(1) {
-    margin: 0 auto;
-    @include font-mixin("Ubuntu-mono_B", 18px, #ffffff);
-    text-transform: uppercase;
-    letter-spacing: -1.8px;
-    width: 280px;
-    max-width: 100%;
-    
-  }
-  
-  .main-info p:nth-child(2) {
-    @include font-mixin("ProximaNova_R", 16px, $light-smoke);
-    position: relative;
-    &::before {
-      position: absolute;
-      content: "";
-      height: 3px;
-      width: 180px;
-      top: calc(100% + 19px);
+      display: block;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
       background-color: $main-blue;
+      bottom: 20px;
     }
   }
-  .header-h1 {
-    padding-top: 40px;
-    padding-bottom: 45px;
-    @include font-mixin("Museo_900", 30px, #ffffff);
-    text-transform: uppercase;
-    letter-spacing: -1.5px;
-    line-height: 1.5;
-    &__full-stack {
-      color: $main-blue;
+}
+.main-info p:nth-child(4) {
+  @include font-mixin("Museo_300", 14px, #ffffff);
+  line-height: 1.5;
+  margin: 0 auto;
+  width: 215px;
+  padding-bottom: 10px;
+  .junior-full-stack {
+    font-family: "Museo_900", "ProximaNova_R";
+  }
+  @media (min-width: 768px) {
+    padding-bottom: 0;
+    width: 522px;
+    font-size: 16px;
+  }
+}
+
+.main-info p:nth-child(5) {
+  @include font-mixin("Ubuntu-mono_B", 14px, #ffffff);
+  line-height: 1.5;
+  margin: 0 auto;
+  width: 275px;
+
+  .precent {
+    font-size: 18px;
+    color: $main-blue;
+    @media (min-width: 768px) {
+      font-size: 24px;
     }
   }
-  .main-info p:nth-child(4) {
-    @include font-mixin("Museo_300", 14px, #ffffff);
-    line-height: 1.5;
-    margin: 0 auto;
-    max-width: 215px;
-    text-align: justify;
-    padding-bottom: 17px;
-    .junior-full-stack {
-      font-family: "Museo_900", "ProximaNova_R";
-    }
+  @media (min-width: 768px) {
+    width: 522px;
+    font-size: 18px;
+    letter-spacing: -0.4px;
+    padding-bottom: 110px;
   }
-  
-  .main-info p:nth-child(5) {
-    @include font-mixin("Ubuntu-mono_B", 14px, #ffffff);
-    line-height: 1.5;
-    margin: 0 auto;
-    max-width: 275px;
-    .precent {
-      font-size: 18px;
-      color: $main-blue;
-    }
+}
+
+.m768 {
+  display: none;
+  @media (min-width: 768px) {
+    display: flex;
   }
-  
+}
+
+.portfolio {
+  width: 510px;
+  display: flex;
+  flex-flow: row nowrap;
+  text-align: center;
+  justify-content: space-between;
+  @include font-mixin("Museo_900", 16px, #ffffff);
+}
+.portfolio .item {
+  text-align: left;
+}
+.portfolio .item:first-child {
+  text-transform: uppercase;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    right: 0;
+    background-color: #fff;
+  }
+}
+.portfolio .item:nth-child(n + 2) {
+  font-family: "Ubuntu-mono_R";
+  position: relative;
+  margin-left: 35px;
+  &::before {
+    position: absolute;
+    content: "<_";
+    font-size: 25px;
+    color: $main-blue;
+    left: -27px;
+    top: -9px;
+  }
+}
