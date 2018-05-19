@@ -6,6 +6,17 @@
   line-height: 1.17;
   background-color: #000000;
   @include font-mixin("Acrom-ex", 58px, #ffffff);
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "programm";
+    @include font-mixin("Acrom-ex", 183px, #000000);
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.05);
+      transform: rotate(90deg);
+      top: 200%;
+      right: -83%;
+  }
 }
 
 .programm-list {

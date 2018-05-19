@@ -1,58 +1,47 @@
 .starting-date {
-    padding-top: 100px;
+  padding-top: 100px;
 }
 .starting-box {
-  padding-top: 48px;
-  padding-bottom: 56px;
+  padding: 48px 60px 56px 48px;
   box-shadow: -8px 8px 21px 8px rgba(0, 0, 0, 0.11);
-  margin: auto;
   text-align: center;
-}
-
-.date,
-.month,
-.duration,
-.count-month {
-  @include size(6);
-  @include font-mixin("Acrom-ex", 12.5px, #000000);
-}
-.date,
-.duration {
-  text-align: right;
-  span {
-    background-color: #000000;
-    color: #ffffff;
+  max-width: 417px;
+  margin: auto;
+  .item {
+    @include size(12);
   }
 }
-.month,
-.count-month {
-  padding-left: 10px;
-  text-align: left;
+.date,
+.duration {
+  text-transform: uppercase;
+  @include font-mixin("Acrom-ex", 12.5px, #000000);
 }
+.bg-black {  
+  background-color: #000000;
+  color: #ffffff;
+}
+
 .date {
-    margin-bottom: 26px;
+  margin-bottom: 26px;
 }
 
 .duration {
-    margin-bottom: 48px;
+  margin-bottom: 48px;
+  padding-right: 58.5px;
 }
 
 .bonus-block {
-    margin: auto;
-    text-align: left;
-    @include font-mixin("Acrom-medium", 14.5px, $orange);
-    position: relative;
-    &::before {
-        position: absolute;
-        content: "";
-        width: 4px;
-        height: 33px;
-        border-radius: 3px;
-        top: 4px;
-        left: -20px;
-        background-color: #000;
-        transform: rotate(30deg);
-    }
+  @include font-mixin("Acrom-medium", 14.5px, $orange);
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 33px;
+    border-radius: 3px;
+    top: 4px;
+    left: 15%;
+    background-color: #000;
+    transform: rotate(30deg);
+  }
 }
-
-  

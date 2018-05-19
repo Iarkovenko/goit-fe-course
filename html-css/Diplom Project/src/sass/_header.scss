@@ -1,49 +1,67 @@
 .main-header {
-    padding-top: 32px;
+  padding-top: 32px;
 }
 .main-header .row {
-    justify-content: space-between;
-    
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.logo-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .logo-goit {
-    margin-right: 48px;
+  margin-right: 48px;
 }
 a {
-    @include font-mixin('Acrom-bold', 10.5px, #000000);
+  @include font-mixin("Acrom-bold", 10.5px, #000000);
 }
 .email {
-    align-self: center;
-    margin-left: auto;
-    margin-right: 34px;
-    a {
-        position: relative;
-        &::before {
-            position: absolute;
-            content: url('../img/sprite/header/close-envelope.svg#Capa_1');
-            width: 15px;
-            height: 11px;
-            left: -18px;
-            top: 50%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding-right: 34px;
+  margin-left: auto;
+  position: relative;
+  align-self: center;
+  &::before {
+    display: block;
+    position: absolute;
+    content: url("../img/close-envelope.png");
+    width: 15px;
+    height: 11px;
+    left: -18px;
+    top: 50%;
+    -webkit-transform: translateY(-70%);
             transform: translateY(-70%);
-        }
-    }
+  }
 }
-
+.call-tel {  
+  align-self: center;
+}
 .call-tel__number {
-    width: 100%;
-    max-width: 110px;
-    flex-direction: column;
-    a {
-        position: relative;
-        &::before {
-            position: absolute;
-            content: url('../img/sprite/header/phone-receiver.svg#Capa_1');
-            width: 8px;
-            height: 11px;
-            left: -11px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-    }  
-    
+  width: 100%;
+  max-width: 110px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  a {
+    display: block;
+    position: relative;
+    &::before {
+      display: block;
+      position: absolute;
+      content: url("../img/phone-receiver.png");
+      width: 8px;
+      height: 11px;
+      left: -13px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+    }
+  }
 }
