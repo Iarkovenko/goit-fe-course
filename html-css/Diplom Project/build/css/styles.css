@@ -195,9 +195,9 @@ a {
 .email::before {
   display: block;
   position: absolute;
-  content: url("../img/close-envelope.png");
-  width: 15px;
-  height: 11px;
+  content: url("../img/sprite.svg#phone-receiver");
+  width: 14px;
+  height: 14px;
   left: -18px;
   top: 50%;
   -webkit-transform: translateY(-70%);
@@ -222,7 +222,7 @@ a {
 .call-tel__number a::before {
   display: block;
   position: absolute;
-  content: url("../img/phone-receiver.png");
+  /*content: url("../img/phone-receiver.png");*/
   width: 8px;
   height: 11px;
   left: -13px;
@@ -476,7 +476,6 @@ a {
 }
 
 .item__sub-title {
-  white-space: pre-line;
   text-transform: uppercase;
   display: block;
   letter-spacing: -0.7px;
@@ -507,7 +506,7 @@ a {
   left: -10px;
 }
 
-.programm-list__item:nth-child(-n+9)::before {
+.programm-list__item:nth-child(-n + 9)::before {
   content: "0" counter(order) ".";
 }
 
@@ -525,7 +524,7 @@ a {
 
 .unit-list__item::before {
   position: absolute;
-  content: '';
+  content: "";
   width: 7px;
   height: 7px;
   background-color: #ef7330;
@@ -551,7 +550,6 @@ a {
 }
 
 .header-6-steps {
-  white-space: pre-line;
   font-family: "Acrom-ex";
   font-size: 37px;
   color: #000000;

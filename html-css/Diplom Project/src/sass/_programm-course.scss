@@ -11,11 +11,11 @@
     position: absolute;
     content: "programm";
     @include font-mixin("Acrom-ex", 183px, #000000);
-      text-transform: uppercase;
-      color: rgba(0, 0, 0, 0.05);
-      transform: rotate(90deg);
-      top: 200%;
-      right: -83%;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.05);
+    transform: rotate(90deg);
+    top: 200%;
+    right: -83%;
   }
 }
 
@@ -28,37 +28,35 @@
   text-transform: uppercase;
   display: inline;
   @include font-mixin("Acrom-ex", 12.5px, #ffffff);
-  background-color: #000000; 
+  background-color: #000000;
 }
 
-.item__sub-title {   
-  white-space: pre-line;
-  text-transform: uppercase; 
+.item__sub-title {
+  text-transform: uppercase;
   display: block;
-  letter-spacing: -0.7px;  
-  padding-bottom: 22px;  
+  letter-spacing: -0.7px;
+  padding-bottom: 22px;
   @include font-mixin("Acrom-ex", 12.5px, #000000);
 }
-
 
 .programm-list__item {
   padding-left: 65px;
   padding-right: 16px;
   padding-bottom: 24px;
-  @include size(4);  
+  @include size(4);
   position: relative;
   overflow: hidden;
   &::before {
     position: absolute;
     counter-increment: order;
-    content: ""counter(order)".";
+    content: "" counter(order) ".";
     line-height: 0.75;
     @include font-mixin("Acrom-ex", 38px, #000000);
     top: 0;
-    left: -10px;    
+    left: -10px;
   }
-  &:nth-child(-n+9)::before {
-    content: "0" counter(order)".";
+  &:nth-child(-n + 9)::before {
+    content: "0" counter(order) ".";
   }
 }
 
@@ -72,7 +70,7 @@
   margin-bottom: 9px;
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     width: 7px;
     height: 7px;
     background-color: $orange;

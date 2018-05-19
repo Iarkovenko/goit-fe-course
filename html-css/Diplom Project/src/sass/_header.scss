@@ -3,16 +3,16 @@
 }
 .main-header .row {
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 .logo-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .logo-goit {
   margin-right: 48px;
@@ -22,7 +22,7 @@ a {
 }
 .email {
   -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
   padding-right: 34px;
   margin-left: auto;
   position: relative;
@@ -30,16 +30,16 @@ a {
   &::before {
     display: block;
     position: absolute;
-    content: url("../img/close-envelope.png");
-    width: 15px;
-    height: 11px;
+    content: url('../img/sprite.svg#phone-receiver');
+    width: 14px;
+    height: 14px;
     left: -18px;
     top: 50%;
     -webkit-transform: translateY(-70%);
-            transform: translateY(-70%);
+    transform: translateY(-70%);
   }
 }
-.call-tel {  
+.call-tel {
   align-self: center;
 }
 .call-tel__number {
@@ -47,21 +47,21 @@ a {
   max-width: 110px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   a {
     display: block;
     position: relative;
     &::before {
       display: block;
       position: absolute;
-      content: url("../img/phone-receiver.png");
+      /*content: url("../img/phone-receiver.png");*/
       width: 8px;
       height: 11px;
       left: -13px;
       top: 50%;
       -webkit-transform: translateY(-50%);
-              transform: translateY(-50%);
+      transform: translateY(-50%);
     }
   }
 }

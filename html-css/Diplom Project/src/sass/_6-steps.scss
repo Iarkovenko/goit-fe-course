@@ -5,7 +5,6 @@
     @include size(6);
 }
 .header-6-steps {
-    white-space: pre-line;
     @include font-mixin("Acrom-ex", 37px, #000000);
     &__subheader {
         background-color: #000000;
