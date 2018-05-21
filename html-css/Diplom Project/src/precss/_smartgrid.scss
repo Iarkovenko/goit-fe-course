@@ -322,6 +322,9 @@ $fields: 177px;
         max-width: 100%;
         height: auto;
     }
+    a {
+        text-decoration: none;
+    }
 }
 
 @mixin debug($background, $outline){
