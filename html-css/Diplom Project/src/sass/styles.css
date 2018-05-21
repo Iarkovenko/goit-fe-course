@@ -144,24 +144,14 @@ a {
 }
 
 .email {
-  -ms-flex-item-align: center;
-  align-self: center;
   padding-right: 34px;
   margin-left: auto;
-  position: relative;
   align-self: center;
 }
 
-.email::before {
-  display: block;
-  position: absolute;
-  content: url("../img/sprite.svg#phone-receiver");
-  width: 14px;
-  height: 14px;
-  left: -18px;
-  top: 50%;
-  -webkit-transform: translateY(-70%);
-  transform: translateY(-70%);
+.icon {
+  position: relative;
+  top: 4px;
 }
 
 .call-tel {
@@ -169,29 +159,15 @@ a {
 }
 
 .call-tel__number {
-  width: 100%;
-  max-width: 110px;
+  flex-wrap: nowrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
 }
 
-.call-tel__number a {
-  display: block;
-  position: relative;
-}
-
-.call-tel__number a::before {
-  display: block;
-  position: absolute;
-  /*content: url("../img/phone-receiver.png");*/
-  width: 8px;
-  height: 11px;
-  left: -13px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+.call-tel__number .icon {
+  top: 7px;
 }
 
 /* HEADER */
