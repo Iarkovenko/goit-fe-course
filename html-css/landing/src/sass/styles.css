@@ -115,6 +115,12 @@ a {
   display: flex;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 @font-face {
   font-family: 'Museo_300';
   src: url("../fonts/museosanscyrl_300.woff2") format("woff2");
@@ -173,6 +179,7 @@ a {
 .top-panel {
   justify-content: space-between;
   padding-bottom: 57px;
+  align-items: center;
 }
 
 .logo {
@@ -465,6 +472,12 @@ a {
   padding-bottom: 91px;
 }
 
+@media screen and (min-width: 768px) {
+  .come-from .item {
+    width: calc(50% - 30px);
+  }
+}
+
 .come-from .row {
   justify-content: center;
 }
@@ -472,16 +485,17 @@ a {
 @media (min-width: 768px) {
   .come-from .row {
     justify-content: space-between;
-    align-content: flex-end;
+    flex-direction: row wrap;
   }
 }
 
 .header-block {
-  width: 220px;
   text-align: center;
 }
 
 .header-block__h2 {
+  margin: 0 auto;
+  width: 220px;
   line-height: 1.2;
   font-family: "Museo_900";
   font-size: 25px;
@@ -494,11 +508,17 @@ a {
 }
 
 @media (min-width: 768px) {
+  .header-block__h2 {
+    margin: 0;
+    font-size: 30px;
+    width: auto;
+  }
+}
+
+@media (min-width: 768px) {
   .header-block {
     text-align: left;
-    order: 1;
     font-size: 30px;
-    align-self: flex-start;
   }
 }
 
@@ -506,7 +526,6 @@ a {
   padding-top: 40px;
   padding-bottom: 60px;
   width: 260px;
-  text-align: center;
   text-transform: uppercase;
   position: relative;
   line-height: 1.5;
@@ -527,7 +546,17 @@ a {
 
 @media (min-width: 768px) {
   .come-from-age {
-    order: 3;
+    text-align: right;
+    padding: 25px 0 0 100px;
+    width: auto;
+    margin-bottom: 50px;
+  }
+  .come-from-age::before {
+    position: absolute;
+    content: "";
+    top: 48.3px;
+    width: 100%;
+    left: 0;
   }
 }
 
@@ -535,6 +564,12 @@ a {
   font-family: "ProximaNova_ExB";
   font-size: 14px;
   color: #00bcd4;
+}
+
+@media (min-width: 768px) {
+  .come-from-age--blue {
+    background-color: #242427;
+  }
 }
 
 .article {
@@ -567,7 +602,13 @@ a {
 
 @media (min-width: 768px) {
   .a-1 {
-    order: 2;
+    margin-top: 64px;
+  }
+  .a-1 .article__info span {
+    font-family: "OpenSans_ExB";
+    font-size: 14px;
+    color: #000000;
+    text-decoration: underline #00bcd4;
   }
 }
 
@@ -578,23 +619,11 @@ a {
   left: -4px;
 }
 
-@media (min-width: 768px) {
-  .a-2 {
-    order: 3;
-  }
-}
-
 .a-3 .article__title::before {
   position: absolute;
   content: url("../img/come-from/a-3.png");
   top: -7px;
   left: -4px;
-}
-
-@media (min-width: 768px) {
-  .a-3 {
-    order: 4;
-  }
 }
 
 .a-4 .article__title::before {
@@ -604,23 +633,11 @@ a {
   left: -4px;
 }
 
-@media (min-width: 768px) {
-  .a-4 {
-    order: 5;
-  }
-}
-
 .a-5 .article__title::before {
   position: absolute;
   content: url("../img/come-from/a-5.png");
   top: -10px;
   left: -4px;
-}
-
-@media (min-width: 768px) {
-  .a-5 {
-    order: 6;
-  }
 }
 
 /* SECTION COME FROM*/
@@ -631,10 +648,58 @@ a {
   background-color: #f4f4f4;
 }
 
+.fullstack-create .row {
+  justify-content: center;
+  overflow: unset;
+}
+
+@media (min-width: 768px) {
+  .fullstack-create .row {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) {
+  .fullstack-create {
+    position: relative;
+    padding-bottom: 0;
+    background: url("../img/fullstack-create/bg-fs-768.png"), url("../img/fullstack-create/block-bg-blue.png");
+    background-repeat: no-repeat;
+    background-position: center, bottom 150px;
+  }
+}
+
+.main-header-fs {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .main-header-fs {
+    position: relative;
+  }
+  .main-header-fs::before {
+    position: absolute;
+    content: '';
+    background-color: #f8f8f8;
+    width: 720px;
+    height: 490px;
+    top: -100px;
+    left: -15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .fs-header-block {
+    margin-right: auto;
+  }
+}
+
 .fullstack-header {
   padding-bottom: 20px;
   text-align: center;
   text-transform: uppercase;
+  margin: 0 auto;
+  width: 280px;
   font-family: "Museo_900";
   font-size: 25px;
   color: #242427;
@@ -645,26 +710,32 @@ a {
   color: #00bcd4;
 }
 
-.fullstack-header::before {
-  position: absolute;
-  content: "";
-  width: 150px;
-  height: 2px;
-  background-color: #242427;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
+@media (min-width: 768px) {
+  .fullstack-header {
+    text-align: left;
+    width: 350px;
+    margin: 0;
+  }
+  .fullstack-header::before {
+    position: absolute;
+    content: "";
+    width: 320px;
+    height: 2px;
+    background-color: #00bcd4;
+    top: -25px;
+    left: 0;
+  }
 }
 
 .sub-title {
-  margin-top: 25px;
-  margin-bottom: 32px;
-  text-align: center;
+  text-align: justify;
   text-transform: uppercase;
+  width: 220px;
+  margin: 25px auto 32px;
   font-family: "Museo_900";
   font-size: 14px;
   color: #242427;
+  position: relative;
 }
 
 .sub-title span {
@@ -672,7 +743,40 @@ a {
   color: #00bcd4;
 }
 
+.sub-title::before {
+  position: absolute;
+  content: "";
+  width: 150px;
+  height: 2px;
+  background-color: #242427;
+  top: -25px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .sub-title {
+    text-align: right;
+    margin-left: 0;
+    margin-right: 30px;
+    width: 250px;
+  }
+  .sub-title::before {
+    top: 14px;
+    width: 275px;
+    left: -15px;
+    margin: 0;
+  }
+  .sub-title span {
+    background-color: #242427;
+    color: #00bcd4;
+    padding: 3px;
+  }
+}
+
 .task-developer {
+  position: relative;
   width: 100%;
   padding: 8px 80px;
   text-align: center;
@@ -684,6 +788,29 @@ a {
 
 .task-developer span {
   color: #00bcd4;
+}
+
+@media (min-width: 768px) {
+  .task-developer {
+    border: none;
+    width: 170px;
+    text-align: left;
+    padding: 0;
+    transform: rotate(90deg);
+    top: -110px;
+    margin-right: 35px;
+  }
+}
+
+.fe-block {
+  position: relative;
+  z-index: 3;
+}
+
+@media screen and (min-width: 768px) {
+  .fe-block {
+    width: calc(50% - 30px);
+  }
 }
 
 .fs-header {
@@ -704,22 +831,34 @@ a {
   background-color: #242427;
   bottom: 5px;
   width: 100%;
-  left: 9px;
-  right: 0;
   display: block;
   margin-left: 100%;
 }
 
+@media (min-width: 768px) {
+  .fs-header {
+    text-align: center;
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .fs-header::before {
+    width: 135px;
+    margin-left: 125px;
+    left: 0;
+  }
+}
+
 .go-full-stack {
   margin-top: 15px;
-  width: 100%;
   border-radius: 10px;
+  width: 100%;
 }
 
 .fs-info {
   padding-bottom: 16px;
   text-align: center;
   margin-top: 30px;
+  text-transform: uppercase;
   font-family: "Museo_900";
   font-size: 16px;
   color: #242427;
@@ -739,6 +878,16 @@ a {
   background-color: #00bcd4;
 }
 
+@media (min-width: 768px) {
+  .fs-info {
+    font-size: 18px;
+  }
+  .fs-info::before {
+    width: 105px;
+    height: 3px;
+  }
+}
+
 .fs-info__sub-info {
   font-family: "OpenSans_SmB";
   font-size: 14px;
@@ -756,14 +905,35 @@ a {
   font-size: 12px;
 }
 
+@media (min-width: 768px) {
+  .fs-info__sub-info {
+    width: 90%;
+  }
+}
+
 .be-block {
   padding-bottom: 65px;
+}
+
+@media screen and (min-width: 768px) {
+  .be-block {
+    width: calc(50% - 30px);
+  }
+}
+
+@media (min-width: 768px) {
+  .be-block {
+    position: relative;
+    top: -148px;
+    z-index: 3;
+  }
 }
 
 .start-learning {
   padding-top: 32px;
   padding-bottom: 106px;
   position: relative;
+  width: 100%;
 }
 
 .start-learning::before {
@@ -775,11 +945,38 @@ a {
   background-color: #242427;
 }
 
+@media (min-width: 768px) {
+  .start-learning {
+    text-align: center;
+    position: relative;
+    top: -150px;
+  }
+  .start-learning::before {
+    left: 0;
+    right: 0;
+    display: block;
+    margin: 0 auto;
+    z-index: 3;
+  }
+  .start-learning::after {
+    position: absolute;
+    content: '';
+    background-color: #f8f8f8;
+    width: 720px;
+    height: 650px;
+    top: -400px;
+    left: -15px;
+    z-index: 2;
+  }
+}
+
 .kwnolege {
   text-align: center;
   text-transform: uppercase;
   line-height: 1.7;
   letter-spacing: -2px;
+  position: relative;
+  z-index: 10;
   font-family: "Ubuntu-mono_B";
   font-size: 16px;
   color: #242427;
@@ -794,6 +991,8 @@ a {
   margin-top: 25px;
   text-align: center;
   line-height: 1.9;
+  position: relative;
+  z-index: 10;
   font-family: "Ubuntu-mono_B";
   font-size: 16px;
   color: #242427;
@@ -802,6 +1001,7 @@ a {
 .click-start {
   width: 100%;
   cursor: pointer;
+  text-transform: uppercase;
   margin-top: 20px;
   font-family: "Museo_900";
   font-size: 14px;
@@ -811,6 +1011,14 @@ a {
   border: none;
   background: linear-gradient(to right, #ffc617 0%, #fb0740 100%);
   box-shadow: 0px 12px 20px 0px rgba(28, 28, 30, 0.21);
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .click-start {
+    width: 300px;
+  }
 }
 
 /*FULL STACK CREATE*/

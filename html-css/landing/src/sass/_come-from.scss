@@ -1,30 +1,37 @@
 .come-from {
   padding-top: 38px;
   padding-bottom: 91px;
+  .item {
+    @include size-sm(1);
+  }
 }
 .come-from .row {
   justify-content: center;
   @media (min-width: 768px) {
     justify-content: space-between;
-    align-content: flex-end;
+    flex-direction: row wrap;
   }
 }
 .header-block {
-  width: 220px;
   text-align: center;
   &__h2 {
+    margin: 0 auto;
+    width: 220px;
     line-height: 1.2;
     @include font-mixin("Museo_900", 25px, $header-color);
     text-transform: uppercase;
     &--underline {
       color: $main-blue;
     }
+    @media (min-width: 768px) {
+      margin: 0;
+      font-size: 30px;
+      width: auto;
+    }
   }
   @media (min-width: 768px) {
     text-align: left;
-    order: 1;
     font-size: 30px;
-    align-self: flex-start;
   }
 }
 
@@ -32,7 +39,6 @@
   padding-top: 40px;
   padding-bottom: 60px;
   width: 260px;
-  text-align: center;
   text-transform: uppercase;
   position: relative;
   line-height: 1.5;
@@ -47,12 +53,25 @@
     top: 24px;
   }
   @media (min-width: 768px) {
-    order: 3;
+    text-align: right;
+    padding: 25px 0 0 100px;
+    width: auto;
+    margin-bottom: 50px;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 48.3px;
+      width: 100%;
+      left: 0;
+    }
   }
 }
 
 .come-from-age--blue {
   @include font-mixin("ProximaNova_ExB", 14px, $main-blue);
+  @media (min-width: 768px) {
+    background-color: $header-color;
+  }
 }
 
 .article {
@@ -78,7 +97,13 @@
     left: -4px;
   }
   @media (min-width: 768px) {
-    order: 2;
+    margin-top: 64px;
+    .article__info {
+      span {
+        @include font-mixin("OpenSans_ExB", 14px, #000000);
+        text-decoration: underline $main-blue;
+      }
+    }
   }
 }
 
@@ -89,9 +114,6 @@
     top: -10px;
     left: -4px;
   }
-  @media (min-width: 768px) {
-    order: 3;
-  }
 }
 
 .a-3 {
@@ -100,9 +122,6 @@
     content: url("../img/come-from/a-3.png");
     top: -7px;
     left: -4px;
-  }
-  @media (min-width: 768px) {
-    order: 4;
   }
 }
 
@@ -113,9 +132,6 @@
     top: -5px;
     left: -4px;
   }
-  @media (min-width: 768px) {
-    order: 5;
-  }
 }
 
 .a-5 {
@@ -124,8 +140,5 @@
     content: url("../img/come-from/a-5.png");
     top: -10px;
     left: -4px;
-  }
-  @media (min-width: 768px) {
-    order: 6;
   }
 }
