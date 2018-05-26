@@ -12,10 +12,9 @@
   @media (min-width: 768px) {   
     position: relative;
     padding-bottom: 0;
-    background-color: none;
-    background:  url('../img/fullstack-create/bg-fs-768.png'), url('../img/fullstack-create/block-bg-blue.png');
-    background-repeat: no-repeat;
-    background-position: center, bottom 150px;
+    background-color: unset;
+    background: url(../img/fullstack-create/bg-fs-768.png) no-repeat center center, url(../img/fullstack-create/block-bg-blue.png) no-repeat center 990px;
+    
   }
 }
 
