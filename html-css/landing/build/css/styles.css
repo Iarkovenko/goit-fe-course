@@ -893,7 +893,7 @@ img {
     position: relative;
     padding-bottom: 0;
     background-color: unset;
-    background: url(../img/fullstack-create/bg-fs-768.png) no-repeat center center, url(../img/fullstack-create/block-bg-blue.png) no-repeat center 990px;
+    background: url(../img/fullstack-create/bg-fs-768.png) no-repeat center 8px, url(../img/fullstack-create/block-bg-blue.png) no-repeat center 990px;
   }
 
   .main-header-fs {
