@@ -30,6 +30,7 @@
       height: 490px; 
       top: -100px;
       left: -15px;
+      box-shadow: 6px 15px 58px 0px rgba(0,0,0,0.15);
     }
   }
 }
@@ -56,16 +57,17 @@
   position: relative;
   @media (min-width: 768px) {
     text-align: left;
-    width: 350px;
+    width: 450px;
     margin: 0;
+    font-size: 30px;
     &::before {
       position: absolute;
       content: "";
-      width: 320px;
+      width: 310px;
       height: 2px;
       background-color: $main-blue;
       top: -25px;
-      left: 0;
+      left: -45px;
     }
   }
 }
@@ -97,9 +99,10 @@
     margin-left: 0;
     margin-right: 30px;
     width: 250px;
+    line-height: 1.5;
     &::before {
-      top: 14px;
-      width: 275px;
+      top: 20px;
+      width: 265px;
       left: -15px;
       margin: 0;
     }
@@ -114,7 +117,7 @@
 .task-developer {
   position: relative;
   width: 100%;
-  padding: 8px 80px;
+  padding: 8px 59px;
   text-align: center;
   border: 2px solid $main-blue;
   @include font-mixin("OpenSans_ExB", 14px, $dark);
@@ -127,8 +130,8 @@
     text-align: left;
     padding: 0;
     transform: rotate(90deg);
-    top: -110px;
-    margin-right: 35px;
+    top: -120px;
+    margin-right: 70px;
   }
 }
 
@@ -156,13 +159,13 @@
     margin-left: 100%;
   }
   @media (min-width: 768px) {
-    text-align: center;
+    text-align: right;
     margin-left: 0;
     margin-top: 0;
     &::before {
-      width: 135px;
+      width: 160px;
       margin-left: 125px;
-      left: 0;
+      left: 45px;
     }
   }
 }
@@ -206,7 +209,7 @@
   text-align: center;
   padding-top: 25px;
   line-height: 1.75;
-  width: 79%;
+  width: 95%;
   margin: auto;
   span {
     font-family: "Open Sans";
@@ -258,9 +261,10 @@
       background-color: $whitesmoke;
       width: 720px;
       height: 650px; 
-      top: -400px;
+      top: -435px;
       left: -15px;
       z-index: 2;
+      box-shadow: 6px 15px 58px 0px rgba(0, 0, 0, 0.15);
     }
     
   }
@@ -268,8 +272,7 @@
 .kwnolege {
   text-align: center;
   text-transform: uppercase;
-  line-height: 1.7;
-  letter-spacing: -2px;
+  line-height: 1.5;
   position: relative;
   z-index: 10;
   @include font-mixin("Ubuntu-mono_B", 16px, $header-color);
@@ -286,6 +289,10 @@
   position: relative;
   z-index: 10;
   @include font-mixin("Ubuntu-mono_B", 16px, $header-color);
+  @media (min-width: 768px) {
+    font-size: 14px;
+    margin-top: 10px;
+  }
 }
 
 .click-start {

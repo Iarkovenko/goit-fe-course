@@ -3,6 +3,16 @@
   padding-bottom: 91px;
   .item {
     @include size-sm(1);
+    @include size-lg(1);
+  }
+  @media (min-width: 768px) {
+    padding-bottom: 50px;
+  }
+  @media (min-width: 1920px) {
+    padding-top: 155px;
+    .container {
+      max-width: 1147px;
+    }
   }
 }
 .come-from .row {
@@ -10,6 +20,10 @@
   @media (min-width: 768px) {
     justify-content: space-between;
     flex-direction: row wrap;
+  }
+  @media (min-width: 1920px) {
+    overflow: visible;
+    justify-content: space-around;
   }
 }
 .header-block {
@@ -28,10 +42,17 @@
       font-size: 30px;
       width: auto;
     }
+    @media (min-width: 1920px) {
+      font-size: 42px;
+      width: 435px;
+    }
   }
   @media (min-width: 768px) {
     text-align: left;
     font-size: 30px;
+  }
+  @media (min-width: 1920px) {
+    max-width: 435px;
   }
 }
 
@@ -50,7 +71,7 @@
     height: 2px;
     background-color: $header-color;
     left: 20%;
-    top: 24px;
+    top: 10px;
   }
   @media (min-width: 768px) {
     text-align: right;
@@ -65,12 +86,23 @@
       left: 0;
     }
   }
+  @media (min-width: 1920px) {
+    font-size: 18px;
+    width: 300px;
+    &::before {
+      top: 50.5px;
+    }
+  }
 }
 
 .come-from-age--blue {
   @include font-mixin("ProximaNova_ExB", 14px, $main-blue);
   @media (min-width: 768px) {
     background-color: $header-color;
+  }
+  @media (min-width: 1920px) {
+    padding-top: 3px;
+    font-size: 18px;
   }
 }
 
@@ -80,30 +112,49 @@
   &__title {
     padding-left: 36px;
     @include font-mixin("Ubuntu-mono_B", 18px, $header-color);
+    @media (min-width: 1920px) {
+      font-size: 30px;
+      padding-left: 0;
+    }
   }
   &__info {
     text-align: left;
     padding: 35px 0;
     line-height: 1.7;
     @include font-mixin("Open Sans", 14px, #000000);
+    @media (min-width: 1920px) {
+      font-size: 18px;
+      padding-top: 22px;
+      padding-bottom: 78px;
+    }
+  }
+  @media (min-width: 1920px) {
+    max-width: 435px;
   }
 }
 
 .a-1 {
+ 
   .article__title::before {
     position: absolute;
     content: url("../img/come-from/a-1.png");
     top: -10px;
     left: -4px;
+    @media (min-width: 1920px) {
+      left: -77px;
+      top: -17px;
+      content: url("../img/come-from/a-1-lg.png");
+    }
+  }
+
+  .article__info {
+    span {
+      @include font-mixin("OpenSans_ExB", 14px, #000000);
+      text-decoration: underline $main-blue;
+    }
   }
   @media (min-width: 768px) {
-    margin-top: 64px;
-    .article__info {
-      span {
-        @include font-mixin("OpenSans_ExB", 14px, #000000);
-        text-decoration: underline $main-blue;
-      }
-    }
+    margin-top: 70px;
   }
 }
 
@@ -113,6 +164,10 @@
     content: url("../img/come-from/a-2.png");
     top: -10px;
     left: -4px;
+    @media (min-width: 1920px) {
+      left: -77px;
+      content: url("../img/come-from/a-2-lg.png");
+    }
   }
 }
 
@@ -122,6 +177,10 @@
     content: url("../img/come-from/a-3.png");
     top: -7px;
     left: -4px;
+    @media (min-width: 1920px) {
+      left: -77px;
+      content: url("../img/come-from/a-3-lg.png");
+    }
   }
 }
 
@@ -131,6 +190,10 @@
     content: url("../img/come-from/a-4.png");
     top: -5px;
     left: -4px;
+    @media (min-width: 1920px) {
+      left: -110px;
+      content: url("../img/come-from/a-4-lg.png");
+    }
   }
 }
 
@@ -140,5 +203,9 @@
     content: url("../img/come-from/a-5.png");
     top: -10px;
     left: -4px;
+    @media (min-width: 1920px) {
+      left: -77px;
+      content: url("../img/come-from/a-5-lg.png");
+    }
   }
 }
