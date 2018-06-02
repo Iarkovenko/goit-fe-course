@@ -823,7 +823,6 @@ img {
 @media (min-width: 1920px) {
   .come-from .row {
     overflow: visible;
-    justify-content: space-around;
   }
 }
 
@@ -1118,6 +1117,32 @@ img {
     top: -126px;
     left: 256px;
     background: url(../img/fullstack-create/block-bg-blue-1920-v.png) no-repeat;
+  }
+}
+
+.side-block {
+  display: none;
+}
+
+@media (min-width: 1920px) {
+  .side-block {
+    display: block;
+    position: absolute;
+    width: 525px;
+    transform: rotate(90deg);
+    right: -604px;
+    top: 185px;
+  }
+  .side-block p {
+    display: inline-block;
+    margin-right: 40px;
+    font-family: "Ubuntu-mono_R";
+    font-size: 15.6px;
+    color: #242427;
+  }
+  .side-block p:first-child {
+    text-transform: uppercase;
+    color: #00bcd4;
   }
 }
 
