@@ -23,6 +23,74 @@
   Если мест нигде нет, показать alert с сообщением 'Извините, столько мест нет ни в одной группе!'
 
 */
+
 const sharm = 15;
 const hurgada = 25;
 const taba = 6;
+
+const welcome = 'Добро пожаловать в турагенство Iarkovenko Travel';
+const countTripPlace = prompt(`${welcome}. \nВведите число необходимых мест`);
+
+
+const checkNumber = Number.parseInt(countTripPlace);
+const inputPlace = checkNumber; // необходимо предложить ввести число необходимых мест,результат сохранить в переменную.
+const trueInputPlace = checkNumber > 0;
+
+const checkInputPlace = checkNumber <= Math.max(sharm, hurgada, taba);
+const maxPlaceGroup =  Math.max(sharm, hurgada, taba);
+const minPlaceGroup = Math.min(sharm, hurgada, taba);
+
+const allGroup = maxPlaceGroup >= inputPlace;
+const twoGroup = inputPlace > minPlaceGroup;
+const oneGroup = inputPlace > sharm;
+
+
+let findPlace;
+
+if (countTripPlace === null) {
+    alert('Заходите к нам еще!)')
+}
+else {
+    switch(trueInputPlace) {
+        case true: // последовательно проверить кол-во мест в группах, и кол-во необходимых мест введенных пользователем.
+                switch (checkInputPlace) {
+                    case true:
+                            switch(true) {    // последовательно проверить кол-во мест в группах, и кол-во необходимых мест введенных пользователем.
+                                case oneGroup:
+                                    findPlace = confirm(`Мы нашли для Вас места группе Hurgada. \nCогласны ли Вы быть в этой группе?`);
+                                        if (findPlace === true) {
+                                            alert('Приятного путешествия в группе Hurgada');
+                                        } else {
+                                             alert('Нам очень жаль, приходите еще!');
+                                        }
+                                    break;           
+                                case twoGroup:
+                                findPlace = confirm(`Мы нашли для Вас места группах Sharm, Hurgada. \nCогласны ли Вы быть в этой группе?`);
+                                        if (findPlace === true) {
+                                            alert(`Мы с Вами свяжемся для уточнения группы. \nПриятного путешествия в группе Hurgada или Sharm`);
+                                        } else {
+                                            alert('Нам очень жаль, приходите еще!');
+                                        }
+                                    break;
+                                case allGroup:
+                                    findPlace = confirm(`Мы нашли для Вас места группах Taba, Sharm, Hurgada. \nCогласны ли Вы быть в этой группе?`);
+                                        if (findPlace === true) {
+                                            alert(`Мы с Вами свяжемся для уточнения группы. \nПриятного путешествия в группе Taba, Hurgada или Sharm`);
+                                        } else {
+                                            alert('Нам очень жаль, приходите еще!');
+                                        }
+                                    break;                   
+                            }                          
+                        break; 
+                    default:
+                        alert('Извините, столько мест нет ни в одной группе!');
+                        break;
+                }
+            break;
+        default: 
+            alert("Ошибка ввода");
+            break;
+    }
+}
+
+                            
