@@ -1,0 +1,90 @@
+.price-section {
+  padding-top: 107px;
+  padding-bottom: 84px;
+  .container {
+    .row {
+      padding-top: 16px;
+      padding-bottom: 20px;
+      justify-content: space-between;
+    }
+  }
+}
+
+.table .row:nth-child(2n + 1) {
+  background-color: #f6f6f6;
+}
+.table .row > .item {
+  @include size(3);
+  align-self: center;
+}
+
+.table .row .item:first-child {
+  @include font-mixin("Acrom-bold", 17px, $list-style);
+  text-align: right;
+  line-height: 1.2;
+}
+
+.table {
+  .row:nth-child(-n + 4) .item:nth-child(2) {
+    background-image: url("../img/v.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 22px;
+  }
+  .row:nth-child(n + 5) .item:nth-child(2) {
+    background-image: url("../img/x.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 23px;
+  }
+  .row:nth-child(-n + 7) .item:nth-child(3) {
+    background-image: url("../img/v.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 22px;
+  }
+  .row:nth-child(n + 8) .item:nth-child(3) {
+    background-image: url("../img/x.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 23px;
+  }
+  .row:nth-child(n + 1) .item:nth-child(4) {
+    background-image: url("../img/v.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 22px;
+  }
+}
+.price-block:first-child {
+  @include shift-left(3);
+}
+.price-block {
+  text-align: center;
+  @include size(3);
+  @include font-mixin("Acrom-bold", 25px, #ffffff);
+  span {
+    background-color: $dark-grey;
+    padding: 6px 14px;
+  }
+}
+
+.choose-price {
+  @include size(3);
+  @include font-mixin("Acrom-bold", 10.5px, #ffffff);
+  text-transform: uppercase;
+  background-color: $orange;
+  cursor: pointer;
+  border: none;
+  width: 200px;
+  height: 48px;
+  padding: 0;
+  @media screen and (max-width: 1024px) {
+    font-size: 9px;
+    width: 150px;
+    height: 30px;
+  }
+  &:first-child {
+    @include shift-left(3);
+  }
+}

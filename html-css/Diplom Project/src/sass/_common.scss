@@ -1,0 +1,25 @@
+@include reset();
+
+.container {
+    @include wrapper();
+}
+
+.row {
+    @include row-flex();
+}
+
+.item {
+    @include col();
+}
+
+@mixin font-mixin($f-family, $f-size, $color) {
+    font-family: $f-family;
+    font-size: $f-size;
+    color: $color;
+}
+
+.h3 {@include font-mixin("Acrom-ex", 37px, #000000);
+@media screen and (min-width: 1024px) {
+    font-size: 30px;
+}
+}

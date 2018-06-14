@@ -27,3 +27,21 @@
 
 const passwords = ['qwerty', '111qwe', '123123', 'r4nd0mp4zzw0rd'];
 let attempts = 3;
+let userInput;
+
+do {
+  userInput = prompt('Enter your password');
+  if (userInput === null) {
+    break;
+  }
+  if (passwords.includes(userInput)) {
+    alert('Welcome');
+    break;
+  } else {
+    attempts -= 1;
+    alert(`ERROR. You have ${attempts} attempts left`);
+  }
+} while (attempts !== 0);
+{
+  if (attempts === 0) alert(`You have run out of account, your account is locked!`);
+}

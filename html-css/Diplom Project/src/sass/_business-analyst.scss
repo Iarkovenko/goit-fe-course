@@ -1,0 +1,181 @@
+.business-analysis {
+  padding-top: 96px;
+  counter-reset: before;
+}
+.header-analyst-block {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "go it";
+    @include font-mixin("Acrom-ex", 183px, #000000);
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.05);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    top: 150%;
+    right: 0;
+  }
+}
+
+.header-course {
+  margin-bottom: 63px;
+  @include font-mixin("Acrom-ex", 58px, #000000);
+  position: relative;
+  &__business-analyst {
+    color: #ffffff;
+    background-color: #000000;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 50px;
+  }
+}
+
+.brief-course {
+  padding-bottom: 70px;
+}
+
+.complete {
+  @include shift-left(1);
+  @include size(5);
+  @include font-mixin("Acrom-bold", 21px, $main-dark);
+  padding-left: 34px;
+  padding-right: 10px;
+  padding-bottom: 30px;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 56px;
+    height: 8px;
+    background-color: #0e0000;
+    left: -58px;
+  }
+}
+
+.student {
+  @include shift-left(1);
+  @include size(8);
+  @include font-mixin("Acrom-regular", 17px, $main-dark);
+  padding-left: 34px;
+}
+
+.info-course {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-bottom: 90px;
+}
+
+.info-img {
+  @include size(6);
+}
+
+.info {
+  @include size(5);
+}
+
+.info__header {
+  padding-top: 30px;
+  line-height: 1.34;
+  letter-spacing: -0.5px;
+  white-space: pre-line;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: #000000;
+    top: 0;
+    left: 0;
+  }
+}
+
+.info__brief {
+  padding-top: 40px;
+  @include font-mixin("Acrom-regular", 17px, #000000);
+  @media screen and (min-width: 1024px) {
+    font-size: 15px;
+  }
+}
+
+.after-course {
+  padding-bottom: 90px;
+}
+
+.arcticle-list {
+  padding-top: 4px;
+}
+
+.arcticle-list__block {
+  @include size(4);
+  padding-left: 73px;
+  position: relative;
+  margin-top: 43px;
+  @include font-mixin("Acrom-regular", 17px, #000000);
+  &::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 8px;
+    background-color: $list-style;
+    left: 15px;
+    top: 5px;
+  }
+}
+
+.requirements-course > h3 {
+  white-space: pre-line;
+}
+.requirements-block {
+  padding-top: 46px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.req-img {
+  @include size(5);
+}
+
+.req-info-block {
+  @include size(6);
+}
+
+.req-list {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.req-list > .item {
+  @include size(6);
+  @include font-mixin("Acrom-regular", 17px, $main-dark);
+  position: relative;
+  margin-bottom: 50px;
+  &::before {
+    position: absolute;
+    counter-increment: before;
+    content: "\005B  00" counter(before) " \005D";
+    @include font-mixin("Acrom-bold", 13px, #ffffff);
+    top: 17px;
+    left: -50px;
+    text-align: center;
+    -webkit-transform: rotateZ(-90deg);
+    transform: rotateZ(-90deg);
+    background-color: $orange;
+  }
+  &:nth-child(even) {
+    max-width: 160px;
+  }
+  &:nth-child(odd) {
+    max-width: 180px;
+  }
+  &:nth-last-child(1),
+  &:nth-last-child(2) {
+    margin-bottom: 0;
+  }
+}

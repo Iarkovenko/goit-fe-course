@@ -6,6 +6,7 @@
 
 .row {
     @include row-flex();
+    overflow: hidden;
 }
 
 .item {
@@ -19,12 +20,11 @@
     color: $color;
 }
 
-img {
-    display: block;
-    height: auto;
-    max-width: 100%;
-}
-
 .flex {
     display: flex;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }

@@ -1,0 +1,44 @@
+.main-header {
+  padding-top: 32px;
+}
+.main-header .row {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.logo-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.logo-goit {
+  margin-right: 48px;
+}
+a {
+  @include font-mixin("Acrom-bold", 10.5px, #000000);
+}
+.email {
+  padding-right: 34px;
+  margin-left: auto;
+  align-self: center;
+}
+.icon {
+  position: relative;
+  top: 4px;
+}
+.call-tel {
+  align-self: center;
+}
+.call-tel__number {
+  flex-wrap: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  .icon {
+    top: 6px;
+  }
+}

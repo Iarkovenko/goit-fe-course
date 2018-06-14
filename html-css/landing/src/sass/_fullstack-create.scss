@@ -1,0 +1,503 @@
+.fullstack-create {
+  padding-top: 50px;
+  padding-bottom: 62px;
+  background-color: $rosesmoke;
+  .row {
+    justify-content: center;
+    overflow: unset;
+    @media (min-width: 768px) {
+      justify-content: space-between;
+    }
+    @media (min-width: 1920px) {
+      overflow: visible;
+      justify-content: space-around;
+    }
+  }
+  @media (min-width: 768px) {
+    position: relative;
+    padding-bottom: 0;
+    background-color: unset;
+    background: url(../img/fullstack-create/bg-fs-768.png) no-repeat 0px 7px,
+      url(../img/fullstack-create/block-bg-blue.png) no-repeat center 990px;
+  }
+  @media (min-width: 1920px) {
+    position: relative;
+    padding-top: 0;
+    background:
+      url(../img/fullstack-create/bg-fs-1920.png) no-repeat center -2px,
+      url(../img/fullstack-create/block-bg-blue-1920-h.png) no-repeat 499px
+        1093px;
+    .container {
+      max-width: 1147px;
+    }
+    &:before {
+      position: absolute;
+      content: '';
+      width: 320px;
+      height: 830px;
+      top: -126px;
+      left: 256px;
+      background: url(../img/fullstack-create/block-bg-blue-1920-v.png) no-repeat;
+      
+    }
+  }
+}
+.side-block {
+  display: none;
+  @media (min-width: 1920px) {
+    display: block;
+    position: absolute;
+    width: 525px;
+    transform: rotate(90deg);
+    right: -604px;
+    top: 185px;
+    p {
+      display: inline-block;
+      margin-right: 40px;
+      @include font-mixin('Ubuntu-mono_R', 15.6px, $header-color);
+      &:first-child {      
+        text-transform: uppercase;
+        color: $main-blue;
+      }
+    }
+    
+  }
+}
+.main-header-fs {
+  width: 100%;
+  @media (min-width: 768px) {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: $whitesmoke;
+      width: 720px;
+      height: 490px;
+      top: -100px;
+      left: -15px;
+      box-shadow: 6px 15px 58px 0px rgba(0, 0, 0, 0.15);
+    }
+  }
+  @media (min-width: 1920px) {
+    &::before {
+      width: 945px;
+      height: 870px;
+      left: -87px;
+    }
+  }
+}
+
+.fs-header-block {
+  @media (min-width: 768px) {
+    margin-right: auto;
+  }
+}
+
+.fullstack-header {
+  padding-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 auto;
+  width: 280px;
+  @include font-mixin("Museo_900", 25px, $header-color);
+  span {
+    color: $main-blue;
+  }
+  position: relative;
+  @media (min-width: 768px) {
+    text-align: left;
+    width: 450px;
+    margin: 0;
+    font-size: 30px;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 310px;
+      height: 2px;
+      background-color: $main-blue;
+      top: -25px;
+      left: -45px;
+    }
+  }
+  @media (min-width: 1920px) {
+    width: 100%;
+    font-size: 42px;
+    padding-top: 28px;
+    &::before {
+      top: 2px;
+      left: -214px;
+      width: 500px;
+    }
+  }
+}
+
+.sub-title {
+  text-align: justify;
+  text-transform: uppercase;
+  width: 220px;
+  margin: 25px auto 32px;
+  @include font-mixin("Museo_900", 14px, $header-color);
+  span {
+    font-family: "ProximaNova_ExB";
+    color: $main-blue;
+  }
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 2px;
+    background-color: $header-color;
+    top: -25px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  @media (min-width: 768px) {
+    text-align: right;
+    margin-left: 0;
+    margin-right: 30px;
+    width: 250px;
+    line-height: 1.5;
+    &::before {
+      top: 20px;
+      width: 265px;
+      left: -15px;
+      margin: 0;
+    }
+    span {
+      background-color: $header-color;
+      color: $main-blue;
+      padding: 3px;
+    }
+  }
+  @media (min-width: 1920px) {
+    margin: 0 0 35px auto;
+    font-size: 18px;
+    width: 295px;
+    text-align: center;
+    span {
+      padding: 5px 8px;
+    }
+    &::before {
+      height: 4px;
+      top: 25px;
+      width: 320px;
+      left: -95px;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 688px;
+      height: 1px;
+      background-color: #d8d8d9;
+      bottom: -45px;
+      right: -75px;
+    }
+  }
+}
+
+.task-developer {
+  position: relative;
+  width: 100%;
+  padding: 8px 59px;
+  text-align: center;
+  border: 2px solid $main-blue;
+  @include font-mixin("OpenSans_ExB", 14px, $dark);
+  span {
+    color: $main-blue;
+  }
+  @media (min-width: 768px) {
+    border: none;
+    width: 170px;
+    text-align: left;
+    padding: 0;
+    transform: rotate(90deg);
+    top: -120px;
+    margin-right: 70px;
+  }
+  @media (min-width: 1920px) {
+    top: -171px;
+    left: -259px;
+  }
+}
+
+
+.fe-block {
+  @include size-sm(1);
+  position: relative;
+  z-index: 3;
+  @media (min-width: 1920px) {
+    position: relative;
+    left: 35px;
+    .fs-info__sub-info {
+      &:before {
+        position: absolute;
+        content: '';
+        width: 427px;
+        height: 330px;
+        bottom: -121px;
+        left: -23px;
+        background: url(../img/fullstack-create/bg-clc-1920.png) no-repeat center 10px;
+        opacity: 0.4;
+      }
+    }
+  }
+}
+
+.fs-header {
+  margin-top: 55px;
+  @include font-mixin("Ubuntu-mono_B", 18px, $header-color);
+  @include size(1);
+  text-align: right;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 135px;
+    background-color: $header-color;
+    bottom: 5px;
+    width: 100%;
+    display: block;
+    margin-left: 100%;
+  }
+  @media (min-width: 768px) {
+    text-align: right;
+    margin-left: 0;
+    margin-top: 0;
+    &::before {
+      width: 160px;
+      margin-left: 125px;
+      left: 45px;
+    }
+  }
+  @media (min-width: 1920px) {
+    font-size: 34.5px;
+    width: 100%;
+    text-align: center;
+    &::before {
+      width: 135px;
+    }
+  }
+}
+
+.fs-header--fe {
+  @media (min-width: 1920px) {
+    font-size: 34.5px;
+    position: relative;
+    transform: rotate(-90deg);
+    left: -288px;
+    top: 289px;
+    &::before {
+      left: 183px;
+    }
+  }
+}
+.fs-header--be {
+  @media (min-width: 1920px) {
+    &::before {
+      left: 200px;
+    }
+  }
+}
+
+.go-full-stack {
+  margin-top: 15px;
+  border-radius: 10px;
+  width: 100%;
+ 
+}
+
+.fs-info {
+  padding-bottom: 16px;
+  text-align: center;
+  margin-top: 30px;
+  text-transform: uppercase;
+  @include font-mixin("Museo_900", 16px, $header-color);
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+    height: 2px;
+    background-color: $main-blue;
+  }
+  @media (min-width: 768px) {
+    font-size: 18px;
+    &::before {
+      width: 105px;
+      height: 3px;
+    }
+  }
+  @media (min-width: 1920px) {
+    font-size: 24px;
+  }
+}
+
+.fs-info__sub-info {
+  @include font-mixin("OpenSans_SmB", 14px, $header-color);
+  text-align: center;
+  padding-top: 25px;
+  line-height: 1.75;
+  width: 95%;
+  margin: auto;
+  span {
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 12px;
+  }
+  @media (min-width: 768px) {
+    width: 90%;
+  }
+  @media (min-width: 1920px) {
+    font-size: 16px;
+  }
+}
+
+.be-block {
+  padding-bottom: 65px;
+  @include size-sm(1);
+  @media (min-width: 768px) {
+    position: relative;
+    top: -148px;
+    z-index: 3;
+  }
+  @media (min-width: 1920px) {
+    position: relative;
+    left: -52px;
+  }
+}
+.fe-block,
+.be-block {
+  @media (min-width: 1920px) {
+    max-width: 460px;
+    width: 100%;
+  }
+}
+.start-learning {
+  padding-top: 32px;
+  padding-bottom: 106px;
+  position: relative;
+  width: 100%;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    top: 0;
+    height: 3px;
+    background-color: $header-color;
+  }
+  @media (min-width: 768px) {
+    text-align: center;
+    position: relative;
+    top: -150px;
+    &::before {
+      left: 0;
+      right: 0;
+      display: block;
+      margin: 0 auto;
+      z-index: 3;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: $whitesmoke;
+      width: 720px;
+      height: 650px;
+      top: -435px;
+      left: -15px;
+      z-index: 2;
+      box-shadow: 6px 15px 58px 0px rgba(0, 0, 0, 0.15);
+    }
+  }
+  @media (min-width: 1920px) {
+    &::after {
+      width: 1077px;
+      height: 822px;
+      top: -550px;
+      left: 60px;      
+    }
+    &::before {
+      width: 906px;
+      left: unset;
+      right: -43px;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .go-full-stack--be {
+    height: 650px;
+  }
+}
+.kwnolege {
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.5;
+  position: relative;
+  z-index: 10;
+  @include font-mixin("Ubuntu-mono_B", 16px, $header-color);
+  span {
+    background-color: $main-blue;
+    padding: 6px 4px;
+  }
+  @media (min-width: 1920px) {
+    font-size: 22px;
+    width: 510px;
+    margin-left: auto;
+    margin-right: 90px; 
+  }
+}
+
+.kwnolege-list {
+  margin-top: 25px;
+  text-align: center;
+  line-height: 1.9;
+  position: relative;
+  z-index: 10;
+  @include font-mixin("Ubuntu-mono_B", 16px, $header-color);
+  @media (min-width: 768px) {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  @media (min-width: 1920px) {
+    font-size: 18px;
+    width: 510px;
+    margin-left: auto;
+    margin-right: 55px;
+  }
+}
+
+.click-start {
+  width: 100%;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 20px;
+  @include font-mixin("Museo_900", 14px, #ffffff);
+  padding: 23px 36px;
+  border-radius: 5px;
+  border: none;
+  background: linear-gradient(
+    to right,
+    rgb(255, 198, 23) 0%,
+    rgb(251, 7, 64) 100%
+  );
+  box-shadow: 0px 12px 20px 0px rgba(28, 28, 30, 0.21);
+  position: relative;
+  z-index: 10;
+  @media (min-width: 768px) {
+    width: 300px;
+  }
+  @media (min-width: 1920px) {
+    font-size: 16px;
+    width: 320px;
+    padding: 28px;
+    margin-right: -581px;
+  }
+}

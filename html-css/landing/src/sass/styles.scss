@@ -3,108 +3,14 @@
 @import "fonts";
 @import "colors";
 
-.main-header {
-  background-color: $dark-smoke;
-  padding-top: 31px;
-  padding-bottom: 68px;
-}
-.top-panel {
-  justify-content: space-between;
-  padding-bottom: 57px;
-}
-.logo {
-  background: url("../img/header/logo.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  object-fit: cover;
-  width: 100px;
-  height: 29px;
-}
+/* HEADER */
+@import "header";
+/* HEADER */
 
-.contact-info__tel {
-  @include font-mixin("Ubuntu-mono_B", 14px, $main-blue);
-  position: relative;
-  &::before {
-    position: absolute;
-    content: "";
-    background-color: $main-blue;
-    top: calc(100% + 4px);
-    width: 135px;
-    height: 1px;
-  }
-}
+/* SECTION COME FROM*/
+@import "come-from";
+/* SECTION COME FROM*/
 
-.contact-info__age {
-  padding-top: 13px;
-  @include font-mixin("ProximaNova_R", 13px, $light-smoke2);
-  &--age-color {
-    @include font-mixin("ProximaNova_ExB", 13px, #ffffff);
-  }
-}
-
-.info-start {
-  margin: 27px auto 0;
-  padding: 10px 12px;
-  border: 1px solid $main-blue;
-  text-transform: uppercase;
-  @include font-mixin("Museo_900", 14px, #ffffff);
-  &__date {
-    color: $main-blue;
-  }
-}
-
-.main-info {
-  text-align: center;
-}
-
-.main-info p:nth-child(1) {
-  margin: 0 auto;
-  @include font-mixin("Ubuntu-mono_B", 18px, #ffffff);
-  text-transform: uppercase;
-  letter-spacing: -1.8px;
-  max-width: 100%;
-}
-
-.main-info p:nth-child(2) {
-  @include font-mixin("ProximaNova_R", 16px, $light-smoke);
-  position: relative;
-  &::before {
-    position: absolute;
-    content: "";
-    height: 3px;
-    width: 150px;
-    top: calc(100% + 19px);
-    left: 68px;
-    background-color: $main-blue;
-  }
-}
-.header-h1 {
-  padding-top: 40px;
-  padding-bottom: 45px;
-  @include font-mixin("Museo_900", 30px, #ffffff);
-  text-transform: uppercase;
-  &__full-stack {
-    color: $main-blue;
-  }
-}
-.main-info p:nth-child(4) {
-  @include font-mixin("Museo_300", 14px, #ffffff);
-  line-height: 1.5;
-  margin: 0 auto;
-  max-width: 215px;
-  text-align: justify;
-  padding-bottom: 17px;
-  .junior-full-stack {
-    font-family: "Museo_900", "ProximaNova_R";
-  }
-}
-
-.main-info p:nth-child(5) {
-  @include font-mixin("Ubuntu-mono_B", 14px, #ffffff);
-  line-height: 1.5;
-  margin: 0 auto;
-  .precent {
-    font-size: 18px;
-    color: $main-blue;
-  }
-}
+/*FULL STACK CREATE*/
+@import 'fullstack-create';
+/*FULL STACK CREATE*/
