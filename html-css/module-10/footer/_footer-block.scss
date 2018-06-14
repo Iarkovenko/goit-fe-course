@@ -1,0 +1,49 @@
+.footer-block {  
+    &__made-by {
+      font-family: "Montserrat-Regular", sans-serif;
+      font-size: 14px;
+      color: $footer;
+      -ms-flex-item-align: center;
+          align-self: center;
+      .made-by--author {
+        color: $author;
+      }
+    }
+    &__form-subscribe {
+      margin-left: auto;
+      .form-subscribe__input {
+        width: 229px;
+        border: 1px solid $border-foot;
+        padding-left: 12px;
+        &::-webkit-input-placeholder {
+          font-family: "Roboto-LightItalic", sans-serif;
+          font-size: 14px;
+          color: #cccccc;
+        }
+        &:-ms-input-placeholder {
+          font-family: "Roboto-LightItalic", sans-serif;
+          font-size: 14px;
+          color: #cccccc;
+        }
+        &::placeholder {
+          font-family: "Roboto-LightItalic", sans-serif;
+          font-size: 14px;
+          color: #cccccc;
+        }
+        &:focus {
+          border: 1px solid #95e1d3;
+        }
+      }
+      .form-subscribe__btn {
+        border: none;
+        font-family: "Montserrat-Bold", sans-serif;
+        font-size: 14px;
+        width: 150px;
+        height: 40px;
+        background-color: $button;
+        text-transform: uppercase;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }

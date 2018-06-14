@@ -1,0 +1,62 @@
+%main-header {
+  padding-top: 28px;
+}
+
+%logo {
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 30px;
+  color: $main-header-color;
+}
+
+%main-nav {
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 14px;
+  :first-child {
+    color: $active-header-link;
+  }
+  a {
+    color: $main-header-color;
+    margin-right: 57px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  
+}
+%h2 {
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 30px;
+  color: $h-color;
+  text-transform: uppercase;
+}
+%h3 {
+  font-family: "KaushanScript-Regular", sans-serif;
+  font-size: 24px;
+  color: $h-color;
+}
+
+
+
+%h4 {
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: $h-color;
+}
+
+%p-style {
+  font-family: "Roboto-Regular", sans-serif;
+  font-size: 15px;
+  color: $figcaption;
+}
+
+%btn-footer {
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 14px;
+  width: 150px;
+  height: 40px;
+  background-color: $button;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+}

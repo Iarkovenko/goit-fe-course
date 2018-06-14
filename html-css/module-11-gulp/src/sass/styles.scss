@@ -1,0 +1,26 @@
+/*
+   Import partials below
+*/
+@import 'normalize';
+@import 'mixin';
+@import 'placeholder';
+@import 'base';
+@import 'vars';
+@import 'fonts';
+
+/* HEADER START */
+
+@import 'header';
+
+/* HEADER END */
+
+/* AMAZING SERVICES START*/
+@import 'our-services';
+/* AMAZING SERVICES END*/
+
+/*OUR TEAM START*/
+@import 'our-team';
+/*OUR TEAM END*/
+
+/*FOOTER START*/
+@import 'footer';

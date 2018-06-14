@@ -1,0 +1,302 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+}
+
+body {
+  max-width: 1400px;
+}
+
+.main-wrapper {
+  margin: 0 auto;
+  width: 940px;
+}
+
+input:focus::placeholder, textarea:focus::placeholder {
+  opacity: 0;
+}
+
+input:required:valid, textarea:required:valid {
+  outline: 2px solid green;
+}
+
+input:required:not(:focus):invalid, textarea:required:not(:focus):invalid {
+  outline: none;
+}
+
+input:required:focus:invalid, textarea:required:focus:invalid {
+  outline: 2px solid red;
+}
+
+@font-face {
+  font-family: "DroidSerif-italic";
+  src: url("../fonts/droidserif-italic-webfont.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "RobotoSlab-regular";
+  src: url("../fonts/robotoslab-regular-webfont.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "WisdomScript-regular";
+  src: url("../fonts/wisdomscript-regular-webfont.woff2") format("woff2");
+}
+
+header, header .nav-header, .services, .services .services-container, .services .services-container .services-block, .services .services-container .services-block .cicle, .form-section .contact-us form .field-form, .form-section .contact-us form .field-form .inputs {
+  display: flex;
+}
+
+.services h2, .form-section .contact-us h2 {
+  font-family: "RobotoSlab-regular", sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.services h3, .form-section .contact-us h3 {
+  font-family: "DroidSerif-italic", sans-serif;
+  font-size: 16px;
+  margin-bottom: 80px;
+}
+
+.services .services-container .services-block > h4 {
+  font-family: "RobotoSlab-regular", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+}
+
+header {
+  padding-top: 44px;
+  padding-bottom: 126px;
+}
+
+header .logo {
+  font-family: "WisdomScript-regular", sans-serif;
+  font-size: 26px;
+  color: #fed136;
+}
+
+header .nav-header {
+  font-family: "RobotoSlab-regular", sans-serif;
+  text-transform: uppercase;
+  align-self: flex-end;
+  margin-left: auto;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  flex-basis: 500px;
+}
+
+header .nav-header a {
+  color: #222222;
+  font-size: 14px;
+}
+
+header .nav-header a:first-child {
+  color: #fed136;
+}
+
+.services {
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 120px;
+}
+
+.services h2 {
+  margin-bottom: 20px;
+  color: #222222;
+}
+
+.services h3 {
+  color: #777777;
+}
+
+.services .services-container {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.services .services-container .services-block {
+  flex-direction: column;
+  align-items: center;
+  max-width: 274px;
+}
+
+.services .services-container .services-block .cicle {
+  border: 3px solid #fed136;
+  border-radius: 50%;
+  position: relative;
+  align-self: center;
+  height: 72px;
+  width: 72px;
+  margin-bottom: 29px;
+  justify-content: center;
+  align-items: center;
+}
+
+.services .services-container .services-block .cicle img {
+  position: absolute;
+}
+
+.services .services-container .services-block > h4 {
+  color: #222222;
+}
+
+.services .services-container .services-block > p {
+  font-family: "RobotoSlab-regular", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  color: #777777;
+  padding-top: 19px;
+}
+
+.form-section {
+  background: #222222;
+  background-image: url("../img/map.png");
+  background-position: right 120px;
+  background-repeat: no-repeat;
+  padding-top: 109px;
+  padding-bottom: 115px;
+  height: 676px;
+  width: 1400px;
+}
+
+.form-section .contact-us {
+  text-align: center;
+}
+
+.form-section .contact-us h2 {
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.form-section .contact-us h3 {
+  color: #777777;
+  margin-bottom: 76px;
+}
+
+.form-section .contact-us form .field-form {
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+.form-section .contact-us form .field-form .inputs {
+  flex-direction: column;
+  justify-content: space-between;
+  width: 455px;
+}
+
+.form-section .contact-us form .field-form .inputs input {
+  padding-left: 20px;
+  width: 100%;
+  height: 50px;
+  border-radius: 3px;
+}
+
+.form-section .contact-us form .field-form .inputs input::placeholder {
+  text-transform: uppercase;
+  font-family: "RobotoSlab-regular", sans-serif;
+  font-size: 14px;
+  color: #bbbbbb;
+}
+
+.form-section .contact-us form .field-form .textarea {
+  width: 455px;
+  border-radius: 3px;
+}
+
+.form-section .contact-us form .field-form .textarea textarea {
+  padding-top: 18px;
+  padding-left: 20px;
+  width: 100%;
+  height: 210px;
+  resize: none;
+}
+
+.form-section .contact-us form .field-form .textarea textarea::placeholder {
+  text-transform: uppercase;
+  font-family: "RobotoSlab-regular", sans-serif;
+  font-size: 14px;
+  color: #bbbbbb;
+}
+
+.form-section .contact-us form button {
+  width: 240px;
+  height: 66px;
+  background-color: #fed136;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "RobotoSlab-regular", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.form-section .contact-us form button:focus {
+  outline: none;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,155 @@
+.meet-our-team {
+  text-align: center;
+  padding-bottom: 94px;
+}
+.block-our-team__second-h {
+  @include font-mixin('KaushanScript-Regular', 24px, map-get($color-team, h-color));
+}
+.block-our-team__intro {
+  @include font-mixin('Roboto-Regular', 15px, map-get($color-team, figcaption));
+  @include full-width(954px);
+  margin: 0 auto;
+  padding-top: 92px;
+}
+
+.block-our-team__main-h {
+  @include font-mixin('Montserrat-Bold', 30px, map-get($color-team, h-color));
+  text-transform: uppercase;
+  position: relative;
+  margin-top: 23px;
+  &::before {
+    @extend %before-after;
+    width: 60px;
+    height: 3px;
+    background-color: map-get($color-team, underline);
+    top: 65px;
+    right: 570px;
+  }
+}
+
+.block-our-team__members {
+  -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-top: 96px;
+}
+
+.card-member {
+  -ms-flex-preferred-size: 380px;
+      flex-basis: 380px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  &::before {
+    @extend %before-after;
+    background-color: map-get($color-team, img-before);
+    width: 380px;
+    height: 470px;
+    z-index: -1;
+  }
+  &:hover .photo-block::before {
+    visibility: visible;
+    opacity: 0.9;
+    -webkit-transform: translate(-10px, -10px);
+            transform: translate(-10px, -10px);
+  }
+  &:hover .photo-block__phototeam {
+    -webkit-transform: translate(-10px, -10px);
+            transform: translate(-10px, -10px);
+  }
+  &:hover .photo-block__social-links {
+    -webkit-transform: translate(-10px, -10px);
+            transform: translate(-10px, -10px);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.card-member__header {
+  @include font-mixin('Montserrat-Regular', 14px, map-get($color-team, h-color));
+  text-transform: uppercase;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.card-member__type-speciality {
+  @include font-mixin('Roboto-LightItalic', 15px, map-get($color-team, figcaption));
+  width: 100%;
+}
+
+.photo-block {
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  &::before {
+    visibility: hidden;
+    @extend %before-after;
+    background: -webkit-gradient(linear,left bottom, left top,from(map-get($color-header, gradient-bottom)),
+    to(map-get($color-header, gradient-top)));
+    background: linear-gradient(to top,map-get($color-header, gradient-bottom) 0%,
+    map-get($color-header, gradient-top) 100%);
+    width: 380px;
+    height: 470px;
+    opacity: 0;
+    z-index: 1;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }  
+}
+
+.photo-block__phototeam {
+  width: 100%;
+  height: 470px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+.photo-block__social-links {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  z-index: 3;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;  
+}
+
+.block-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  background-color: map-get($color-team, block-link);
+  margin-right: 1px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover {
+    background-color: map-get($color-team, block-link-hover);
+    opacity: 1;
+  }
+  &:hover .block-link__icon {
+    fill: map-get($color-team, fill-icon-hover);
+  }
+  &__icon {
+    fill: map-get($color-team, fill-icon);
+  }
+}

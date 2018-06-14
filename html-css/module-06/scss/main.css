@@ -1,0 +1,423 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+}
+
+.main-wrapper {
+  margin: 28px auto 24px;
+  width: 1200px;
+}
+
+.flex {
+  display: flex;
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../fonts/Roboto-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto-LightItalic";
+  src: url("../fonts/Roboto-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "KaushanScript-Regular";
+  src: url("../fonts/KaushanScript-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+.main-header {
+  padding-top: 28px;
+}
+
+.main-header .logo {
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 30px;
+  color: #95e1d3;
+}
+
+.main-header .main-nav {
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 14px;
+}
+
+.main-header .main-nav :first-child {
+  color: #f38181;
+}
+
+.main-header .main-nav a {
+  color: #95e1d3;
+  margin-right: 57px;
+}
+
+.main-header .main-nav a:last-child {
+  margin-right: 0;
+}
+
+.whatwetodo h2, .meet-our-team h2 {
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 30px;
+  color: #333333;
+  text-transform: uppercase;
+}
+
+.whatwetodo h3, .meet-our-team h3 {
+  font-family: "KaushanScript-Regular", sans-serif;
+  font-size: 24px;
+  color: #333333;
+}
+
+.whatwetodo .our-services .item-services .about-services h4, .meet-our-team .our-team .card-member h4 {
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.whatwetodo .our-services .item-services .about-services p, .meet-our-team > p {
+  font-family: "Roboto-Regular", sans-serif;
+  font-size: 15px;
+  color: #999999;
+}
+
+.footer > form .btn-footer {
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 14px;
+  width: 150px;
+  height: 40px;
+  background-color: #95e1d3;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* HEADER START*/
+.main-header .main-nav {
+  margin-left: auto;
+  align-self: flex-end;
+}
+
+.main-header .main-nav a {
+  position: relative;
+  transition: color 0.2s linear;
+}
+
+.main-header .main-nav a:first-child::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #f38181;
+  top: 23px;
+}
+
+.main-header .main-nav a:hover {
+  color: #f38181;
+}
+
+/* HEADER END*/
+/* AMAZING SERVICES START*/
+.whatwetodo {
+  padding-top: 128px;
+  text-align: center;
+}
+
+.whatwetodo h2 {
+  position: relative;
+  margin-top: 23px;
+}
+
+.whatwetodo h2::before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: #f38181;
+  top: 65px;
+  right: 560px;
+}
+
+.whatwetodo .our-services {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 112px 0 96px;
+}
+
+.whatwetodo .our-services .item-services {
+  flex-basis: 370px;
+  padding: 0 20px 50px 0;
+  display: flex;
+  text-align: left;
+}
+
+.whatwetodo .our-services .item-services:nth-last-child(-n + 3) {
+  padding-bottom: 0;
+}
+
+.whatwetodo .our-services .item-services:nth-last-child(3n + 1) {
+  padding-right: 0;
+}
+
+.whatwetodo .our-services .item-services img {
+  align-self: flex-start;
+}
+
+.whatwetodo .our-services .item-services .about-services {
+  padding-left: 28px;
+}
+
+.whatwetodo .our-services .item-services .about-services h4 {
+  margin-bottom: 20px;
+}
+
+/* AMAZING SERVICES END*/
+/*OUR TEAM START*/
+.meet-our-team {
+  text-align: center;
+  padding-bottom: 94px;
+}
+
+.meet-our-team h2 {
+  position: relative;
+  margin-top: 23px;
+}
+
+.meet-our-team h2::before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: #f38181;
+  top: 65px;
+  right: 560px;
+}
+
+.meet-our-team > p {
+  width: 954px;
+  margin: 0 auto;
+  padding-top: 92px;
+}
+
+.meet-our-team .our-team {
+  justify-content: space-between;
+  padding-top: 96px;
+}
+
+.meet-our-team .our-team .card-member {
+  flex-basis: 380px;
+  flex-direction: column;
+  position: relative;
+}
+
+.meet-our-team .our-team .card-member::before {
+  position: absolute;
+  content: "";
+  background-color: #95e1d3;
+  width: 380px;
+  height: 470px;
+  z-index: -1;
+}
+
+.meet-our-team .our-team .card-member .photo-block {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.meet-our-team .our-team .card-member .photo-block::before {
+  visibility: hidden;
+  position: absolute;
+  content: "";
+  background: linear-gradient(to top, #fce38a, #f38181);
+  width: 380px;
+  height: 470px;
+  opacity: 0;
+  z-index: 1;
+  transition: all 0.2s linear;
+}
+
+.meet-our-team .our-team .card-member .photo-block .phototeam {
+  width: 100%;
+  height: 470px;
+  object-fit: cover;
+  position: relative;
+  transition: transform 0.2s linear;
+}
+
+.meet-our-team .our-team .card-member .photo-block .social-links {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  z-index: 3;
+  transition: all 0.2s linear;
+}
+
+.meet-our-team .our-team .card-member .photo-block .social-links > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  background-color: #fce38a;
+  margin-right: 1px;
+  transition: background-color 0.2s linear;
+}
+
+.meet-our-team .our-team .card-member .photo-block .social-links > a:last-child {
+  margin-right: 0;
+}
+
+.meet-our-team .our-team .card-member .photo-block .social-links > a:hover {
+  background-color: #95e1d3;
+  opacity: 1;
+}
+
+.meet-our-team .our-team .card-member h4 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.meet-our-team .our-team .card-member .speciality-direction {
+  font-family: "Roboto-LightItalic", sans-serif;
+  font-size: 15px;
+  color: #999999;
+  width: 100%;
+}
+
+.meet-our-team .our-team .card-member:hover .photo-block::before {
+  visibility: visible;
+  opacity: 0.9;
+  transform: translate(-10px, -10px);
+}
+
+.meet-our-team .our-team .card-member:hover .phototeam {
+  transform: translate(-10px, -10px);
+}
+
+.meet-our-team .our-team .card-member:hover .social-links {
+  transform: translate(-10px, -10px);
+  opacity: 1;
+  visibility: visible;
+}
+
+/*OUR TEAM END*/
+/*FOOTER START*/
+.footer {
+  border-top-color: #e7e7e7;
+}
+
+.footer .made-by {
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 14px;
+  color: #333333;
+  align-self: center;
+}
+
+.footer .made-by span {
+  color: #f38181;
+}
+
+.footer > form {
+  display: flex;
+  margin-left: auto;
+}
+
+.footer > form input {
+  width: 229px;
+  border: 1px solid #e7e7e7;
+  padding-left: 12px;
+}
+
+.footer > form input::placeholder {
+  font-family: "Roboto-LightItalic", sans-serif;
+  font-size: 14px;
+  color: #cccccc;
+}
+
+.footer > form input:focus {
+  border: 1px solid #95e1d3;
+}
+
+/*FOOTER END*/
+/*# sourceMappingURL=main.css.map */

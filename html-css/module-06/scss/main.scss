@@ -1,0 +1,245 @@
+@import "reset";
+@import "base";
+@import "vars";
+@import "fonts";
+@import "templates";
+
+/* HEADER START*/
+.main-header {
+  @extend %main-header;
+  .logo {
+    @extend %logo;
+  }
+  .main-nav {
+    @extend %main-nav;
+    margin-left: auto;
+    align-self: flex-end;
+    a {
+      position: relative;
+      transition: color 0.2s linear;
+      &:first-child::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 3px;
+        background-color: $underline;
+        top: 23px;
+      }
+      &:hover {
+        color: $active-header-link;
+      }      
+    }
+  }
+}
+/* HEADER END*/
+
+/* AMAZING SERVICES START*/
+.whatwetodo {
+  padding-top: 128px;
+  text-align: center;
+  h2 {
+    @extend %h2;
+    position: relative;
+    margin-top: 23px;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 60px;
+      height: 3px;
+      background-color: $underline;
+      top: 65px;
+      right: 560px;
+    }
+  }
+  h3 {
+    @extend %h3;
+  }
+  .our-services {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 112px 0 96px;
+    .item-services {
+      flex-basis: 370px;
+      padding: 0 20px 50px 0;
+      &:nth-last-child(-n + 3) {
+        padding-bottom: 0;
+      }
+      &:nth-last-child(3n + 1) {
+        padding-right: 0;
+      }
+      display: flex;
+      text-align: left;
+      img {
+        align-self: flex-start;
+      }
+      .about-services {
+        padding-left: 28px;
+        h4 {
+          @extend %h4;
+          margin-bottom: 20px;
+        }
+        p {
+          @extend %p-style;
+        }
+      }
+    }
+  }
+}
+/* AMAZING SERVICES END*/
+
+/*OUR TEAM START*/
+.meet-our-team {
+  text-align: center;
+  padding-bottom: 94px;
+  h3 {
+    @extend %h3;
+  }
+  h2 {
+    @extend %h2;
+    position: relative;
+    margin-top: 23px;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 60px;
+      height: 3px;
+      background-color: $underline;
+      top: 65px;
+      right: 560px;
+    }
+  }
+  > p {
+    @extend %p-style;
+    width: 954px;
+    margin: 0 auto;
+    padding-top: 92px;
+  }
+  .our-team {
+    justify-content: space-between;
+    padding-top: 96px;
+    .card-member {
+      flex-basis: 380px;
+      flex-direction: column;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        background-color: $img-before;
+        width: 380px;
+        height: 470px;
+        z-index: -1;
+      }
+
+      .photo-block {
+        position: relative;
+        justify-content: center;
+        align-items: center;        
+        &::before { 
+          visibility: hidden;
+          position: absolute;           
+          content: "";
+          background: linear-gradient(to top, #fce38a, #f38181);
+          width: 380px;
+          height: 470px;            
+          opacity: 0;
+          z-index: 1;
+          transition: all 0.2s linear;          
+        }
+        .phototeam {
+          width: 100%;
+          height: 470px;
+          object-fit: cover;
+          position: relative;
+          transition: transform 0.2s linear;
+        }
+        .social-links {
+          visibility: hidden;
+          opacity: 0;
+          position: absolute;
+          z-index: 3; 
+          transition: all 0.2s linear;
+          > a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            width: 60px;
+            height: 60px;
+            background-color: #fce38a;
+            margin-right: 1px;
+            transition: background-color 0.2s linear;
+            &:last-child {
+              margin-right: 0;
+            }
+            &:hover {
+              background-color: $button;
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      h4 {
+        @extend %h4;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        width: 100%;
+      }
+      .speciality-direction {
+        font-family: "Roboto-LightItalic", sans-serif;
+        font-size: 15px;
+        color: $figcaption;
+        width: 100%;
+      }
+      &:hover .photo-block::before {
+        visibility: visible;
+        opacity: 0.9;
+        transform: translate(-10px, -10px);        
+      }
+      &:hover .phototeam {
+        transform: translate(-10px, -10px);
+      }      
+      &:hover .social-links {
+        transform: translate(-10px, -10px);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+/*OUR TEAM END*/
+
+/*FOOTER START*/
+.footer {
+  border-top-color: $border-foot;
+  .made-by {
+    font-family: "Montserrat-Regular", sans-serif;
+    font-size: 14px;
+    color: $footer;
+    align-self: center;
+    span {
+      color: $author;
+    }
+  }
+  > form {
+    display: flex;
+    margin-left: auto;
+    input {
+      width: 229px;
+      border: 1px solid $border-foot;
+      padding-left: 12px;
+      &::placeholder {
+        font-family: "Roboto-LightItalic", sans-serif;
+        font-size: 14px;
+        color: #cccccc;
+      }
+      &:focus {
+        border: 1px solid #95e1d3;
+      }
+    }
+    .btn-footer {
+      @extend %btn-footer;
+    }
+  }
+}
+/*FOOTER END*/

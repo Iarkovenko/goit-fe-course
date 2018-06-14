@@ -1,0 +1,79 @@
+.whatwetodo {
+  padding-top: 128px;
+  text-align: center;
+}
+.block-services__main-h {
+  @include font-mixin(
+    "Montserrat-Bold",
+    30px,
+    map-get($color-services, h-color)
+  );
+  text-transform: uppercase;
+  position: relative;
+  margin-top: 23px;
+  &::before {
+    @extend %before-after;
+    width: 60px;
+    height: 3px;
+    background-color: map-get($color-services, underline);
+    top: 65px;
+    right: 570px;
+  }
+}
+.block-services__second-h {
+  @include font-mixin(
+    "KaushanScript-Regular",
+    24px,
+    map-get($color-services, h-color)
+  );
+}
+.block-services__our-services {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 112px 0 96px;
+}
+.item-services {
+  -ms-flex-preferred-size: 380px;
+  flex-basis: 380px;
+  padding: 0 40px 50px 0;
+  text-align: left;
+  &:nth-last-child(-n + 3) {
+    padding-bottom: 0;
+  }
+  &:nth-last-child(3n + 1) {
+    padding-right: 0;
+  }
+}
+.item-services__icon {
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  fill: map-get($color-services, fill-icon);
+}
+.item-services__about-services {
+  padding-left: 28px;
+  width: 100%;
+}
+.about-services__title {
+  @include font-mixin(
+    "Montserrat-Regular",
+    14px,
+    map-get($color-services, h-color)
+  );
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  margin: 0;
+}
+.about-services__describe {
+  @include full-width(380px);
+  @include font-mixin(
+    "Roboto-Regular",
+    15px,
+    map-get($color-services, figcaption)
+  );
+  margin: 0;
+}
