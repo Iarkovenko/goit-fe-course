@@ -19,28 +19,26 @@
       в массив чисел не нужно, после чего снова пользователю предлагается ввести число в prompt.
 */
 
-let userInput;
-let newNumber;
 const numbers = [];
 let total = 0;
 
 do {
-  userInput = prompt("Enter the number");
-  newNumber = Number(userInput);
+  let userInput = prompt('Enter the number');
+  let newNumber = Number(userInput);
   if (userInput === null) {
     break;
   }
-  if (Number.isNaN(newNumber) || userInput === "") {
+  if (Number.isNaN(newNumber) || userInput === '') {
     alert(`It's not a number, try again!`);
   } else {
     numbers.push(newNumber);
-  }  
-} while (true) {
-  if(numbers.length !== 0) {
+  }
+} while (true);
+{
+  if (numbers.length > 0) {
     for (const value of numbers) {
       total += value;
     }
     console.log(`Total count of numbers is: ${total}`);
   }
 }
-
