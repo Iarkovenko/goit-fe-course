@@ -52,43 +52,23 @@ function checkLoginValidity(login) {
   }
   return checkLength;
 }
-// console.log(checkLoginValidity('Dma'));
 
 function checkIfLoginExists(arr, login) {
-  for (const value of login) {
-    if (!arr.includes(value)) {
-      return true;
-    }
-    return false;
+  if (!arr.includes(login)) {
+    return true;
   }
+  return false;
 }
-// console.log(
-//   checkIfLoginExists(logins, 'Dima'),
-// );
-// console.log(
-//   checkIfLoginExists(logins, 'Poly'),
-// );
 
 function addLogin(arr, login) {
   if (checkLoginValidity(login) === false) {
     return 'Ошибка! Логин должен быть от 4 до 16 символов';
   }
+  if (checkIfLoginExists(arr, login) === false) {
+    return 'Такой логин уже используется!';
+  }
+  logins.push(login);
+  return logins;
 }
-// Далее напишите функцию addLogin(logins, login) которая:
-//     - Получает новый логин и массив всех логинов как аргументы
-    
-//     - Проверяет валидность логина используя вспомогательную функцию checkLoginValidity
-      
-//     - Если логин не валиден, прекратить исполнение функции addLogin 
-//       и вернуть строку 'Ошибка! Логин должен быть от 4 до 16 символов'
-      
-//     - Если логин валиден, функция addLogin проверяеть уникальность логина 
-//       с помощью функции checkIfLoginExists
-       
-//     - Если checkIfLoginExists вернет false, addLogin добавляет новый логин 
-//        в logins и возвращает строку 'Логин успешно добавлен!'
-       
-//     - Если checkIfLoginExists вернет true, тогда addLogin не добавляет 
-//        логин в массив и возвращает строку 'Такой логин уже используется!'
 
-console.log(addLogin(logins, 'Dima'));
+console.log(addLogin(logins, 'Poly'));
