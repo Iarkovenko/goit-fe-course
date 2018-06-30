@@ -59,43 +59,22 @@ function Cashier(name, productsDatabase) {
   this.greet = function() {
     console.log(`Здравствуйте, вас обслуживает ${this.name}`);
   };
-  // this.onSuccess = function() {
-  //   if (this.changeAmount > 0) {
-  //     console.log(`Спасибо за покупку, ваша сдача ${this.changeAmount}`);
-  //   }
-  //   if (this.changeAmount === 0) {
-  //     console.log(`Спасибо за покупку`);
-  //   }
-  // };
-  // this.onError = function() {
-  //   console.log('Очень жаль, вам не хватает денег на покупки');
-  // };
-
-  /*
-const order = {
-  bread: 2,
-  milk: 2,
-  apples: 1,
-  cheese: 1,
-};
-const products = {
-  bread: 10,
-  milk: 15,
-  apples: 20,
-  chicken: 50,
-  cheese: 40,
-};
-*/
+  this.onSuccess = function() {
+    if (this.changeAmount > 0) {
+      console.log(`Спасибо за покупку, ваша сдача ${this.changeAmount}`);
+    }
+    if (this.changeAmount === 0) {
+      console.log(`Спасибо за покупку`);
+    }
+  };
+  this.onError = function() {
+    console.log('Очень жаль, вам не хватает денег на покупки');
+  };
 
   this.countTotalPrice = function(order) {
-    const count = Object.entries(order);
-    const price = Object.entries(productsDatabase);
-    if (!count.hasOwnProperty(price)) {
-      for (let i = 0; i < count.length; i += 1) {
-        this.totalPrice += count[i][1] * price[i][1];
-      }
+    for (const key in order) {
+      this.totalPrice += order[key] * products[key];
     }
-    
   };
 
   this.getCustomerMoney = function(value) {
@@ -105,9 +84,13 @@ const products = {
     if (this.customerMoney < this.totalPrice) {
       return null;
     }
-    return (this.changeAmount = this.totalPrice - this.customerMoney);
+    return (this.changeAmount = this.customerMoney - this.totalPrice);
   };
-  // this.reset = function() {};
+  this.reset = function() {
+    this.totalPrice = 0;
+    this.customerMoney = 0;
+    this.changeAmount = 0;
+  };
 }
 
 /* Заказ пользователя хранится в виде объекта следующего формата. "имя-продукта":"количество-единиц" */
@@ -149,19 +132,19 @@ const result = mango.countChange();
 // // Проверяем что нам вернул countChange
 console.log(`countChange: ${result}`); // 190
 
-// // Проверяем результат подсчета денег
-// if (result !== null) {
-//   // При успешном обслуживании вызываем метод onSuccess
-//   mango.onSuccess(); // Спасибо за покупку, ваша сдача 190
-// } else {
-//   // При неудачном обслуживании вызываем метод onError
-//   mango.onError(); // Очень жаль, вам не хватает денег на покупки
-// }
+// Проверяем результат подсчета денег
+if (result !== null) {
+  // При успешном обслуживании вызываем метод onSuccess
+  mango.onSuccess(); // Спасибо за покупку, ваша сдача 190
+} else {
+  // При неудачном обслуживании вызываем метод onError
+  mango.onError(); // Очень жаль, вам не хватает денег на покупки
+}
 
-// // Вызываем reset при любом исходе обслуживания
-// mango.reset();
+// Вызываем reset при любом исходе обслуживания
+mango.reset();
 
 // // Проверяем значения полей после reset
-// console.log(mango.totalPrice); // 0
-// console.log(mango.customerMoney); // 0
-// console.log(mango.changeAmount); // 0
+console.log(mango.totalPrice); // 0
+console.log(mango.customerMoney); // 0
+console.log(mango.changeAmount); // 0
