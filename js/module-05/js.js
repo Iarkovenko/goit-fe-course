@@ -171,7 +171,7 @@ console.log(getUsersWithAge(users, 30, 40));
  * Получить общую сумму баланса (поле balance) всех пользователей
  */
 const getTotalBalance = arr => {
-  const summ = arr.map( user => user.balance).reduce( (acc, val) => acc + val, 0);
+  const summ = arr.reduce( (acc, val) => acc + val.balance, 0);
   return summ;
 };
 
