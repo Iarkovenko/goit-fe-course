@@ -1,77 +1,8 @@
+'use strict'
 /*
   Используя массив (users) объектов пользователей, напишите функции которые с помощью 
   функциональных методов массивов (никаких for, splice и т.д.) выполняют указанные операции.
 */
-
-/**
- * Получить массив имен (поле name) всех пользователей
- */
-const getAllNames = arr => {...};
-
-console.log(getAllNames(users)); 
-// [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
-
-                            
-/**
- * Получить массив объектов пользователей по цвету глаз (поле eyeColor)
- */
-const getUsersByEyeColor = (arr, color) => {...};
-
-console.log(getUsersByEyeColor(users, 'blue')); // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
-
-                                            
-/**
- * Получить массив имен пользователей по полу (поле gender)
- */
-const getUsersByGender = (arr, gender) => {...};
-
-console.log(getUsersByGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
-
-
-/**
- * Получить массив только неактивных пользователей (поле isActive)
- */
-const getInactiveUsers = arr => {...};
-
-console.log(getInactiveUsers(users)); // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
-                      
-                                 
-/**
- * Получить пользоваля (не массив) по email (поле email, он уникальный)
- */
-const getUserByEmail = (arr, email) => {...};
-
-console.log(getUserByEmail(users, 'shereeanthony@kog.com')); // {объект пользователя Sheree Anthony}
-console.log(getUserByEmail(users, 'elmahead@omatom.com')); // {объект пользователя Elma Head}
-
-
-/**
- * Получить массив пользователей попадающих в возрастную категорию от min до max лет (поле age)
- */
-const getUsersWithAge = (arr, min, max) => {...};
-
-console.log(getUsersWithAge(users, 20, 30)); // [объект Ross Vazquez, объект Elma Head, объект Carey Barr]
-                                            
-console.log(getUsersWithAge(users, 30, 40)); 
-// [объект Moore Hensley, объект Sharlene Bush, объект Blackburn Dotson, объект Sheree Anthony]
-                                 
-                                 
-/**
- * Получить общую сумму баланса (поле balance) всех пользователей
- */
-const getTotalBalance = arr => {...};
-
-console.log(getTotalBalance(users)); // 20916
-                                
-                                
-/**
- * Массив имен всех пользователей у которых есть друг с указанным именем
- */
-const getUsersByFriend = (arr, name) => {...};
-
-console.log(getUsersByFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
-console.log(getUsersByFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
-                                            
 const users = [
   {
     id: '701b29c3-b35d-4cf1-a5f6-8b12b29a5081',
@@ -166,3 +97,95 @@ const users = [
   },
 ];
 
+
+/**
+ * Получить массив имен (поле name) всех пользователей
+ */
+const getAllNames = arr => {
+  const userName = arr.map(user => user.name);
+  return userName;
+};
+console.log(getAllNames(users)); 
+// [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
+
+                            
+/**
+ * Получить массив объектов пользователей по цвету глаз (поле eyeColor)
+ */
+const getUsersByEyeColor = (arr, color) => {
+  const userEyes = arr.filter( user => user.eyeColor === color);
+  return userEyes;
+};
+console.log(getUsersByEyeColor(users, 'blue')); // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
+
+                                            
+/**
+ * Получить массив имен пользователей по полу (поле gender)
+ */
+const getUsersByGender = (arr, gender) => {
+  const userGender = arr.filter( user => user.gender === gender).map( user => user.name);
+  return userGender;
+};
+
+console.log(getUsersByGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
+
+
+/**
+ * Получить массив только неактивных пользователей (поле isActive)
+ */
+const getInactiveUsers = arr => {
+  const userInactive = arr.filter( user => !user.isActive);
+  return userInactive;
+};
+console.log(getInactiveUsers(users)); // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
+                      
+                                 
+/**
+ * Получить пользоваля (не массив) по email (поле email, он уникальный)
+ */
+const getUserByEmail = (arr, email) => {
+  const userByEmail = arr.find( user => user.email === email);
+  return userByEmail.name;
+  // return userByEmail; Так объект пользователя или только имя?
+};
+
+console.log(getUserByEmail(users, 'shereeanthony@kog.com')); // {объект пользователя Sheree Anthony}
+console.log(getUserByEmail(users, 'elmahead@omatom.com')); // {объект пользователя Elma Head}
+
+
+/**
+ * Получить массив пользователей попадающих в возрастную категорию от min до max лет (поле age)
+ */
+const getUsersWithAge = (arr, min, max) => {
+  const userByAge = arr.filter( user => user.age > min && user.age < max);
+  return userByAge;
+};
+
+console.log(getUsersWithAge(users, 20, 30)); // [объект Ross Vazquez, объект Elma Head, объект Carey Barr]
+                                            
+console.log(getUsersWithAge(users, 30, 40)); 
+// [объект Moore Hensley, объект Sharlene Bush, объект Blackburn Dotson, объект Sheree Anthony]
+                                 
+                                 
+/**
+ * Получить общую сумму баланса (поле balance) всех пользователей
+ */
+const getTotalBalance = arr => {
+  const summ = arr.reduce( (acc, val) => acc + val.balance, 0);
+  return summ;
+};
+
+console.log(getTotalBalance(users)); // 20916
+                                
+                                
+/**
+ * Массив имен всех пользователей у которых есть друг с указанным именем
+ */
+const getUsersByFriend = (arr, name) => {
+  const nameFriend = arr.reduce( 
+    (acc, val) => val.friends.includes(name) ? acc.concat(val.name) : acc, 
+    []);
+  return nameFriend;
+};
+console.log(getUsersByFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
+console.log(getUsersByFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
