@@ -100,22 +100,21 @@ const users = [
  */
 
 const getAllSkills = arr => {
-  const allSkils = arr.reduce((acc, val) => {
-    val.skills.filter(skill => (!acc.includes(skill) ? acc.push(skill) : null));
-    return acc.sort();
-  }, []);
-
+  const allSkils = arr
+    .reduce(( acc, user ) => acc.concat(user.skills), [])
+    .filter( (skill, idx, self) => self.indexOf(skill) === idx)
+    .sort()
   return allSkils;
 };
 
 console.log(getAllSkills(users));
-// [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
+// // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
 
-/**
-* Массив имен (поле name) людей, отсортированных в зависимости от количества их друзей (поле friends)
-*/
-const getUserNamesSortedByFriendsCount = arr => {
-  const namesSortedByFriendsCount = arr.sort( (a, b) => a.friends.length - b.friends.length).map ( user => user.name);
-  return namesSortedByFriendsCount;
-};
+// /**
+// * Массив имен (поле name) людей, отсортированных в зависимости от количества их друзей (поле friends)
+// */
+// const getUserNamesSortedByFriendsCount = arr => {
+//   const namesSortedByFriendsCount = arr.sort( (a, b) => a.friends.length - b.friends.length).map ( user => user.name);
+//   return namesSortedByFriendsCount;
+// };
 
