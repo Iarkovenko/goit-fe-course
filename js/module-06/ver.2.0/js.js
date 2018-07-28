@@ -120,9 +120,9 @@ class Hamburger {
     return totalCalories = Hamburger.SIZES[this._size].calories + Hamburger.STUFFINGS[this._stuffing].calories + summCalories;
   }
   get calories () {
-    let totalPrice = 0;
-    const costOfToppings = this._toppings.reduce( (acc, val) => acc + Hamburger.TOPPINGS[val].price ,0);
-    return totalPrice = costOfToppings + Hamburger.SIZES[this._size].price + Hamburger.STUFFINGS[this._stuffing].price;
+    let totalCalories = 0;
+    const summCalories = this._toppings.reduce( (acc, val) => acc + Hamburger.TOPPINGS[val].calories, 0 );
+    return totalCalories = Hamburger.SIZES[this._size].calories + Hamburger.STUFFINGS[this._stuffing].calories + summCalories;
   }
 }
 
