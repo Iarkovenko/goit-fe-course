@@ -37,10 +37,10 @@ class Hamburger {
    * @param {String} topping - Тип добавки
    */
   addTopping(topping) {
-    if (this._toppings.length === 0) {
+    if (!this._toppings.includes(topping)) {
       this._toppings.push(topping);
     }
-    this._toppings.filter(key => key !== topping ? this._toppings.push(topping) : console.log('This topping already exist'));
+    
   }
 
   /**
@@ -48,7 +48,7 @@ class Hamburger {
    * @param {String} topping - Тип добавки
    */
   removeTopping(topping) {
-    this._toppings.filter( key => key === topping ? this._toppings.pop(topping) : console.log('Nothing to remove'))
+    this._toppings = this._toppings.filter( key => !key === topping)
   }
 
   /**
@@ -195,7 +195,7 @@ console.log("Price: ", hamburger.calculatePrice());
 
 // Я тут передумал и решил добавить еще соус
 hamburger.addTopping(Hamburger.TOPPING_SAUCE);
-
+console.log(hamburger.getToppings())
 // А сколько теперь стоит?
 console.log("Price with sauce: ", hamburger.calculatePrice());
 
