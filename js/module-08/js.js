@@ -59,4 +59,10 @@ const galleryItems = [
   { preview: 'img/preview-3.jpeg', fullview: 'img/fullview-3.jpeg', alt: "alt text 3" },
   { preview: 'img/preview-4.jpeg', fullview: 'img/fullview-4.jpeg', alt: "alt text 4" },
   { preview: 'img/preview-5.jpeg', fullview: 'img/fullview-5.jpeg', alt: "alt text 5" },
+<<<<<<< HEAD
 ];
+=======
+  { preview: 'img/preview-6.jpeg', fullview: 'img/fullview-6.jpeg', alt: "alt text 6" },
+];
+vcvb
+>>>>>>> 4587e73783c55e71de83cf097d4227ee96279d40
