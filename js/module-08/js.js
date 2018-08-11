@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 /*
   Создайте компонент галлереи изображений следующего вида.
   
@@ -17,7 +17,7 @@
     
     🔔 Превью компонента: https://monosnap.com/file/5rVeRM8RYD6Wq2Nangp7E4TkroXZx2
       
-      
+    
     Реализуйте функционал:
       
       - image-gallery есть изначально в HTML-разметке как контейнер для компонента.
@@ -53,16 +53,74 @@
   Замените пути на соотвествующие вашим, или назовите изображения аналогично.
 */
 
-const galleryItems = [
-  { preview: 'img/preview-1.jpeg', fullview: 'img/fullview-1.jpeg', alt: "alt text 1" },
-  { preview: 'img/preview-2.jpeg', fullview: 'img/fullview-2.jpeg', alt: "alt text 2" },
-  { preview: 'img/preview-3.jpeg', fullview: 'img/fullview-3.jpeg', alt: "alt text 3" },
-  { preview: 'img/preview-4.jpeg', fullview: 'img/fullview-4.jpeg', alt: "alt text 4" },
-  { preview: 'img/preview-5.jpeg', fullview: 'img/fullview-5.jpeg', alt: "alt text 5" },
-<<<<<<< HEAD
+const galleryItems = [{
+    preview: 'img/preview-1.jpeg',
+    fullview: 'img/fullview-1.jpeg',
+    alt: 'alt text 1',
+  },
+  {
+    preview: 'img/preview-2.jpeg',
+    fullview: 'img/fullview-2.jpeg',
+    alt: 'alt text 2',
+  },
+  {
+    preview: 'img/preview-3.jpeg',
+    fullview: 'img/fullview-3.jpeg',
+    alt: 'alt text 3',
+  },
+  {
+    preview: 'img/preview-4.jpeg',
+    fullview: 'img/fullview-4.jpeg',
+    alt: 'alt text 4',
+  },
+  {
+    preview: 'img/preview-5.jpeg',
+    fullview: 'img/fullview-5.jpeg',
+    alt: 'alt text 5',
+  },
+  {
+    preview: 'img/preview-6.jpeg',
+    fullview: 'img/fullview-6.jpeg',
+    alt: 'alt text 6',
+  },
 ];
-=======
-  { preview: 'img/preview-6.jpeg', fullview: 'img/fullview-6.jpeg', alt: "alt text 6" },
-];
-vcvb
->>>>>>> 4587e73783c55e71de83cf097d4227ee96279d40
+
+const gallery = document.querySelector('.js-image-gallery');
+
+const fullview = document.querySelector('.fullview');
+const imgFullview = document.createElement('img');
+fullview.append(imgFullview);
+
+const preview = document.querySelector('.preview');
+preview.addEventListener('click', handlerChooseFullImg);
+
+
+const elementsPreview = [];
+galleryItems.forEach(item => {
+  const itemPreview = document.createElement('li');
+  const imgPreview = document.createElement('img');
+  imgPreview.src = item.preview;
+  imgPreview.dataset.fullview = item.fullview;
+  imgPreview.alt = item.alt;
+  itemPreview.append(imgPreview);
+  elementsPreview.push(itemPreview);
+});
+
+preview.append(...elementsPreview);
+
+const imgPreviewBar = preview.querySelectorAll('img');
+
+imgFullview.src = imgPreviewBar[0].dataset.fullview;
+
+function handlerChooseFullImg({target}) {
+  if (target.nodeName !== 'IMG') return;
+  imgFullview.src = target.dataset.fullview;
+  imgFullview.alt = target.alt;
+  imgPreviewBar.forEach(img => {
+    if (img !== target) {
+      img.classList.remove('preview-active');
+    } else {
+      img.classList.add('preview-active');
+    }
+  })
+}
