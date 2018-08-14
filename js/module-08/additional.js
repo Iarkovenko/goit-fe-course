@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 /*
   ⚠️ ЗАДАНИЕ ПОВЫШЕННОЙ СЛОЖНОСТИ - ВЫПОЛНЯТЬ ПО ЖЕЛАНИЮ
   
@@ -13,7 +13,8 @@
     
   Тогда создание экземпляра будет выглядеть следующим образом.
 */
-const galleryItems = [{
+const galleryItems = [
+  {
     preview: 'img/preview-1.jpeg',
     fullview: 'img/fullview-1.jpeg',
     alt: 'alt text 1',
@@ -46,50 +47,60 @@ const galleryItems = [{
 ];
 
 class Gallery {
-  constructor({
-    items = '',
-    parentNode = '',
-    defaultActiveItem = ''
-  }) {
+  constructor({ items, parentNode, defaultActiveItem }) {
     this.items = items;
     this.parentNode = parentNode;
     this.defaultActiveItem = defaultActiveItem;
-    const fullview = this.parentNode.querySelector('.fullview');
-    const imgFullview = document.createElement('img');    
-    fullview.append(imgFullview);    
-    const preview = this.parentNode.querySelector('.preview');
-    preview.addEventListener('click', this.handlerChooseFullImg.bind(this));
-    const elementsPreview = [];
-    this.items.forEach(item => {
-      const itemPreview = document.createElement('li');
-      const imgPreview = document.createElement('img');
-      imgPreview.src = item.preview;
-      imgPreview.dataset.fullview = item.fullview;
-      imgPreview.alt = item.alt;
-      itemPreview.append(imgPreview);
-      elementsPreview.push(itemPreview);
-    });
-    preview.append(...elementsPreview);
-    
-    const imgPreviewBar = preview.querySelectorAll('img');
-    imgFullview.src = imgPreviewBar[this.defaultActiveItem].dataset.fullview;
+    this.fullviewScreen = null;
+    this.previewScreen = null;
+    this.previewItem = null;
+    this.createGallery();
   }
-  handlerChooseFullImg({target}) {
-    if (target.nodeName !== 'IMG') return;
-    imgFullview.src = target.dataset.fullview;
-    imgFullview.alt = target.alt;
-    imgPreviewBar.forEach(img => {
-      if (img !== target) {
-        img.classList.remove('preview-active');
-      } else {
-        img.classList.add('preview-active');
-      }
-    })
+  createGallery() {    
+    this.createrPreviewScreen();
+    this.createFullviewScreenDefault();
+    this.chooseFullviewImgClick();
+    // this.parentNode.classList.add('image-gallery');
+  }
+  createFullviewScreenDefault() {
+    this.fullviewScreen = document.createElement('img');
+    const { fullview, alt } = this.items[this.defaultActiveItem];
+    this.fullviewScreen.src = fullview;
+    this.fullviewScreen.alt = alt;
+    this.parentNode.firstElementChild.append(this.fullviewScreen)
+  }
+
+  createrPreviewScreen() {
+    this.previewScreen = document.createElement('ul');
+    this.previewScreen.classList.add('preview');
+    this.items.forEach(img => {
+      this.previewItem = document.createElement('li');
+      const previewImg = document.createElement('img');
+      previewImg.src = img.preview;
+      previewImg.alt = img.alt;
+      previewImg.dataset.fullview = img.fullview;
+      this.previewItem.append(previewImg);
+      this.previewScreen.append(this.previewItem);
+      this.parentNode.append(this.previewScreen);
+    });
+  }
+
+  chooseFullviewImgClick() {
+    this.parentNode = addEventListener('click', this.handleOpenFullviewImg.bind(this));
+  }
+  handleOpenFullviewImg(event) {
+    const target = event.target;
+    const nodeName = event.target.nodeName;      
+    if (nodeName !== 'IMG') return;
+    this.fullviewScreen.src = target.dataset.fullview;
+    this.fullviewScreen.alt = target.alt;
+    
   }
 }
+
 const myGallery = new Gallery({
   items: galleryItems,
-  parentNode: document.querySelector('.image-gallery'),
-  defaultActiveItem: 1
+  parentNode: document.querySelector('.js-image-gallery'),
+  defaultActiveItem: 1,
 });
 /* Далее плагин работает в автономном режиме */
