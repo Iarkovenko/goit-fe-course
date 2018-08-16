@@ -24,13 +24,7 @@ const resetBtn = document.querySelector('.js-reset');
 const listLaps = document.querySelector('.js-laps');
 
 class Timer {
-  constructor({
-    startBtn,
-    lapBtn,
-    resetBtn,
-    clockface,
-    listLaps
-  }) {
+  constructor({ startBtn, lapBtn, resetBtn, clockface, listLaps }) {
     this.startBtn = startBtn;
     this.lapBtn = lapBtn;
     this.resetBtn = resetBtn;
@@ -48,51 +42,44 @@ class Timer {
     this.lapBtn.addEventListener('click', this.hadleLapTimer.bind(this));
   }
 
-  handleStartTimer({target}) {
-    if(!this.isActive && !this.onPaused) {
+  handleStartTimer({ target }) {
+    if (!this.isActive) {
       this.setActiveBtn(target);
       target.textContent = 'Pause';
       this.startTick(target);
     } else {
       this.pauseTick(target);
-      target.textContent = 'Continue'
-      console.log('next')
-      
-    }   
-        
+      target.textContent = 'Continue';
+      console.log('next');
+    }
   }
   startTick(target) {
     if (this.isActive) return;
     this.isActive = true;
     this.startTime = Date.now();
-    console.log('start')
+    console.log('start');
     this.id = setInterval(() => {
       const currentTime = Date.now();
-      this.deltaTime = currentTime - this.startTime;      
+      this.deltaTime = currentTime - this.startTime;
       const time = new Date(this.deltaTime);
       this.updateClockface(this.timerContent, time);
     }, 100);
   }
   pauseTick(target) {
     this.isActive = false;
-    this.onPaused = true;
-    this.startTime = this.deltaTime;
-    target.textContent = 'Pause'; 
-    console.log('pause') 
+    target.textContent = 'Pause';
+    console.log('pause'); 
     this.pauseTime = this.deltaTime;
-    console.log(this.pauseTime)  
+    this.startTime = this.pauseTime
     clearInterval(this.id);
-    target.addEventListener('click', ()=> {
-      console.log('go next')
-    })
   }
 
-  hadleResetTimer({target}) {
+  hadleResetTimer({ target }) {
     this.isActive = false;
-    this.onPaused = false;  
+    this.onPaused = false;
     this.setActiveBtn(target);
     this.startBtn.textContent = 'Start';
-    console.log('reset')
+    console.log('reset');
     this.timerContent.textContent = '00:00.0';
     clearInterval(this.id);
     this.listLaps.innerHTML = null;
@@ -120,7 +107,7 @@ class Timer {
     elem.textContent = `${min}:${sec}.${ms}`;
     return elem.textContent;
   }
-  
+
   setActiveBtn(target) {
     if (target.classList.contains('active')) {
       return;
