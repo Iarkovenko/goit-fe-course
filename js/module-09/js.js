@@ -24,7 +24,13 @@ const resetBtn = document.querySelector('.js-reset');
 const listLaps = document.querySelector('.js-laps');
 
 class Timer {
-  constructor({ startBtn, lapBtn, resetBtn, clockface, listLaps }) {
+  constructor({
+    startBtn,
+    lapBtn,
+    resetBtn,
+    clockface,
+    listLaps
+  }) {
     this.startBtn = startBtn;
     this.lapBtn = lapBtn;
     this.resetBtn = resetBtn;
@@ -35,56 +41,59 @@ class Timer {
     this.deltaTime = null;
     this.id = null;
     this.isActive = false;
-    this.timerStatus = null;
     this.pauseTime = null;
     this.startBtn.addEventListener('click', this.handleStartTimer.bind(this));
     this.resetBtn.addEventListener('click', this.hadleResetTimer.bind(this));
     this.lapBtn.addEventListener('click', this.hadleLapTimer.bind(this));
   }
-  // - Когда секундомер запущен, текст кнопки button.js-start меняется на 'Pause',
-  //   а функционал при клике превращается в оставновку секундомера без сброса
-  //   значений времени.
 
-  //   🔔 Подсказка: вам понадобится буль который описывает состояние таймера активен/неактивен.
-  handleStartTimer({ target }) {
-    this.setActiveBtn(target);
-    console.log(this.isActive);
-    if (!this.isActive) {
+  handleStartTimer({target}) {
+    if(!this.isActive) {
+      this.setActiveBtn(target);
       target.textContent = 'Pause';
       this.startTick(target);
-    }
-    if (this.isActive) {
-      target.textContent = 'next';
+    } else {
       this.pauseTick(target);
-    }
+      target.textContent = 'Continue'
+    }   
+        
   }
   startTick(target) {
+    if (this.isActive) return;
     this.isActive = true;
-    this.timerStatus = true;
     this.startTime = Date.now();
     this.id = setInterval(() => {
       const currentTime = Date.now();
-      this.deltaTime = currentTime - this.startTime;
+      this.deltaTime = currentTime - this.startTime;      
       const time = new Date(this.deltaTime);
       this.updateClockface(this.timerContent, time);
     }, 100);
   }
   pauseTick(target) {
-    clearInterval(this.id);
-    this.pauseTime = this.deltaTime;
-  }
-  hadleResetTimer({ target }) {
     this.isActive = false;
+    this.onPaused = true;
+    target.textContent = 'Pause';  
+    this.pauseTime = this.deltaTime;
+    console.log(this.pauseTime)  
+    clearInterval(this.id);
+  }
+
+  hadleResetTimer({target}) {
+    this.isActive = false;
+    this.onPaused = false;  
     this.setActiveBtn(target);
     this.startBtn.textContent = 'Start';
     this.timerContent.textContent = '00:00.0';
     clearInterval(this.id);
-    this.listLaps.innerHTML = '';
+    this.listLaps.innerHTML = null;
+    this.startTime = 0;
+    this.deltaTime = 0;
   }
+
   hadleLapTimer() {
     if (!this.isActive) return;
     const item = document.createElement('li');
-    item.textContent = clockface.textContent;
+    item.textContent = this.timerContent.textContent;
     this.listLaps.append(item);
   }
   updateClockface(elem, time) {
@@ -100,7 +109,6 @@ class Timer {
     elem.textContent = `${min}:${sec}.${ms}`;
     return elem.textContent;
   }
-
   setActiveBtn(target) {
     if (target.classList.contains('active')) {
       return;
