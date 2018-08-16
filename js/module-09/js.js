@@ -42,19 +42,22 @@ class Timer {
     this.id = null;
     this.isActive = false;
     this.pauseTime = null;
+    this.onPaused = false;
     this.startBtn.addEventListener('click', this.handleStartTimer.bind(this));
     this.resetBtn.addEventListener('click', this.hadleResetTimer.bind(this));
     this.lapBtn.addEventListener('click', this.hadleLapTimer.bind(this));
   }
 
   handleStartTimer({target}) {
-    if(!this.isActive) {
+    if(!this.isActive && !this.onPaused) {
       this.setActiveBtn(target);
       target.textContent = 'Pause';
       this.startTick(target);
     } else {
       this.pauseTick(target);
       target.textContent = 'Continue'
+      console.log('next')
+      
     }   
         
   }
@@ -62,6 +65,7 @@ class Timer {
     if (this.isActive) return;
     this.isActive = true;
     this.startTime = Date.now();
+    console.log('start')
     this.id = setInterval(() => {
       const currentTime = Date.now();
       this.deltaTime = currentTime - this.startTime;      
@@ -72,10 +76,15 @@ class Timer {
   pauseTick(target) {
     this.isActive = false;
     this.onPaused = true;
-    target.textContent = 'Pause';  
+    this.startTime = this.deltaTime;
+    target.textContent = 'Pause'; 
+    console.log('pause') 
     this.pauseTime = this.deltaTime;
     console.log(this.pauseTime)  
     clearInterval(this.id);
+    target.addEventListener('click', ()=> {
+      console.log('go next')
+    })
   }
 
   hadleResetTimer({target}) {
@@ -83,6 +92,7 @@ class Timer {
     this.onPaused = false;  
     this.setActiveBtn(target);
     this.startBtn.textContent = 'Start';
+    console.log('reset')
     this.timerContent.textContent = '00:00.0';
     clearInterval(this.id);
     this.listLaps.innerHTML = null;
@@ -96,6 +106,7 @@ class Timer {
     item.textContent = this.timerContent.textContent;
     this.listLaps.append(item);
   }
+
   updateClockface(elem, time) {
     let min = time.getMinutes();
     let sec = time.getSeconds();
@@ -109,6 +120,7 @@ class Timer {
     elem.textContent = `${min}:${sec}.${ms}`;
     return elem.textContent;
   }
+  
   setActiveBtn(target) {
     if (target.classList.contains('active')) {
       return;
