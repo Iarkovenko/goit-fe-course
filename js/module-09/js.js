@@ -9,7 +9,7 @@ class Stopwatch {
     this.deltaTime = null;
     this.id = null;
     this.isActive = false;
-        
+
   }
   createTimer() {
     const section = document.createElement('section')
@@ -44,12 +44,14 @@ class Stopwatch {
 
 
     div.append(p, startBtn, lapBtn, resetBtn)
-    section.append(div)
+    
 
     const list = document.createElement('ul');
     list.classList.add('laps')
     list.classList.add('js-laps')
 
+
+    section.append(div, list)
     this.watches.append(section)
 
     
