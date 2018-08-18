@@ -1,52 +1,45 @@
-/*
-  - Если секундомер находится в состоянии паузы, текст на кнопке button.js-start
-    меняется на 'Continue'. При следующем клике в нее, продолжается отсчет времени, 
-    а текст меняется на 'Pause'. То есть если во время нажатия 'Pause' прошло 6 секунд 
-    со старта, при нажатии 'Continue' 10 секунд спустя, секундомер продолжит отсчет времени 
-    с 6 секунд, а не с 16. 
-    
-    🔔 Подсказка: сохраните время секундомера на момент паузы и используйте его 
-                  при рассчете текущего времени после возобновления таймера отнимая
-                  это значение от времени запуска таймера.
-    
-  - Если секундомер находится в активном состоянии или в состоянии паузы, кнопка 
-    button.js-reset должна быть активна (на нее можно кликнуть), в противном случае
-    disabled. Функционал при клике - остановка таймера и сброс всех полей в исходное состояние.
-    
-  - Функционал кнопки button.js-take-lap при клике - сохранение текущего времени секундомера 
-    в массив и добавление в ul.js-laps нового li с сохраненным временем в формате xx:xx.x
-*/
-
-// 
-
-const watches = document.querySelector('.watches');
+const watches = document.querySelector('.asd');
 
 class Stopwatch {
-  constructor({ watches }) {    
+  constructor({ watches }) {
     this.watches = watches;
-    this.createTimer()
-    this.startBtn = this.watches.querySelector('.js-start');
-    this.lapBtn = this.watches.querySelector('.js-take-lap');
-    this.resetBtn = this.watches.querySelector('.js-reset');
-    this.timerContent = this.watches.querySelector('.js-time');
-    this.listLaps = this.watches.querySelector('.js-laps');
+    this.createTimer();
+    this.watch = this.watches.querySelectorAll('.watches');
+    this.startBtn = null;
+    this.lapBtn = null;
+    this.resetBtn = null;
     this.startTime = null;
     this.deltaTime = null;
     this.id = null;
-    this.isActive = false;
+    this.isActive = false;    
+    this.listLaps = null;
+    this.setWatch(this.watch);
+    
     this.startBtn.addEventListener('click', this.handleStartTimer.bind(this));
     this.resetBtn.addEventListener('click', this.hadleResetTimer.bind(this));
     this.lapBtn.addEventListener('click', this.hadleLapTimer.bind(this));
   }
   createTimer() {
-    const bodyWatch = `<div class="stopwatch">
+    const bodyWatch = `<section class="watches">
+                      <div class="stopwatch">
                       <p class="time js-time">00:00.0</p>
                       <button class="btn js-start">Start</button>
                       <button class="btn js-take-lap">Lap</button>
                       <button class="btn js-reset">Reset</button>
                       </div>
-                      <ul class="laps js-laps"></ul>`;
+                      <ul class="laps js-laps"></ul>
+                      </section>`;
     this.watches.innerHTML += bodyWatch;
+  }
+  setWatch(arr) {
+    arr.forEach(el => {
+      this.startBtn = el.querySelector('.js-start');
+      this.lapBtn = el.querySelector('.js-take-lap');
+      this.resetBtn = el.querySelector('.js-reset');
+      this.timerContent = el.querySelector('.js-time');
+      this.listLaps = el.querySelector('.js-laps');
+      console.log(this.startBtn);
+    });
   }
   handleStartTimer({ target }) {
     if (!this.isActive) {
@@ -120,5 +113,9 @@ class Stopwatch {
 }
 
 const firstTimer = new Stopwatch({
+  watches: watches,
+});
+
+const secondTimer = new Stopwatch({
   watches: watches,
 });
