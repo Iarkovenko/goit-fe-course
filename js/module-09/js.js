@@ -17,95 +17,95 @@
     в массив и добавление в ul.js-laps нового li с сохраненным временем в формате xx:xx.x
 */
 
-const clockface = document.querySelector('.js-time');
-const startBtn = document.querySelector('.js-start');
-const lapBtn = document.querySelector('.js-take-lap');
-const resetBtn = document.querySelector('.js-reset');
-const listLaps = document.querySelector('.js-laps');
+// 
 
-class Timer {
-  constructor({ startBtn, lapBtn, resetBtn, clockface, listLaps }) {
-    this.startBtn = startBtn;
-    this.lapBtn = lapBtn;
-    this.resetBtn = resetBtn;
-    this.timerContent = clockface;
-    this.listLaps = listLaps;
-    this.timerContent.textContent = '00:00.0';
+const watches = document.querySelector('.watches');
+
+class Stopwatch {
+  constructor({ watches }) {    
+    this.watches = watches;
+    this.createTimer()
+    this.startBtn = this.watches.querySelector('.js-start');
+    this.lapBtn = this.watches.querySelector('.js-take-lap');
+    this.resetBtn = this.watches.querySelector('.js-reset');
+    this.timerContent = this.watches.querySelector('.js-time');
+    this.listLaps = this.watches.querySelector('.js-laps');
     this.startTime = null;
     this.deltaTime = null;
     this.id = null;
     this.isActive = false;
-    this.pauseTime = null;
-    this.onPaused = false;
     this.startBtn.addEventListener('click', this.handleStartTimer.bind(this));
     this.resetBtn.addEventListener('click', this.hadleResetTimer.bind(this));
     this.lapBtn.addEventListener('click', this.hadleLapTimer.bind(this));
   }
-
+  createTimer() {
+    const bodyWatch = `<div class="stopwatch">
+                      <p class="time js-time">00:00.0</p>
+                      <button class="btn js-start">Start</button>
+                      <button class="btn js-take-lap">Lap</button>
+                      <button class="btn js-reset">Reset</button>
+                      </div>
+                      <ul class="laps js-laps"></ul>`;
+    this.watches.innerHTML += bodyWatch;
+  }
   handleStartTimer({ target }) {
     if (!this.isActive) {
       this.setActiveBtn(target);
-      target.textContent = 'Pause';
       this.startTick(target);
+      this.startBtn.textContent = 'Pause';
     } else {
       this.pauseTick(target);
-      target.textContent = 'Continue';
-      console.log('next');
+      this.startBtn.textContent = 'Continue';
     }
   }
   startTick(target) {
     if (this.isActive) return;
     this.isActive = true;
-    this.startTime = Date.now();
-    console.log('start');
+    this.startTime = Date.now() - this.deltaTime;
     this.id = setInterval(() => {
       const currentTime = Date.now();
       this.deltaTime = currentTime - this.startTime;
-      const time = new Date(this.deltaTime);
-      this.updateClockface(this.timerContent, time);
+      this.updateClockface(this.deltaTime);
     }, 100);
   }
   pauseTick(target) {
-    this.isActive = false;
-    target.textContent = 'Pause';
-    console.log('pause'); 
-    this.pauseTime = this.deltaTime;
-    this.startTime = this.pauseTime
     clearInterval(this.id);
+    this.isActive = false;
   }
 
   hadleResetTimer({ target }) {
-    this.isActive = false;
-    this.onPaused = false;
-    this.setActiveBtn(target);
-    this.startBtn.textContent = 'Start';
-    console.log('reset');
-    this.timerContent.textContent = '00:00.0';
     clearInterval(this.id);
-    this.listLaps.innerHTML = null;
-    this.startTime = 0;
+    this.isActive = false;
+    this.setActiveBtn(target);
     this.deltaTime = 0;
+    this.updateClockface(this.deltaTime);
+    this.startBtn.textContent = 'Start';
+    this.listLaps.innerHTML = null;
+    this.startTime = null;
   }
 
-  hadleLapTimer() {
+  hadleLapTimer(time) {
     if (!this.isActive) return;
     const item = document.createElement('li');
     item.textContent = this.timerContent.textContent;
     this.listLaps.append(item);
   }
-
-  updateClockface(elem, time) {
-    let min = time.getMinutes();
-    let sec = time.getSeconds();
-    let ms = parseInt(time.getMilliseconds() / 100);
+  updateClockface(time) {
+    const formattedTime = this.getFormatedTime(time);
+    this.timerContent.textContent = formattedTime;
+  }
+  getFormatedTime(mls) {
+    const date = new Date(mls);
+    let min = date.getMinutes();
+    let sec = date.getSeconds();
+    let ms = parseInt(date.getMilliseconds() / 100);
     if (min < 10) {
       min = `0${min}`;
     }
     if (sec < 10) {
       sec = `0${sec}`;
     }
-    elem.textContent = `${min}:${sec}.${ms}`;
-    return elem.textContent;
+    return `${min}:${sec}.${ms}`;
   }
 
   setActiveBtn(target) {
@@ -119,10 +119,6 @@ class Timer {
   }
 }
 
-const firstTimer = new Timer({
-  startBtn: startBtn,
-  lapBtn: lapBtn,
-  resetBtn: resetBtn,
-  clockface: clockface,
-  listLaps: listLaps,
+const firstTimer = new Stopwatch({
+  watches: watches,
 });
