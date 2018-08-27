@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,30 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+    <section class="block">
+
+        <div class="allUsers">
+            <h2>List of All Users</h2>
+            <button class="js-btn-getAllUsers">Get All Users</button>
+            <div class="allUsers js-allUsersList"></div>
+        </div>
+
+        <div class="getUserById">
+            <h2>Get User By ID</h2>
+            <form action="get">
+                <input class="js-enterUserId" type="text" name="userId" placeholder="enter user ID">
+                <button class="js-btn-getUserById">Get User By Id</button>
+            </form>
+            <div class="js-getUserById"></div>
+        </div>
+        
+
+    </section>
+
     <script src="js.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,7 @@
+.block {
+    display: flex;
+    justify-content: center;
+}
+.block div {
+    border: 2px solid blue;
+}
