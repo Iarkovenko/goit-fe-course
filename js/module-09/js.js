@@ -3,64 +3,56 @@ const watches = document.querySelector('.asd');
 class Stopwatch {
   constructor({ watches }) {
     this.watches = watches;
-    this.createTimer();
-    this.watch = this.watches.querySelectorAll('.stopwatch');
     this.startTime = null;
     this.deltaTime = null;
     this.id = null;
     this.isActive = false;
-
+    this.createTimer();
+    this.startBtn = this.watches.querySelector('.js-start');
+    this.lapBtn = this.watches.querySelector('.js-take-lap');
+    this.resetBtn = this.watches.querySelector('.js-reset');
+    this.timerContent = this.watches.querySelector('.js-time');
+    this.listLaps = this.watches.querySelector('.js-laps');
   }
-  createTimer() {
-    const section = document.createElement('section')
-    section.classList.add('watches')
 
-    const div = document.createElement('div')
-    div.classList.add('stopwatch')
+  createTimer() {
+    const section = document.createElement('section');
+    section.classList.add('watches');
+
+    const div = document.createElement('div');
+    div.classList.add('stopwatch');
 
     const p = document.createElement('p');
-    p.classList.add('time')
-    p.classList.add('js-time')
-    p.textContent = '00:00.0'
+    p.classList.add('time');
+    p.classList.add('js-time');
+    p.textContent = '00:00.0';
 
     const startBtn = document.createElement('button');
-    startBtn.classList.add('btn')
-    startBtn.classList.add('js-start')
-    startBtn.textContent = 'Start'
+    startBtn.classList.add('btn');
+    startBtn.classList.add('js-start');
+    startBtn.textContent = 'Start';
     startBtn.addEventListener('click', this.handleStartTimer.bind(this));
 
     const lapBtn = document.createElement('button');
-    lapBtn.classList.add('btn')
-    lapBtn.classList.add('js-take-lap')
-    lapBtn.textContent = 'Lap'
+    lapBtn.classList.add('btn');
+    lapBtn.classList.add('js-take-lap');
+    lapBtn.textContent = 'Lap';
     lapBtn.addEventListener('click', this.hadleLapTimer.bind(this));
 
     const resetBtn = document.createElement('button');
-    resetBtn.classList.add('btn')
-    resetBtn.classList.add('js-reset')
-    resetBtn.textContent = 'Reset'
+    resetBtn.classList.add('btn');
+    resetBtn.classList.add('js-reset');
+    resetBtn.textContent = 'Reset';
     resetBtn.addEventListener('click', this.hadleResetTimer.bind(this));
-    
 
-
-    div.append(p, startBtn, lapBtn, resetBtn)
-    
+    div.append(p, startBtn, lapBtn, resetBtn);
 
     const list = document.createElement('ul');
-    list.classList.add('laps')
-    list.classList.add('js-laps')
+    list.classList.add('laps');
+    list.classList.add('js-laps');
 
-
-    section.append(div, list)
-    this.watches.append(section)
-
-    
-    
-    // this.startBtn = this.watches.querySelector('.js-start');
-    // this.lapBtn = this.watches.querySelector('.js-take-lap');
-    // this.resetBtn = this.watches.querySelector('.js-reset');
-    // this.timerContent = this.watches.querySelector('.js-time');
-    // this.listLaps = this.watches.querySelector('.js-laps');
+    section.append(div, list);
+    this.watches.append(section);
   }
   handleStartTimer({ target }) {
     if (!this.isActive) {
