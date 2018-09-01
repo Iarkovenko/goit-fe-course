@@ -1,0 +1,15 @@
+.form   {
+    margin-bottom: 20px;
+}
+#root {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card {
+    border: 2px solid blue;
+    margin-bottom: 10px;
+    padding: 10px 5px;
+}
