@@ -124,7 +124,6 @@ class Stopwatch {
     target.classList.add('active');
   }
 }
-
 const firstTimer = new Stopwatch({
   watches: watches,
 });
