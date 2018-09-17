@@ -1,18 +1,14 @@
 const watches = document.querySelector('.asd');
 
 class Stopwatch {
-  constructor({ watches }) {
+  constructor( watches ) {
     this.watches = watches;
     this.startTime = null;
     this.deltaTime = null;
     this.id = null;
     this.isActive = false;
     this.createTimer();
-    this.startBtn = this.watches.querySelector('.js-start');
-    this.lapBtn = this.watches.querySelector('.js-take-lap');
-    this.resetBtn = this.watches.querySelector('.js-reset');
-    this.timerContent = this.watches.querySelector('.js-time');
-    this.listLaps = this.watches.querySelector('.js-laps');
+   
   }
 
   createTimer() {
@@ -52,8 +48,14 @@ class Stopwatch {
     list.classList.add('js-laps');
 
     section.append(div, list);
-    this.watches.append(section);
+    this.startBtn = section.querySelector('.js-start');
+    this.lapBtn = section.querySelector('.js-take-lap');
+    this.resetBtn = section.querySelector('.js-reset');
+    this.timerContent = section.querySelector('.js-time');
+    this.listLaps = section.querySelector('.js-laps');
+    this.watches.append(section);    
   }
+
   handleStartTimer({ target }) {
     if (!this.isActive) {
       this.setActiveBtn(target);
@@ -124,9 +126,5 @@ class Stopwatch {
     target.classList.add('active');
   }
 }
-const firstTimer = new Stopwatch({
-  watches: watches,
-});
-const SecondTimer = new Stopwatch({
-  watches: watches,
-});
+const firstTimer = new Stopwatch(watches);
+const SecondTimer = new Stopwatch(watches);
