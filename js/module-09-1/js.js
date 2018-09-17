@@ -7,8 +7,11 @@ class Stopwatch {
     this.deltaTime = null;
     this.id = null;
     this.isActive = false;
+    this.startBtn = '';
+    this.resetBtn = '';
+    this.listLaps = '';
     this.createTimer();
-   
+
   }
 
   createTimer() {
@@ -23,31 +26,32 @@ class Stopwatch {
     p.classList.add('js-time');
     p.textContent = '00:00.0';
 
-    const startBtn = document.createElement('button');
-    startBtn.classList.add('btn');
-    startBtn.classList.add('js-start');
-    startBtn.textContent = 'Start';
-    startBtn.addEventListener('click', this.handleStartTimer.bind(this));
+    this.startBtn = document.createElement('button');
+    this.startBtn.classList.add('btn');
+    this.startBtn.classList.add('js-start');
+    this.startBtn.textContent = 'Start';
+    this.startBtn.addEventListener('click', this.handleStartTimer.bind(this));
 
-    const lapBtn = document.createElement('button');
-    lapBtn.classList.add('btn');
-    lapBtn.classList.add('js-take-lap');
-    lapBtn.textContent = 'Lap';
-    lapBtn.addEventListener('click', this.hadleLapTimer.bind(this));
+    this.lapBtn = document.createElement('button');
+    this.lapBtn.classList.add('btn');
+    this.lapBtn.classList.add('js-take-lap');
+    this.lapBtn.textContent = 'Lap';
+    this.lapBtn.addEventListener('click', this.hadleLapTimer.bind(this));
 
-    const resetBtn = document.createElement('button');
-    resetBtn.classList.add('btn');
-    resetBtn.classList.add('js-reset');
-    resetBtn.textContent = 'Reset';
-    resetBtn.addEventListener('click', this.hadleResetTimer.bind(this));
+    this.resetBtn = document.createElement('button');
+    this.resetBtn.classList.add('btn');
+    this.resetBtn.classList.add('js-reset');
+    this.resetBtn.textContent = 'Reset';
+    this.resetBtn.addEventListener('click', this.hadleResetTimer.bind(this));
 
-    div.append(p, startBtn, lapBtn, resetBtn);
+    div.append(p, this.startBtn, this.lapBtn, this.resetBtn);
 
-    const list = document.createElement('ul');
-    list.classList.add('laps');
-    list.classList.add('js-laps');
+    this.listLaps = document.createElement('ul');
+    this.listLaps.classList.add('laps');
+    this.listLaps.classList.add('js-laps');
 
-    section.append(div, list);
+    section.append(div, this.listLaps);
+
     this.startBtn = section.querySelector('.js-start');
     this.lapBtn = section.querySelector('.js-take-lap');
     this.resetBtn = section.querySelector('.js-reset');
@@ -59,14 +63,14 @@ class Stopwatch {
   handleStartTimer({ target }) {
     if (!this.isActive) {
       this.setActiveBtn(target);
-      this.startTick(target);
+      this.startTick();
       this.startBtn.textContent = 'Pause';
     } else {
-      this.pauseTick(target);
+      this.pauseTick();
       this.startBtn.textContent = 'Continue';
     }
   }
-  startTick(target) {
+  startTick() {
     if (this.isActive) return;
     this.isActive = true;
     this.startTime = Date.now() - this.deltaTime;
@@ -76,7 +80,7 @@ class Stopwatch {
       this.updateClockface(this.deltaTime);
     }, 100);
   }
-  pauseTick(target) {
+  pauseTick() {
     clearInterval(this.id);
     this.isActive = false;
   }
@@ -87,16 +91,16 @@ class Stopwatch {
     this.setActiveBtn(target);
     this.deltaTime = 0;
     this.updateClockface(this.deltaTime);
-    this.startBtn.textContent = 'Start';
-    this.listLaps.innerHTML = null;
+    this.startBtn.textContent = 'Start';    
     this.startTime = null;
+    this.listLaps.innerHTML = null;
   }
 
-  hadleLapTimer(time) {
+  hadleLapTimer() {
     if (!this.isActive) return;
-    const item = document.createElement('li');
-    item.textContent = this.timerContent.textContent;
-    this.listLaps.append(item);
+    this.item = document.createElement('li');
+    this.item.textContent = this.timerContent.textContent;    
+    this.listLaps.append(this.item);
   }
   updateClockface(time) {
     const formattedTime = this.getFormatedTime(time);
